@@ -1,0 +1,30 @@
+{% set menu = [
+	{
+		title: "Главная",
+		link: "/"
+	},
+	{
+		title: "Документы",
+		link: "/documents"
+	},
+	{
+		title: "Офисы",
+		link: "/office"
+	}
+] %}
+
+<ul class="menu">
+
+{% for item in menu %}
+
+	<li class="menu__item{% if item.link == urlPage %} menu__item--active{% endif %}">
+
+		<a class="menu__link" href="{{ item.link }}">
+			{{ item.title }}
+		</a>
+
+	</li>
+
+{% endfor %}
+
+</ul>
