@@ -1,0 +1,155 @@
+.it-we {
+
+	padding: 122px 0 111px;
+
+	@media ($mdWidth) {
+
+		padding: 50px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		padding: 28px 0 40px;
+
+	}
+
+	&__title {
+
+		color: var(--red);
+
+		@media ($smWidth) {
+
+			font-size: 36px;
+
+		}
+
+		@media ($xsWidth) {
+
+			font-size: 30px;
+
+		}
+
+	}
+
+	&__intro {
+
+		font-size: 18px;
+		line-height: 30px;
+		color: color(var(--color) a(70%));
+		margin: 7px 0 40px;
+
+		@media ($mdWidth) {
+
+			margin-bottom: 20px;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 1.25;
+			margin: 18px 0 24px;
+
+		}
+
+	}
+
+	&__list {
+
+		display: flex;
+		padding: 0 30px;
+		justify-content: space-between;
+
+		@media ($mdWidth) {
+
+			padding: 0;
+			margin: 0 -10px;
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 0;
+
+		}
+
+	}
+
+	&__item {
+
+		width: 210px;
+
+		@media ($mdWidth) {
+
+			width: 25%;
+			padding: 0 10px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: auto;
+			display: flex;
+			padding: 21px 0;
+			align-items: center;
+
+		}
+
+	}
+
+	&__ico {
+
+		width: 100px;
+		height: 139px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		flex-shrink: 0;
+
+		@media ($smWidth) {
+
+			width: 50px;
+			height: 50px;
+
+			svg {
+
+				width: 50px;
+				height: auto;
+
+			}
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 30px;
+		text-align: center;
+		color: var(--color);
+		display: block;
+
+		@media ($mdWidth) {
+
+			font-size: 16px;
+
+		}
+
+		@media ($smWidth) {
+
+			flex-grow: 1;
+			text-align: left;
+			font-size: 16px;
+			line-height: 1.25;
+			padding: 0 24px;
+
+		}
+
+	}
+
+}

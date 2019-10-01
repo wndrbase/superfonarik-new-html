@@ -1,0 +1,13 @@
+:root {
+
+	--color: #555;
+	--yellow: #fff95a;
+	--gray: #a41212;
+	/* --gray: #4e4e4e; */
+
+}
+
+$desktop: (min-width: 1200px);
+$mdWidth: (max-width: 1199px);
+$smWidth: (max-width: 767px);
+$xsWidth: (max-width: 359px);

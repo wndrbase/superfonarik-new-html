@@ -1,0 +1,11 @@
+
+
+
+@font-face {
+	font-family: 'Hermes';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Hermes Regular'), local('Hermes-Regular'),
+		 url('/fonts/Hermes.otf') format('truetype');
+}
