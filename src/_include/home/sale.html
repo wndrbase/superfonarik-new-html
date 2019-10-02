@@ -1,0 +1,67 @@
+	<section class="carousel swiper-container-style">
+
+		<div class="center">
+
+			<h2 class="carousel__title h1">
+
+				<span class="color-yellow">Наша</span> распродажа
+
+			</h2>
+
+			<div class="swiper-container swiper-container--carousel">
+
+				<ul class="carousel__list swiper-wrapper">
+
+{% set list = [
+	{
+		name: "EagleTac M30LC2C (XP-G2, холодный свет)",
+		price: 7500,
+		priceOld: 9010,
+		img: "eagletac_m30lc2_compact_01"
+	},
+	{
+		name: "Складная солнечная панель NESL SPB0104 (100 Вт)",
+		price: 27000,
+		priceOld: 50180,
+		img: "834b1e16eae120d7b41629d24ee7b213"
+	},
+	{
+		name: "EagleTac MX25L2 Turbo (SBT-70, холодный свет)",
+		price: 18423,
+		priceOld: 23750,
+		img: "cfc3f4627ad8da960d556ace80c9257d"
+	},
+	{
+		name: "EagleTac MX25L4 (SST90, холодный свет)",
+		price: 5500,
+		priceOld: 14050,
+		img: "a90d1f4bc780b4aac2ac920311373e8e"
+	},
+	{
+		name: "EagleTac MX25L3C KIT (XP-G2, холодный свет)",
+		price: 7500,
+		priceOld: 13600,
+		img: "947edff69c1f9f8c7f21896afdee7b7b"
+	},
+	{
+		name: "EagleTac SX25L3 Kit (XM-L2, холодный свет)",
+		price: 5500,
+		priceOld: 11140,
+		img: "6b76a48a2d0750b850e1fcca6597c376"
+	}
+] %}
+
+{% set heightImg = 140 %}
+{% include "_include/home/carousel__item.html" %}
+
+				</ul>
+
+			</div>
+
+			<a href="/catalog/sale/" class="carousel__link-top">
+				Все товары в распродаже
+			</a>
+
+		</div>
+
+	</section>

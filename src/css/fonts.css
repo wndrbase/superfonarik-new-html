@@ -1,4 +1,11 @@
-
+@font-face {
+	font-family: 'PT Sans RUB';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/pt-sans-ruble.woff2') format('woff2'),
+		 url('/fonts/pt-sans-ruble.woff') format('woff');
+}
 
 
 @font-face {

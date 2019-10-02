@@ -1,0 +1,60 @@
+{% for item in list %}
+
+					<li class="swiper-slide carousel__item">
+
+						<a class="carousel__link" href="/">
+
+							<span class="carousel__img">
+
+								<picture>
+
+									<source srcset="/img/carousel/{{ item.img }}@1x.webp 1x, /img/carousel/{{ item.img }}@2x.webp 2x" type="image/webp">
+
+									<source srcset="/img/carousel/{{ item.img }}@1x.jpg 1x, /img/carousel/{{ item.img }}@2x.jpg 2x">
+
+									<img src="/img/carousel/{{ item.img }}@1x.jpg" alt="{{ item.name }}" loading="lazy" width="250" height="{{ heightImg }}">
+
+								</picture>
+
+							</span>
+
+							<span class="carousel__price">
+
+								{% if item.priceOld %}
+
+								<span class="carousel__price-old">
+
+									{{ item.priceOld }} <span class="rub">₽</span>
+
+								</span>
+
+								{% endif %}
+
+								<span class="carousel__price-current">
+
+{% set price = '' %}
+{% set return = item.price | int | string | reverse | batch(3) %}
+
+{% for group in return %}
+{% set price = price + ' ' + (group | join) %}
+{% endfor %}
+
+{% set price = price | reverse  %}
+
+									{{ price }} <span class="rub">₽</span>
+
+								</span>
+
+							</span>
+
+							<span class="carousel__name">
+
+								{{ item.name }}
+
+							</span>
+
+						</a>
+
+					</li>
+
+{% endfor %}

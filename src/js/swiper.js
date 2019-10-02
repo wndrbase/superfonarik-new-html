@@ -27,7 +27,7 @@ SF.swiper = function(swiperContainer){
 					prevEl: swipePrev
 				},
 				autoplay: {
-					delay: 6000
+					delay: 9996000
 				}
 			},
 			carousel = swipe.classList.contains('swiper-container--carousel'),
@@ -85,7 +85,7 @@ SF.swiper = function(swiperContainer){
 			param.autoHeight = false;
 			param.slidesPerView = 3;
 			param.slidesPerGroup = 3;
-			param.spaceBetween = 30;
+//			param.spaceBetween = 30;
 			param.loopFillGroupWithBlank = true;
 
 			toggleSwipe = function() {
