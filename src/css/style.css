@@ -5,10 +5,11 @@
 @import url(sprite.css);
 @import url(form.css);
 
-/* @import url(modal.css); */
+@import url(modal.css);
 @import url(swiper.css);
 
 @import url(header.css);
+@import url(menu.css);
 @import url(footer.css);
 
 @import url(home-slider.css);

@@ -116,71 +116,9 @@
 			content: '';
 			opacity: 0.6;
 			z-index: 9;
-			background-color: #000;
+			background-color: rgb(35, 31, 32);
 
 		}
-
-	}
-
-}
-
-.modal-form {
-
-	&__title {
-
-		text-align: center;
-		margin: -10px 0 34px;
-		color: var(--red);
-
-		@media ($smWidth) {
-
-			margin: 0 0 20px;
-
-		}
-
-	}
-
-	&__input {
-
-		margin: 20px 0;
-
-	}
-
-	&__links {
-
-		display: flex;
-		justify-content: space-between;
-
-		&-red,
-		&-dark {
-
-			font-size: 16px;
-			line-height: 30px;
-			color: var(--color);
-			text-decoration: underline;
-
-			&:hover {
-
-				text-decoration: none;
-
-			}
-
-		}
-
-		&-red {
-
-			color: var(--red);
-
-		}
-
-	}
-
-	&__submit {
-
-		width: 100%;
-		font-weight: 600;
-		font-size: 20px;
-		margin-top: 30px;
 
 	}
 
