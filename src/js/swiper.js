@@ -1,4 +1,4 @@
-BF.swiper = function(swiperContainer){
+SF.swiper = function(swiperContainer){
 
 	Array.prototype.forEach.call(swiperContainer, function(swipe){
 
@@ -7,24 +7,45 @@ BF.swiper = function(swiperContainer){
 			windowWidthOLd = null,
 			toggleSwipe = null,
 			resetSwipe = null,
+			swipeControls = document.createElement('div'),
 			swipeNav = document.createElement('div'),
 			swipeNext = document.createElement('button'),
 			swipePrev = document.createElement('button'),
 			items = swipe.querySelectorAll('.swiper-slide'),
 			count = items.length,
+			param = {
+				loop: true,
+				pagination: {
+					clickable: true,
+					bulletElement: 'button',
+					bulletClass: 'button',
+					bulletActiveClass: 'is-active',
+					el: swipeNav
+				},
+				navigation: {
+					nextEl: swipeNext,
+					prevEl: swipePrev
+				},
+				autoplay: {
+					delay: 6000
+				}
+			},
 			carousel = swipe.classList.contains('swiper-container--carousel'),
 			homeSlider = swipe.classList.contains('swiper-container--home-slider');
+
+		swipeControls.className = 'swiper-controls center';
 
 		swipeNav.className = 'swiper-pagination';
 		swipePrev.className = 'swiper-button-prev button';
 		swipeNext.className = 'swiper-button-next button';
 
-		swipePrev.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16"><path d="M9.95 14.05L5.046 9.142H16V6.857H5.045L9.95 1.951 8.335.335.67 8l7.665 7.665z"/></svg>';
-		swipeNext.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16"><path d="M6.05 14.05l4.905-4.907H0V6.857h10.955L6.05 1.951 7.665.335 15.33 8l-7.665 7.665z"/></svg>';
+		swipePrev.innerHTML = 'ico';
+		swipeNext.innerHTML = 'ico';
 
-		swipe.appendChild(swipeNav);
-		swipe.parentNode.appendChild(swipeNext);
-		swipe.parentNode.appendChild(swipePrev);
+		swipeControls.appendChild(swipeNext);
+		swipeControls.appendChild(swipePrev);
+		swipeControls.appendChild(swipeNav);
+		swipe.parentNode.appendChild(swipeControls);
 
 		resetSwipe = function(){
 
@@ -53,23 +74,19 @@ BF.swiper = function(swiperContainer){
 				swipeNext.classList.remove('hide');
 				swipePrev.classList.remove('hide');
 */
-				mySwipe = new Swiper(swipe, {
-					loop: true,
-					pagination: {
-						clickable: true,
-						el: swipeNav
-					},
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					}
-				});
+				mySwipe = new Swiper(swipe, param);
 
 			}
 
 		}
 
 		if (carousel) {
+
+			param.autoHeight = false;
+			param.slidesPerView = 3;
+			param.slidesPerGroup = 3;
+			param.spaceBetween = 30;
+			param.loopFillGroupWithBlank = true;
 
 			toggleSwipe = function() {
 
@@ -79,22 +96,7 @@ BF.swiper = function(swiperContainer){
 				swipeNext.classList.remove('hide');
 				swipePrev.classList.remove('hide');*/
 
-				mySwipe = new Swiper(swipe, {
-					loop: true,
-					autoHeight: false,
-					slidesPerView: 3,
-					spaceBetween: 30,
-					slidesPerGroup: 3,
-					loopFillGroupWithBlank: true,
-					pagination: {
-						clickable: true,
-						el: swipeNav
-					},
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					}
-				});
+				mySwipe = new Swiper(swipe, param);
 
 			}
 
@@ -176,9 +178,9 @@ BF.swiper = function(swiperContainer){
 
 		}
 
-		if(!BF.swiper.init) {
+		if(!SF.swiper.init) {
 
-			BF.swiper.init = true;
+			SF.swiper.init = true;
 
 			setTimeout(function(){
 
@@ -207,6 +209,6 @@ BF.swiper = function(swiperContainer){
 
 if(document.querySelector('.swiper-container')) {
 
-	BF.swiper(document.querySelectorAll('.swiper-container'));
+	SF.swiper(document.querySelectorAll('.swiper-container'));
 
 }

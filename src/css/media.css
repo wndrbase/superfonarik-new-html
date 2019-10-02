@@ -23,12 +23,15 @@
 
 }
 
+@media ($wideWidth) {
+
+
+}
 
 @media ($desktop) {
 
 
 }
-
 
 @media ($mdWidth) {
 

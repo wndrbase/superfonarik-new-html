@@ -12,6 +12,31 @@
 
 .swiper-container-style {
 
+	position: relative;
+
+	.swiper-controls {
+
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 48px;
+		z-index: 5;
+
+		&::before {
+
+			background-color: #858585;
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 100%;
+			width: 100vw;
+
+		}
+
+	}
+
 	.swiper-container {
 
 		margin: 0 auto;
@@ -20,7 +45,7 @@
 		list-style: none;
 		padding: 0;
 		z-index: 1;
-
+/*
 		&::after,
 		&::before {
 
@@ -43,7 +68,7 @@
 			background-image: linear-gradient(to left, #fff, color(#fff a(0)));
 
 		}
-
+ */
 	}
 
 	.swiper-container-no-flexbox .swiper-slide {
@@ -113,13 +138,12 @@
 	.swiper-button-next {
 
 		position: absolute;
-		top: 50%;
-		margin-top: -32px;
 		z-index: 2;
-		border-radius: 50%;
-		width: 50px;
-		height: 50px;
-		outline:1px solid red;
+		width: 48px;
+		height: 48px;
+		left: 0;
+		top: 0;
+		background-color: #4e4e4e;
 
 		svg {
 
@@ -140,39 +164,13 @@
 
 		}
 
-
-		&::before {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			background-image: linear-gradient(to bottom, #4aa1ad, #1d8c97);
-			opacity: 0;
-			transition: .3s;
-			border-radius: 50%;
-
-		}
-
-		&:hover::before {
-
-			opacity: 1;
-
-		}
-
 	}
 
 	.swiper-button-prev {
 
-		left: -190px;
+		&:hover svg {
 
-		@media ($mdWidth) {
-
-			left: auto;
-			right: 80px;
-			top: -40px;
+			fill: var(--yellow);
 
 		}
 
@@ -180,12 +178,18 @@
 
 	.swiper-button-next {
 
-		right: -190px;
+		left: 48px;
+		background-color: #231f20;
 
-		@media ($mdWidth) {
+		svg {
 
-			right: 20px;
-			top: -40px;
+			fill: var(--yellow);
+
+		}
+
+		&:hover svg {
+
+			fill: #fff;
 
 		}
 
@@ -197,23 +201,23 @@
 		transform: translate3d(0, 0, 0);
 		z-index: 10;
 		display: flex;
-		justify-content: center;
+		position: absolute;
+		right: 0;
+		bottom: 20px;
 
-	}
+		.button {
 
-	.swiper-pagination-bullet {
+			background-color: color(#4e4e4e a(66%));
+			height: 19px;
+			width: 19px;
+			transition: .3s;
+			margin-left: 6px;
 
-		border-radius: 3px;
-		width: 5px;
-		height: 5px;
-		margin: 0 5px;
-		background-color: var(--color);
-		transition: width .3s;
+			&.is-active {
 
-		&-active {
+				background-color: var(--yellow);
 
-			width: 20px;
-			background-color: var(--color);
+			}
 
 		}
 

@@ -1,8 +1,13 @@
 
-(function(){
+(function(modal){
 
-	var modal = document.querySelector('.modal'),
-		items = modal.querySelectorAll('.modal__item'),
+	if(!modal) {
+
+		return;
+
+	}
+
+	var items = modal.querySelectorAll('.modal__item'),
 		btns = document.querySelectorAll('[data-modal]'),
 		wrapper = document.querySelector('.wrapper'),
 		windowScroll = 0;
@@ -82,4 +87,4 @@
 
 	});
 
-})();
+})(document.querySelector('.modal'));
