@@ -1,5 +1,7 @@
 .article {
 
+	flex-shrink: 0;
+
 	&--index {
 
 		order: 10;

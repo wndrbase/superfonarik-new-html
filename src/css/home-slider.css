@@ -1,5 +1,7 @@
 .home-slider {
 
+	flex-shrink: 0;
+
 	.swiper-pagination {
 
 		bottom: 15px;

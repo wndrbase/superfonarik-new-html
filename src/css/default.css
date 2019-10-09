@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+color: red !important;
 }
 
 html {
@@ -31,9 +31,9 @@ body {
 	scroll-behavior: smooth;
 	position: relative;
 
-/* background-image: url(/css/main_mobile.png); */
-background-position: center 886px;
-background-size: 360px auto;
+background-image: url(/css/1.png);
+background-position: center 0;
+/* background-size: 1920px auto; */
 
 	&.scroll-behavior-off {
 
@@ -176,6 +176,7 @@ time {
 
 	position: relative;
 	overflow: hidden;
+	flex-shrink: 0;
 
 }
 
@@ -183,6 +184,7 @@ time {
 
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 
 }
 

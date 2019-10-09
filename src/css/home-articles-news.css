@@ -1,5 +1,7 @@
 .home-articles-news {
 
+	flex-shrink: 0;
+
 	&__box {
 
 		background-color: #eee;

@@ -1,5 +1,7 @@
 .home-actions {
 
+	flex-shrink: 0;
+
 	&__inner {
 
 		max-width: 500px;

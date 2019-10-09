@@ -1,10 +1,11 @@
 .header {
 
-	padding-top: 22px;
+	padding-top: 21px;
+	flex-shrink: 0;
 
 	&__top {
 
-		padding-top: 45px;
+		padding-top: 44px;
 		position: relative;
 		display: flex;
 
@@ -18,7 +19,7 @@
 
 		&::before {
 
-			background-color: #fff95a;
+			background-color: var(--yellow);
 			content: "";
 			position: absolute;
 			top: 0;
@@ -41,8 +42,8 @@
 			font-size: 25px;
 			display: flex;
 			align-items: center;
-			margin-bottom: 5px;
 			line-height: 23px;
+			margin: 3px 0 2px;
 
 			span {
 
@@ -50,8 +51,14 @@
 				border-left: 2px solid #fff;
 				border-right: 2px solid #fff;
 				margin: 0 8px;
-				min-width: 60px;
+				min-width: 54px;
 				text-align: center;
+
+			}
+
+			& + a {
+
+				margin-top: 8px;
 
 			}
 
@@ -68,9 +75,9 @@
 	&__logo {
 
 		position: absolute;
-		top: -20px;
+		top: -24px;
 		left: 0;
-		right: 0;
+		right: 88px;
 		width: 301px;
 		height: 146px;
 		margin: auto;
@@ -88,7 +95,6 @@
 
 	&__bottom {
 
-		margin-top: 12px;
 		display: flex;
 		align-items: flex-end;
 
@@ -98,11 +104,12 @@
 
 		flex-grow: 1;
 		position: relative;
+		margin-top: -10px;
 
 		&-btns {
 
 			display: flex;
-			background-color: #fff95a;
+			background-color: var(--yellow);
 			padding: 2px;
 
 		}
@@ -119,7 +126,7 @@
 			display: block;
 			font-weight: bold;
 			font-size: 16px;
-			line-height: 67px;
+			line-height: 63px;
 			text-align: center;
 			text-transform: uppercase;
 
@@ -137,14 +144,14 @@
 			transition: .3s;
 			color: #000;
 			font-size: 11px;
-			line-height: 67px;
-			height: 67px;
+			line-height: 63px;
+			height: 63px;
 			text-transform: uppercase;
 			width: 100%;
 
 			&:hover {
 
-				background-color: #fff95a;
+				background-color: var(--yellow);
 
 			}
 
@@ -177,7 +184,7 @@
 		span {
 
 			text-decoration: underline;
-			margin-right: 6px;
+			margin-right: 10px;
 
 		}
 
@@ -205,7 +212,7 @@
 
 			border: 0;
 			height: 34px;
-			padding: 0 10px;
+			padding: 0 40px 0 10px;
 
 		}
 

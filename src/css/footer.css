@@ -3,6 +3,7 @@
 	color: #fff;
 	background: #202020 url(/img/footer/bg-footer.jpg) center top no-repeat;
 	padding: 16px 0 0;
+	flex-shrink: 0;
 
 	a {
 

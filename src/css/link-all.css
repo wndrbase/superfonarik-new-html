@@ -31,7 +31,7 @@
 			position: absolute;
 			width: 2px;
 			top: 8px;
-			right: 50px;
+			right: 45px;
 			bottom: 8px;
 			background-color: #eee;
 			content: "";
@@ -44,8 +44,8 @@
 			content: "";
 			height: 18px;
 			position: absolute;
-			top: 14px;
-			right: 8px;
+			top: 13px;
+			right: 9px;
 			width: 26px;
 			outline:1px solid red;
 
