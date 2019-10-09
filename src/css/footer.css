@@ -1,4 +1,158 @@
 .footer {
 
+	color: #fff;
+	background: #202020 url(/img/footer/bg-footer.jpg) center top no-repeat;
+	padding: 16px 0 0;
+
+	a {
+
+		color: #fff;
+
+	}
+
+	&__top {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__contacts {
+
+		width: 270px;
+		flex-shrink: 0;
+
+		&-item {
+
+			margin-top: 14px;
+			color: #858585;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+
+			&:first-child {
+
+				margin-top: 2px;
+
+			}
+
+		}
+
+	}
+
+	&__whatsapp {
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+
+		span {
+
+			display: flex;
+
+		}
+
+		svg {
+
+			fill: var(--yellow);
+			flex-shrink: 0;
+			margin-right: 5px;
+
+		}
+
+	}
+
+	&__social {
+
+		ul {
+
+			margin-top: 6px;
+			display: flex;
+
+		}
+
+		li {
+
+			margin-right: 7px;
+
+		}
+
+		a {
+
+			display: block;
+			height: 25px;
+			width: 25px;
+			transition: all .3s;
+			outline:1px solid red;
+			overflow: hidden;
+
+		}
+
+	}
+
+	&__menu {
+
+		padding-right: 48px;
+		width: 619px;
+		display: flex;
+
+		li {
+
+			margin-top: 4px;
+
+		}
+
+		a {
+
+			font-size: 15px;
+			border-bottom: 1px solid transparent;
+			transition: .3s;
+
+			&:hover {
+
+				color: var(--yellow);
+				border-bottom-color: var(--yellow);
+
+			}
+
+		}
+
+	}
+
+	&__paymend {
+
+		background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+		margin: 42px 0 0;
+		padding: 20px 0 32px;
+		position: relative;
+
+		&::after {
+
+			background: rgba(255, 255, 255, 0.04);
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 100%;
+			width: 100vw;
+
+		}
+
+		ul {
+
+			display: flex;
+
+		}
+
+		li {
+
+			font-size: 12px;
+			margin-left: 18px;
+
+		}
+
+	}
 
 }
