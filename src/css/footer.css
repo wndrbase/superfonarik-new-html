@@ -2,8 +2,8 @@
 
 	color: #fff;
 	background: #202020 url(/img/footer/bg-footer.jpg) center top no-repeat;
-	padding: 16px 0 0;
 	flex-shrink: 0;
+	margin-top: 4px;
 
 	a {
 
@@ -15,6 +15,7 @@
 
 		display: flex;
 		justify-content: space-between;
+		padding: 14px 0 42px;
 
 	}
 
@@ -31,10 +32,11 @@
 			flex-direction: column;
 			align-items: flex-start;
 			position: relative;
+			line-height: 17px;
 
 			&:first-child {
 
-				margin-top: 2px;
+				margin-top: 4px;
 
 			}
 
@@ -95,19 +97,15 @@
 
 	&__menu {
 
+		width: 668px;
 		padding-right: 48px;
-		width: 619px;
 		display: flex;
-
-		li {
-
-			margin-top: 4px;
-
-		}
+		justify-content: space-between;
 
 		a {
 
 			font-size: 15px;
+			line-height: 22px;
 			border-bottom: 1px solid transparent;
 			transition: .3s;
 
@@ -124,14 +122,13 @@
 
 	&__paymend {
 
-		background: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
-		margin: 42px 0 0;
+		background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
 		padding: 20px 0 32px;
 		position: relative;
 
 		&::after {
 
-			background: rgba(255, 255, 255, 0.04);
+			background-color: rgba(255, 255, 255, 0.04);
 			content: "";
 			position: absolute;
 			top: 0;
@@ -144,13 +141,24 @@
 		ul {
 
 			display: flex;
+			align-items: center;
 
 		}
 
 		li {
 
 			font-size: 12px;
-			margin-left: 18px;
+			line-height: 14px;
+			margin-right: 22px;
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+
+			span + img {
+
+				margin-left: 10px;
+
+			}
 
 		}
 

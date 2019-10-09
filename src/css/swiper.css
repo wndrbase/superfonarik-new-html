@@ -22,6 +22,8 @@
 		bottom: 0;
 		height: 48px;
 		z-index: 5;
+		display: flex;
+		justify-content: space-between;
 
 		&::before {
 
@@ -30,7 +32,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			right: 100%;
+			right: calc(100% - 15px);
 			width: 100vw;
 
 		}
@@ -137,12 +139,10 @@
 	.swiper-button-prev,
 	.swiper-button-next {
 
-		position: absolute;
 		z-index: 2;
 		width: 48px;
 		height: 48px;
-		left: 0;
-		top: 0;
+		position: relative;
 		background-color: #4e4e4e;
 
 		svg {
@@ -178,7 +178,6 @@
 
 	.swiper-button-next {
 
-		left: 48px;
 		background-color: #231f20;
 
 		svg {
@@ -201,9 +200,9 @@
 		transform: translate3d(0, 0, 0);
 		z-index: 10;
 		display: flex;
-		position: absolute;
-		right: 0;
-		bottom: 20px;
+		align-items: center;
+		position: relative;
+		top: -6px;
 
 		.button {
 

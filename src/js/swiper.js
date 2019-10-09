@@ -9,6 +9,7 @@ SF.swiper = function(swiperContainer){
 			resetSwipe = null,
 			swipeControls = document.createElement('div'),
 			swipeNav = document.createElement('div'),
+			swipeBtns = document.createElement('div'),
 			swipeNext = document.createElement('button'),
 			swipePrev = document.createElement('button'),
 			items = swipe.querySelectorAll('.swiper-slide'),
@@ -42,8 +43,9 @@ SF.swiper = function(swiperContainer){
 		swipePrev.innerHTML = 'ico';
 		swipeNext.innerHTML = 'ico';
 
-		swipeControls.appendChild(swipeNext);
-		swipeControls.appendChild(swipePrev);
+		swipeBtns.appendChild(swipeNext);
+		swipeBtns.appendChild(swipePrev);
+		swipeControls.appendChild(swipeBtns);
 		swipeControls.appendChild(swipeNav);
 		swipe.parentNode.appendChild(swipeControls);
 
@@ -85,7 +87,7 @@ SF.swiper = function(swiperContainer){
 			param.autoHeight = false;
 			param.slidesPerView = 3;
 			param.slidesPerGroup = 3;
-//			param.spaceBetween = 30;
+			param.spaceBetween = 59;
 			param.loopFillGroupWithBlank = true;
 
 			toggleSwipe = function() {

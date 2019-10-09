@@ -4,7 +4,7 @@
 
 	.swiper-pagination {
 
-		bottom: 15px;
+		top: -1px;
 
 		.button:not(.is-active) {
 

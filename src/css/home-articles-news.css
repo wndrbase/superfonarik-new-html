@@ -5,7 +5,7 @@
 	&__box {
 
 		background-color: #eee;
-		padding: 40px;
+		padding: 3px 10px 29px 37px;
 		display: flex;
 		justify-content: space-between;
 		position: relative;
@@ -29,6 +29,7 @@
 		color: var(--color);
 		font-weight: bold;
 		font-size: 18px;
+		line-height: 22px;
 		border-bottom: 1px solid #000;
 		text-decoration: none;
 		transition: all .3s;
@@ -58,7 +59,7 @@
 		color: #4e4e4e;
 		font-family: 'Hermes', 'Helvetica', 'Arial', sans-serif;
 		font-size: 20px;
-		margin: 0 0 4px;
+		margin: 2px 0;
 
 		span {
 
@@ -70,7 +71,7 @@
 
 	&__grid {
 
-		width: 500px;
+		width: 526px;
 
 		&-list {
 
@@ -79,7 +80,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			padding: 1px;
-			margin-top: 50px;
+			margin-top: 58px;
 
 			&::before {
 
@@ -97,15 +98,18 @@
 		&-item {
 
 			width: calc(50% - 2px);
+			min-height: 261px;
 			margin: 1px;
 			background-color: #fff;
-			padding: 10px;
+			padding: 22px 20px 20px 20px;
 			display: flex;
 			position: relative;
 
 			&--first {
 
 				width: 100%;
+				padding: 17px;
+				min-height: 0;
 				background-color: transparent;
 
 			}
@@ -113,7 +117,8 @@
 			&-img {
 
 				flex-shrink: 0;
-				margin-right: 10px;
+				padding: 7px 0;
+				margin-right: 19px;
 
 			}
 
@@ -125,7 +130,8 @@
 
 			p {
 
-				margin-top: 7px;
+				margin-top: 8px;
+				line-height: 17px;
 
 			}
 
@@ -142,15 +148,25 @@
 
 	&__column {
 
-		width: 256px;
+		width: 300px;
+		padding-bottom: 45px;
+
+		.link-all {
+
+			position: absolute;
+			left: 0;
+			bottom: 0;
+
+		}
 
 		&-item {
 
-			margin-top: 23px;
+			margin: 21px 0 29px;
 
 			p {
 
-				margin-top: 7px;
+				margin-top: 8px;
+				line-height: 17px;
 
 			}
 

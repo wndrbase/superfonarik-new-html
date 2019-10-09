@@ -2,17 +2,23 @@
 
 	flex-shrink: 0;
 
+	&__title {
+
+		margin: 0 0 13px;
+
+	}
+
 	&__inner {
 
-		max-width: 500px;
-		margin-top: 50px;
+		max-width: 625px;
+
 	}
 
 	&__box {
 
 		position: relative;
 		background-color: var(--yellow);
-		padding: 20px 30px 20px 0;
+		padding: 14px 30px 30px 0;
 
 		&::before {
 
@@ -47,6 +53,7 @@
 		font-family: 'Hermes', 'Helvetica', 'Arial', sans-serif;
 		font-size: 30px;
 		text-decoration: none;
+		word-spacing: 2.5px;
 		text-transform: uppercase;
 
 		&::after {
@@ -75,7 +82,8 @@
 
 		p {
 
-			margin-top: 7px;
+			margin-top: 14px;
+			line-height: 17px;
 
 		}
 
@@ -84,7 +92,7 @@
 	&__img {
 
 		flex-shrink: 0;
-		margin-right: 10px;
+		margin: 7px 28px 7px 0;
 
 	}
 

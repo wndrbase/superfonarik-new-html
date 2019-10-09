@@ -12,7 +12,8 @@
 
 		font-family: 'Hermes', 'Helvetica', 'Arial', sans-serif;
 		font-size: 36px;
-		margin: 22px 0 15px;
+		line-height: 43px;
+		margin: 21px 0 15px;
 		font-weight: 400;
 		text-transform: uppercase;
 
@@ -24,7 +25,9 @@
 
 	p {
 
-		margin: 0 0 21px;
+		margin: 0 0 17px;
+		line-height: 17px;
+		text-align: justify;
 
 	}
 
