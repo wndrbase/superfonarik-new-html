@@ -1,0 +1,29 @@
+.article {
+
+	&--index {
+
+		order: 10;
+
+	}
+
+	h1 {
+
+		font-family: 'Hermes', 'Helvetica', 'Arial', sans-serif;
+		font-size: 36px;
+		margin: 22px 0 15px;
+		font-weight: 400;
+		text-transform: uppercase;
+
+	}
+
+	h2 {
+
+	}
+
+	p {
+
+		margin: 0 0 21px;
+
+	}
+
+}
