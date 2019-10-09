@@ -27,7 +27,7 @@ SF.swiper = function(swiperContainer){
 					prevEl: swipePrev
 				},
 				autoplay: {
-					delay: 9996000
+					delay: 6000
 				}
 			},
 			carousel = swipe.classList.contains('swiper-container--carousel'),

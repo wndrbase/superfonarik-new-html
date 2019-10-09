@@ -1,0 +1,171 @@
+	<div class="home-articles-news">
+
+		<div class="center">
+
+			<div class="home-articles-news__box">
+
+				<section class="home-articles-news__grid">
+
+					<h2 class="home-articles-news__title h1">
+						Статьи
+					</h2>
+
+					<div class="home-articles-news__grid-list">
+
+{% set list = [
+	{
+		title: "Преимущества подствольных фонарей",
+		text: "В чём преимущество подствольных фонарей EagleTac? Почему качественные подствольники всегда работают при стрельбе?",
+		img: "b094f4b5e0d88bb9d32756b570232f0a"
+	},
+	{
+		title: "Тесты фонарей 20 (2018)",
+		text: "Новые тесты света фонарей (более 100 фото). Теперь вы можете посмотреть, как светят новые модели EagleTac, а также популярные фонари Fenix, Night Reaper, Olight и Яркий Луч."
+	},
+	{
+		title: "Выставка Arms & Hunting 2017",
+		text: "Компания SuperFonarik успешно участвовала в 14-й международной выставке Arms & Hunting. Мы подготовили собственный фотообзор по прошедшей выставке."
+	}
+] %}
+
+{% for item in list %}
+
+						<article class="home-articles-news__grid-item{% if loop.first %} home-articles-news__grid-item--first{% endif %}">
+
+						{% if item.img %}
+
+							<div class="home-articles-news__grid-item-img">
+
+								<picture>
+
+									<source srcset="/img/home-articles-news/{{ item.img }}@1x.webp 1x, /img/home-articles-news/{{ item.img }}@2x.webp 2x" type="image/webp">
+
+									<source srcset="/img/home-articles-news/{{ item.img }}@1x.jpg 1x, /img/home-articles-news/{{ item.img }}@2x.jpg 2x">
+
+									<img src="/img/home-articles-news/{{ item.img }}@1x.jpg" alt="{{ item.title }}" loading="lazy">
+
+								</picture>
+
+							</div>
+
+						{% endif %}
+
+							<div class="home-articles-news__grid-item-content">
+
+								<a href="/" class="home-articles-news__link">
+									{{ item.title }}
+								</a>
+
+								<p>
+									{{ item.text | truncate(125, true, "...") }}
+								</p>
+
+							</div>
+
+						</article>
+
+{% endfor %}
+
+					</div>
+
+					<div class="home-articles-news__grid-link-all">
+
+						<div class="link-all link-all--dark">
+
+							<a href="/articles/">
+								Посмотреть другие статьи
+							</a>
+
+						</div>
+
+					</div>
+
+				</section>
+
+				<section class="home-articles-news__column">
+
+					<h2 class="home-articles-news__title h1">
+						Новости
+					</h2>
+
+					<div class="home-articles-news__column-list">
+
+{% set list = [
+	{
+		title: "Приглашаем на выставку Arms & Hunting 2019",
+		date: "2019-10-07",
+		text: "С 10 по 13 октября ждём вас на стенде E90 в выставочном комплексе «Гостиный двор»."
+	},
+	{
+		title: "Готовые комплекты с фонарями EagleTac",
+		date: "2019-09-19",
+		text: "Представляем вам готовые комплекты с фонарями EagleTac: поисковыми, ручными и подствольными (тактическими). Комплекты готовы к использованию, не требуют обязательного приобретения дополнительных аксессуаров. Они выгоднее по цене, чем покупка всех их составляющих отдельно."
+	},
+	{
+		title: "Выберите свою новинку EagleTac",
+		date: "2019-08-15",
+		text: "Новые модели фонарей EagleTac ждут вас в нашем магазине. Взгляните на новый тактический фонарь EagleTac G3L (пришедший на смену легендарному G25C2 Mk II), на новые версии D25C Clicky Mark II (которые светят более чем в 1,5 раза ярче предыдущей версии), на новый титановый D3C. Также вам стоит обратить внимание на компактные карманные фонари DX3B Clicky на дальнобойном светодиоде XHP35 HI, на новый DX3L (тот же DX3B, только на АКБ 18650) и на версию TX3L со светодиодом XHP35 HI."
+	}
+] %}
+
+{% for item in list %}
+
+						<article class="home-articles-news__column-item">
+
+							<time datetime="{{ item.date }}" class="home-articles-news__date">
+
+{% set year = '' %}
+{% set month = '' %}
+{% set day = '' %}
+
+{% for litteral in item.date | replace("-", "") %}
+
+	{% if year.length == 4 and month.length == 2 %}
+
+		{% set day = day + litteral %}
+
+	{% elseif year.length == 4 %}
+
+		{% set month = month + litteral %}
+
+	{% else %}
+
+		{% set year = year + litteral %}
+
+	{% endif %}
+
+{% endfor %}
+
+								{{ day }}.{{ month }}.<span>{{ year }}</span>
+
+							</time>
+
+							<a href="/" class="home-articles-news__link">
+								{{ item.title }}
+							</a>
+
+							<p>
+								{{ item.text | truncate(160, true, "...") }}
+							</p>
+
+						</article>
+
+{% endfor %}
+
+					</div>
+
+					<div class="link-all link-all--white">
+
+						<a href="/news/">
+							Посмотреть другие новости
+						</a>
+
+					</div>
+
+				</section>
+
+			</div>
+
+		</div>
+
+	</div>

@@ -75,8 +75,16 @@ gulp.task('html', function() {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs())
-		.pipe(w3cjs.reporter())
+		.pipe(w3cjs({
+			callback: function (error, res) {
+				console.log(error || res);
+				if (res && res.messages.length > 0 ) {
+					throw {error: 'html errors have been found', results: res};
+				};
+				done();
+			}
+		}))
+//		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 
 });
@@ -194,9 +202,9 @@ gulp.task('sprite', function() {
 				plugins: [
 					{removeDesc: true},
 					{cleanupIDs: {
-                        prefix: file.stem + '-',
-                        minify: true
-                    }},
+						prefix: file.stem + '-',
+						minify: true
+					}},
 					{mergePaths: false},
 					{removeViewBox: false}
 				]
