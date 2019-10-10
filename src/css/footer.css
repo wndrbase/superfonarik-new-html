@@ -78,18 +78,45 @@
 
 		li {
 
-			margin-right: 7px;
+			margin-right: 8px;
 
 		}
 
 		a {
 
 			display: block;
-			height: 25px;
-			width: 25px;
-			transition: all .3s;
-			outline:1px solid red;
-			overflow: hidden;
+			height: 34px;
+			width: 34px;
+			transition: .3s;
+			background-color: #858585;
+			position: relative;
+			transition: .3s;
+			border-radius: 50%;
+
+			&:hover {
+
+				background-color: var(--yellow);
+
+				svg {
+
+					fill: #202020;
+
+				}
+
+			}
+
+		}
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			fill: #fff;
+			transition: .3s;
 
 		}
 

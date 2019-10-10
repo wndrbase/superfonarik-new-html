@@ -1,0 +1,68 @@
+.search-ajax-result {
+
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: #fff;
+	z-index: 9;
+	padding: 26px 30px;
+	min-width: 200%;
+	border-top: 1px solid #eee;
+
+	&__head {
+
+		line-height: 17px;
+		font-family: Tahoma;
+		font-size: 14px;
+		font-weight: bold;
+		color: #000;
+		margin: 0;
+		padding: 0;
+		text-transform: none;
+
+	}
+
+	&__item {
+
+		margin: 13px 0 0;
+		padding: 0 0 0 20px;
+		list-style: none;
+		position: relative;
+
+		a {
+
+			line-height: 17px;
+			font-family: Tahoma;
+			font-size: 14px;
+			color: #565656;
+			text-decoration: none;
+
+			&:hover {
+
+				color: #000;
+
+			}
+
+			b {
+
+				color: #000;
+
+			}
+
+			&::before {
+
+				position: absolute;
+				width: 8px;
+				height: 12px;
+				top: 3px;
+				left: 0;
+				content: '';
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='12' viewBox='0 0 8 12'%3E%3Cpath fill='%23858585' fill-rule='nonzero' d='M1.707 11.707L7.414 6 1.707.293.293 1.707 4.586 6 .293 10.293z'/%3E%3C/svg%3E%0A");
+
+			}
+
+		}
+
+	}
+
+}

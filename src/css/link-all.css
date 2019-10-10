@@ -39,15 +39,13 @@
 
 		}
 
-		&::after {
+		svg {
 
-			content: "";
-			height: 18px;
 			position: absolute;
-			top: 13px;
-			right: 9px;
-			width: 26px;
-			outline:1px solid red;
+			top: 15px;
+			right: 10px;
+			fill: #555;
+			transition: .3s;
 
 		}
 
@@ -82,9 +80,21 @@
 			border: 0;
 			padding-right: 63px;
 
+			svg {
+
+				fill: var(--yellow);
+
+			}
+
 			&:hover {
 
 				background-color: var(--yellow);
+
+				svg {
+
+					fill: #fff;
+
+				}
 
 			}
 

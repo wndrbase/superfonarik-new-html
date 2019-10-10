@@ -34,17 +34,18 @@ SF.swiper = function(swiperContainer){
 			carousel = swipe.classList.contains('swiper-container--carousel'),
 			homeSlider = swipe.classList.contains('swiper-container--home-slider');
 
+		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls center';
 
-		swipeNav.className = 'swiper-pagination';
+		swipeBtns.className = 'swiper-navigation';
 		swipePrev.className = 'swiper-button-prev button';
 		swipeNext.className = 'swiper-button-next button';
 
-		swipePrev.innerHTML = 'ico';
-		swipeNext.innerHTML = 'ico';
+		swipePrev.innerHTML = '<svg width="19" height="24" viewBox="0 0 19 24"><path d="M12.528,23.999 L18.272,18.488 L11.243,12.706 L18.272,5.512 L12.529,-0.000 L-0.002,11.998 L12.528,23.999 Z"/></svg>';
+		swipeNext.innerHTML = '<svg width="19" height="24" viewBox="0 0 19 24"><path d="M6.471,0.001 L0.728,5.511 L7.756,11.294 L0.728,18.487 L6.470,23.999 L19.001,12.000 L6.471,0.001 Z"/></svg>';
 
-		swipeBtns.appendChild(swipeNext);
 		swipeBtns.appendChild(swipePrev);
+		swipeBtns.appendChild(swipeNext);
 		swipeControls.appendChild(swipeBtns);
 		swipeControls.appendChild(swipeNav);
 		swipe.parentNode.appendChild(swipeControls);

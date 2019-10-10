@@ -221,9 +221,36 @@
 			position: absolute;
 			top: 10px;
 			right: 0;
-			background-color: #231f20;
+			background-color: var(--dark);
 			height: 34px;
 			width: 34px;
+			fill: var(--yellow);
+			transition: .3s;
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				fill: var(--yellow);
+				transition: .3s;
+
+			}
+
+			&:hover {
+
+				background-color: var(--yellow);
+
+				svg {
+
+					fill: var(--dark);
+
+				}
+
+			}
 
 		}
 

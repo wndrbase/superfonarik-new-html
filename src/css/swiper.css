@@ -25,18 +25,6 @@
 		display: flex;
 		justify-content: space-between;
 
-		&::before {
-
-			background-color: #858585;
-			content: "";
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: calc(100% - 15px);
-			width: 100vw;
-
-		}
-
 	}
 
 	.swiper-container {
@@ -136,6 +124,25 @@
 
 	}
 
+	.swiper-navigation {
+
+		position: relative;
+		display: flex;
+
+		&::before {
+
+			background-color: #858585;
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 100%;
+			width: 100vw;
+
+		}
+
+	}
+
 	.swiper-button-prev,
 	.swiper-button-next {
 
@@ -178,7 +185,7 @@
 
 	.swiper-button-next {
 
-		background-color: #231f20;
+		background-color: var(--dark);
 
 		svg {
 
