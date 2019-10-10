@@ -14,7 +14,7 @@
 
 	modal.addEventListener('click', function (e) {
 
-		if(e.target.classList.contains('modal__box') || e.target.classList.contains('modal__close')){
+		if(e.target.classList.contains('modal') || e.target.classList.contains('modal__close')){
 
 			SF.hideModal();
 
@@ -57,6 +57,8 @@
 			wrapper.style.top = -windowScroll + 'px';
 
 		}
+
+		modal.classList.toggle('modal--wide', selector == 'rules');
 
 		SF.activeModal = modal.querySelector('.modal__item--' + selector);
 

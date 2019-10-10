@@ -6,42 +6,41 @@
 	z-index: 10;
 	display: none;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
 
 	&__box {
 
-		flex-grow: 1;
-		display: flex;
-		width: 100%;
-		padding: 80px 20px 20px;
+		border: 2px solid var(--yellow);
+		padding: 12px;
+		width: 430px;
+		max-width: 100%;
+		position: relative;
 
-		@media ($xsWidth) {
+	}
 
-			padding: 80px 10px 10px;
+	&--wide &__box {
 
-		}
+		width: 940px;
 
 	}
 
 	&__item {
 
 		position: relative;
-		max-width: 100%;
-		margin: auto;
-		flex-shrink: 0;
-		width: 470px;
-		border-radius: 6px;
 		background-color: #fff;
-		padding: 60px;
+		padding: 30px 40px;
 
 		@media ($smWidth) {
 
-			padding: 30px;
+			padding: 20px 30px;
 
 		}
 
 		@media ($xsWidth) {
 
-			padding: 20px;
+			padding: 10px 20px;
 
 		}
 
@@ -50,35 +49,27 @@
 	&__close-btn {
 
 		position: absolute;
-		width: 40px;
-		height: 40px;
-		background-color: #fff;
-		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+		top: 12px;
+		right: 12px;
 
-		top: 20px;
-		right: 20px;
-
-		&::after,
-		&::before {
+		svg {
 
 			position: absolute;
-			width: 20px;
-			height: 2.5px;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
-			border-radius: 1px;
 			margin: auto;
-			background-color: var(--color);
-			transform: rotate(-45deg);
-			content: '';
+			transition: .3s;
+			fill: #ddd;
 
 		}
 
-		&::after {
+		&:hover svg {
 
-			transform: rotate(45deg);
+			fill: var(--dark);
 
 		}
 
@@ -87,8 +78,6 @@
 }
 
 .modal-show {
-
-	padding: 0;
 
 	.modal {
 
@@ -116,7 +105,81 @@
 			content: '';
 			opacity: 0.6;
 			z-index: 9;
-			background-color: rgb(35, 31, 32);
+			background-color: var(--dark);
+
+		}
+
+	}
+
+}
+
+.modal-form {
+
+	&__title {
+
+		margin: 0;
+
+	}
+
+	&__text {
+
+		color: #4e4e4e;
+		margin: 10px 0;
+
+		&--big {
+
+			font-size: 18px;
+			font-weight: 700;
+
+		}
+
+		.is-error & {
+
+			color: color(var(--red) a(50%)) !important;
+
+		}
+
+	}
+
+	&__input {
+
+		margin: 24px 0;
+
+	}
+
+	&__input &__text {
+
+		margin-top: 4px;
+
+	}
+
+	&__btns {
+
+		display: flex;
+		justify-content: space-between;
+		margin: 24px 0 12px;
+
+		&--center {
+
+			justify-content: center;
+
+			.btn {
+
+				margin: 0 10px;
+
+			}
+
+		}
+
+		&--right {
+
+			justify-content: flex-end;
+
+			.btn {
+
+				margin-left: 20px;
+
+			}
 
 		}
 

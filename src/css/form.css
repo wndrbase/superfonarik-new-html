@@ -44,22 +44,99 @@
 
 	padding: 0 30px;
 
-	height: 60px;
-	font-size: 16px;
-	line-height: 60px;
-	font-weight: 600;
+	height: 46px;
+	font-size: 14px;
+	line-height: 46px;
+	font-weight: 400;
 	text-align: center;
-	color: #fff;
-	border-radius: 6px;
+	color: #555;
+	border-radius: 0px;
 	background-color: transparent;
 
-	&--big {
+	&--yellow {
 
-		padding: 0 40px;
-		height: 80px;
-		line-height: 80px;
-		font-size: 21px;
+		color: #111;
+		background-color: var(--yellow);
+
+		&:hover {
+
+			color: #fff;
+			background-color: #4e4e4e;
+
+		}
+
+	}
+
+	&--gray {
+
+		background-color: #eee;
+
+		&:hover {
+
+			background-color: #dadada;
+
+		}
+
+	}
+
+	&--link {
+
 		font-weight: 700;
+		padding: 0;
+		height: 18px;
+		line-height: 18px;
+		border-bottom: 1px solid;
+
+		&:hover {
+
+			border-bottom-color: transparent;
+
+		}
+
+	}
+
+	&--user {
+
+		padding-right: 78px;
+
+		&::before {
+
+			position: absolute;
+			width: 2px;
+			top: 14px;
+			right: 50px;
+			bottom: 12px;
+			background-color: var(--color);
+			transition: .3s;
+			content: '';
+
+		}
+
+		svg {
+
+			position: absolute;
+			top: 14px;
+			right: 15px;
+			fill: var(--dark);
+			transition: .3s;
+
+		}
+
+		&:hover {
+
+			&::before {
+
+				background-color: #fff;
+
+			}
+
+			svg {
+
+				fill: var(--yellow);
+
+			}
+
+		}
 
 	}
 
@@ -67,11 +144,11 @@
 
 .input {
 
-	height: 60px;
-	line-height: 20px;
+	height: 34px;
+	line-height: 24px;
 	border-radius: 0;
 
-	padding: 20px;
+	padding: 5px 10px;
 
 	font-size: 16px;
 	color: var(--color);
@@ -84,8 +161,8 @@
 	filter: none;
 	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
 
-	background-color: #fff;
-	border: solid 1px color(var(--color) a(20%));
+	background-color: #eee;
+	border: 0;
 
 	textarea& {
 
@@ -98,7 +175,8 @@
 	&::placeholder {
 
 		color: var(--color);
-		opacity: .5;
+		opacity: 1;
+		font-size: 14px;
 
 	}
 
@@ -117,14 +195,14 @@
 
 	&:hover {
 
-		border-color: color(var(--color) a(40%));
+		background-color: #dadada;
 
 	}
 
 	&:focus {
 
 		outline: none;
-		border-color: var(--color);
+		background-color: #dadada;
 
 		&::placeholder {
 
@@ -142,7 +220,7 @@
 
 	&--error {
 
-		border-color: color(var(--red) a(50%)) !important;
+		background-color: color(var(--error) a(25%)) !important;
 
 	}
 
@@ -159,62 +237,69 @@
 	to {
 
 		color: var(--color);
-		background-color: #fff;
+		background-color: #eee;
 
 	}
 
 }
-/*
-.input-box {
+
+
+.checkbox {
 
 	display: block;
-	width: 100%;
 	position: relative;
-
-	&__text {
-
-		font-size: 14px;
-		display: block;
-		line-height: 30px;
-
-	}
-
+	cursor: pointer;
 
 	&__input {
 
-		padding-top: 20px;
-		padding-bottom: 6px;
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		top: 0;
+		left: 0;
+		opacity: 0.001;
+		z-index: -1;
 
 	}
 
 	&__label {
 
-		position: absolute;
-		top: 15px;
-		left: 20px;
-		pointer-events: none;
-		transition: .3s;
-		line-height: 30px;
-		opacity: .5;
+		display: block;
+		padding-left: 24px;
+
+		&::before {
+
+			width: 16px;
+			height: 16px;
+			border: solid 1px var(--color);
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+
+		}
 
 	}
 
-	&__input:focus ~ &__label,
-	&--no-empty &__label {
+	&__input:checked + &__label::before {
 
-		top: 4px;
-		font-size: 12px;
-		opacity: .7;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 343 343'%3E%3Cpath d='M290.04 33.286L118.861 204.427l-66.541-66.52L0 190.226l118.862 118.845L342.357 85.606z'/%3E%3C/svg%3E%0A");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 80% auto;
 
 	}
 
-	&--error {
+	&--error &__label::before {
 
-		color: var(--red);
+		border-color: var(--error);
 
 	}
 
 }
+
+/*
+
 
 .select {
 

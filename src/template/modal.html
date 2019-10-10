@@ -2,49 +2,141 @@
 
 		<div class="modal__box">
 
-			<div class="modal__item modal__item--lk">
+			<div class="modal__item modal__item--message">
+
+				<div class="modal-form">
+
+					<div class="modal-form__title h1"></div>
+
+					<div class="modal-form__text modal-form__text--big">
+						Вы успешно авторизованы.
+					</div>
+
+					<button class="btn btn--gray modal__close" type="button">
+						Закрыть окно
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="modal__item modal__item--reg">
 
 				<form class="modal-form" action="/" autocomplete="off" novalidate="novalidate">
 
-					<h3 class="modal-form__title h3">
-						Вход в личный кабинет
+					<h3 class="modal-form__title h1">
+						Регистрация
 					</h3>
 
-					<label class="modal-form__input input-box">
+					<p class="modal-form__text">
+						Пароль должен быть не менее 6 символов длиной.
+					</p>
 
-						<input class="input-box__input input" name="email" type="email">
+					<div class="modal-form__input">
 
-						<span class="input-box__label">
-							Email
+						<input class="input" placeholder="Имя">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="Фамилия">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="E-Mail" type="email" required="required">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="Пароль" type="password" required="required">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="Подтверждение пароля" type="password" required="required">
+
+					</div>
+
+					<label class="checkbox">
+
+						<input type="checkbox" class="checkbox__input js-checkbox-rule js-modal-reg" required="required">
+
+						<span class="checkbox__label">
+							Нажимая кнопку «Регистрация», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных
 						</span>
 
 					</label>
 
-					<label class="modal-form__input input-box">
+					<div class="modal-form__btns">
 
-						<input class="input-box__input input" name="password" type="password">
-
-						<span class="input-box__label">
-							Пароль
-						</span>
-
-					</label>
-
-					<div class="modal-form__links">
-
-						<button class="modal-form__links-red button" type="button" data-modal="reset">
-							Забыли пароль?
+						<button class="btn btn--gray btn--user" type="button" data-modal="login">
+							Вход
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<path d="M10 1c2.295 0 4.626 1.963 4.626 3.374v3.125c0 1.3-.516 3.639-1.937 4.757-.272.215-.414.554-.375.898.038.344.252.644.565.792l5.442 2.581c.016.007.031.014.048.021.21.087.524.286.631.413v1.789c0 .138-.113.25-.25.25H1.249A.2499.2499 0 011 18.75v-1.771c.109-.126.411-.331.676-.451l5.492-2.592a.9983.9983 0 00.567-.787c.04-.342-.098-.682-.367-.898C5.99 11.145 5.37 8.807 5.37 7.499V4.374C5.37 2.963 7.703 1 10 1m0-1C7.238 0 4.369 2.304 4.369 4.374v3.125c0 1.366.624 4.129 2.372 5.533l-5.492 2.591S0 16.18 0 16.873v1.877C0 19.44.56 20 1.249 20H18.75c.69 0 1.25-.56 1.25-1.25v-1.877c0-.735-1.25-1.25-1.25-1.25l-5.443-2.581c1.733-1.363 2.319-4.041 2.319-5.543V4.374C15.626 2.304 12.761 0 10 0z"/>
+							</svg>
 						</button>
 
-						<button class="modal-form__links-dark button" type="button" data-modal="reg">
+						<button class="btn btn--yellow">
 							Регистрация
 						</button>
 
 					</div>
 
-					<button class="modal-form__submit btn btn--big btn--red">
-						<span>Войти</span>
-					</button>
+				</form>
+
+			</div>
+
+			<div class="modal__item modal__item--login">
+
+				<form class="modal-form" action="/" autocomplete="off" novalidate="novalidate">
+
+					<h3 class="modal-form__title h1">
+						Вход
+					</h3>
+
+					<p class="modal-form__text">
+						Уважаемые покупатели! В связи с переездом сайта и полным его обновлением, для входа на сайт, Вам потребуется восстановить и поменять пароль. Приносим извинения за доставленные неудобства!
+					</p>
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="Логин">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="Пароль" type="password">
+
+					</div>
+
+					<div class="modal-form__btns">
+
+						<button class="btn btn--yellow btn--user">
+							Войти
+							<svg width="20" height="20" viewBox="0 0 20 20">
+								<path d="M10 1c2.295 0 4.626 1.963 4.626 3.374v3.125c0 1.3-.516 3.639-1.937 4.757-.272.215-.414.554-.375.898.038.344.252.644.565.792l5.442 2.581c.016.007.031.014.048.021.21.087.524.286.631.413v1.789c0 .138-.113.25-.25.25H1.249A.2499.2499 0 011 18.75v-1.771c.109-.126.411-.331.676-.451l5.492-2.592a.9983.9983 0 00.567-.787c.04-.342-.098-.682-.367-.898C5.99 11.145 5.37 8.807 5.37 7.499V4.374C5.37 2.963 7.703 1 10 1m0-1C7.238 0 4.369 2.304 4.369 4.374v3.125c0 1.366.624 4.129 2.372 5.533l-5.492 2.591S0 16.18 0 16.873v1.877C0 19.44.56 20 1.249 20H18.75c.69 0 1.25-.56 1.25-1.25v-1.877c0-.735-1.25-1.25-1.25-1.25l-5.443-2.581c1.733-1.363 2.319-4.041 2.319-5.543V4.374C15.626 2.304 12.761 0 10 0z"/>
+							</svg>
+						</button>
+
+						<button class="btn btn--gray" type="button" data-modal="reg">
+							Регистрация
+						</button>
+
+					</div>
+
+					<div class="modal-form__btns modal-form__btns--center">
+
+						<button class="btn btn--link" type="button" data-modal="reset">
+							Забыли пароль?
+						</button>
+
+					</div>
 
 				</form>
 
@@ -54,34 +146,85 @@
 
 				<form class="modal-form" action="/" autocomplete="off" novalidate="novalidate">
 
-					<h3 class="modal-form__title h3">
-						Восстановление пароля
+					<h3 class="modal-form__title h1">
+						Запрос пароля
 					</h3>
 
-					<label class="modal-form__input input-box input-box--error">
+					<p class="modal-form__text">
+						Если вы забыли пароль, введите Ваш E-Mail.
+					</p>
 
-						<input class="input-box__input input input--error" name="email" type="email">
+					<div class="modal-form__input is-error">
 
-						<span class="input-box__label">
-							Email
-						</span>
+						<input class="input input--error" placeholder="Email" type="email">
 
-						<span class="input-box__text">
+						<div class="modal-form__text">
 							Не верно введён e-mail
-						</span>
+						</div>
 
-					</label>
+					</div>
 
-					<button class="modal-form__submit btn btn--big btn--red">
-						<span>Отправить</span>
+					<button class="btn btn--yellow">
+						Выслать
 					</button>
 
 				</form>
 
 			</div>
 
-			<button type="button" class="modal__close modal__close-btn button">
-				Закрыть
+			<div class="modal__item modal__item--rules">
+
+				<aside class="modal-form">
+
+					<h3 class="modal-form__title h1">
+						Согласие на обработку персональных данных
+					</h3>
+
+					<p class="modal-form__text">
+						Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года свободно, своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных ООО "Суперфонарик", ОГРН 1127747045579, ИНН 7726706695, зарегистрированным в соответствии с законодательством РФ по адресу: <br>
+						115230, Москва, Варшавское ш, д. 42, оф. 2330 (далее по тексту - Оператор). <br>
+						Персональные данные - любая информация, относящаяся к определенному или определяемому на основании такой информации физическому лицу. <br>
+						Настоящее Согласие выдано мною на обработку следующих персональных данных: <br>
+						- Имя; <br>
+						- Фамилия; <br>
+						- Логин (мин. 3 символа); <br>
+						- Пароль; <br>
+						- E-Mail.
+					</p>
+
+					<p class="modal-form__text">
+						Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение, уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий, предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными способами. <br>
+						Данное согласие дается Оператору для обработки моих персональных данных в следующих целях: <br>
+						- предоставление мне услуг/работ; <br>
+						- направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ; <br>
+						- подготовка и направление ответов на мои запросы; <br>
+						- направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах Оператора.
+					</p>
+
+					<p class="modal-form__text">
+						Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления на электронный адрес sf@superfonarik.ru. В случае отзыва мною согласия на обработку персональных данных Оператор вправе продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в пунктах 2 – 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных данных» от 27.06.2006 г.
+					</p>
+
+					<div class="modal-form__btns modal-form__btns--right">
+
+						<button class="btn btn--gray js-btn-rules" data-change="js-modal-reg" data-checked="false" type="button" data-modal="reg">
+							Не принимаю
+						</button>
+
+						<button class="btn btn--yellow js-btn-rules" data-change="js-modal-reg" data-checked="true" type="button" data-modal="reg">
+							Принимаю
+						</button>
+
+					</div>
+
+				</aside>
+
+			</div>
+
+			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть окно">
+				<svg width="10" height="10" viewBox="0 0 10 10">
+					<path d="M9.907,7.789 L7.607,5.488 L9.907,3.188 C10.028,3.067 10.029,2.870 9.907,2.749 L8.226,1.068 C8.105,0.947 7.909,0.948 7.788,1.068 L5.488,3.369 L3.188,1.068 C3.066,0.948 2.870,0.947 2.750,1.068 L1.069,2.749 C0.947,2.870 0.948,3.067 1.069,3.188 L3.369,5.488 L1.069,7.789 C0.948,7.910 0.947,8.106 1.069,8.227 L2.750,9.908 C2.870,10.029 3.067,10.029 3.188,9.908 L5.488,7.608 L7.788,9.908 C7.910,10.029 8.105,10.029 8.226,9.908 L9.908,8.227 C10.029,8.106 10.029,7.910 9.907,7.789 Z"/>
+				</svg>
 			</button>
 
 		</div>

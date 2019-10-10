@@ -38,7 +38,7 @@
 		a {
 
 			color: #565656;
-			font-family: 'Hermes', 'Helvetica', 'Arial', sans-serif;
+			font-family: 'Hermes', 'Impact';
 			font-size: 25px;
 			display: flex;
 			align-items: center;
@@ -210,9 +210,8 @@
 
 		.input {
 
-			border: 0;
-			height: 34px;
-			padding: 0 40px 0 10px;
+			padding-right: 40px;
+			background-color: #fff !important;
 
 		}
 
