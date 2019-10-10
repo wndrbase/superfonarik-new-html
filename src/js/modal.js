@@ -14,7 +14,7 @@
 
 	modal.addEventListener('click', function (e) {
 
-		if(e.target.classList.contains('modal') || e.target.classList.contains('modal__close')){
+		if(e.target.classList.contains('modal') || e.target.closest('.modal__close')){
 
 			SF.hideModal();
 

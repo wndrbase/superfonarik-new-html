@@ -140,6 +140,26 @@
 
 	}
 
+	&--user&--gray {
+
+		&:hover {
+
+			&::before {
+
+				background-color: var(--color);
+
+			}
+
+			svg {
+
+				fill: var(--color);
+
+			}
+
+		}
+
+	}
+
 }
 
 .input {
