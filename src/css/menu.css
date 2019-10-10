@@ -24,7 +24,7 @@
 
 			&:hover {
 
-				border-bottom-color: #fff95a;
+				border-bottom-color: var(--yellow);
 				color: #565656;
 
 			}
@@ -48,18 +48,19 @@
 
 			width: 113px;
 
-			&::after {
+		}
 
-				text-align: center;
-				content: 'ico';
-				height: 30px;
-				position: absolute;
-				bottom: 55px;
-				left: 0;
-				right: 0;
-				pointer-events: none;
+		&__logo {
 
-			}
+			position: absolute;
+			height: 56px;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			fill: #565656;
 
 		}
 
@@ -78,7 +79,7 @@
 
 			&:hover {
 
-				background-color: #fff95a;
+				background-color: var(--yellow);
 
 			}
 

@@ -36,6 +36,8 @@
 	&__item {
 
 		height: 396px;
+		overflow: hidden;
+		position: relative;
 
 		img {
 
