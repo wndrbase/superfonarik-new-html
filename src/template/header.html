@@ -60,9 +60,33 @@
 
 						<div class="header__basket">
 
+<!-- если есть товары -->
 							<a class="header__basket-link" href="/personal/cart/">
-								Корзина
+
+								<span class="header__basket-inner">
+
+									<span class="header__basket-count">
+										1 товар
+									</span>
+
+									<span class="header__basket-bold">
+										на 16 600  <span class="rub">₽</span>
+									</span>
+
+								</span>
+
 							</a>
+<!-- если нет товаров
+
+							<a class="header__basket-link" href="/personal/cart/">
+
+								<span class="header__basket-bold">
+									Корзина
+								</span>
+
+							</a>
+
+если нет товаров -->
 
 						</div>
 
@@ -107,5 +131,11 @@
 			</div>
 
 		</div>
+
+{% if sliderHome %}
+
+{% include "_include/home/slider.html" %}
+
+{% endif %}
 
 	</header>

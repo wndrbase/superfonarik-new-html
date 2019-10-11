@@ -122,13 +122,40 @@
 
 		&-link {
 
-			color: #000;
+			white-space: nowrap;
+			height: 63px;
+			font-size: 14px;
+			line-height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+
+		&-link:hover &-count {
+
+			text-decoration-color: color(var(--color) a(0%));
+
+		}
+
+		&-count {
+
+			color: var(--color);
+			text-decoration: underline;
+			text-decoration-color: var(--color);
+			transition: .3s;
 			display: block;
+
+		}
+
+		&-bold {
+
+			display: block;
+			color: var(--color);
 			font-weight: bold;
 			font-size: 16px;
-			line-height: 63px;
-			text-align: center;
-			text-transform: uppercase;
+			line-height: 22px;
+			text-align: left;
 
 		}
 

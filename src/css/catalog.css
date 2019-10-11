@@ -1,3 +1,70 @@
-.catalog-section {
+.catalog {
+
+	display: flex;
+	margin-bottom: 30px;
+
+	&__filter {
+
+		width: 270px;
+		background-color: #eee;
+		position: relative;
+		padding: 38px 10px 40px 0;
+		flex-shrink: 0;
+
+		&::after {
+
+			position: absolute;
+			width: 100vw;
+			top: 0;
+			right: 100%;
+			bottom: 0;
+			content: '';
+			background-color: #eee;
+			pointer-events: none;
+
+		}
+
+	}
+
+	&__list {
+
+		padding-left: 48px;
+		flex-grow: 1;
+
+	}
+
+	&__sort {
+
+		margin: 10px 0;
+
+	}
+
+	&__desc {
+
+		p {
+
+			text-align: justify;
+
+			& + p {
+
+				margin-top: 21px;
+
+			}
+
+		}
+
+	}
+
+	&__more {
+
+		margin-top: 10px;
+
+	}
+
+	&__pagination {
+
+		margin-top: 30px;
+
+	}
 
 }

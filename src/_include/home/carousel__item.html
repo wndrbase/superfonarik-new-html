@@ -1,36 +1,36 @@
 {% for item in list %}
 
-					<li class="swiper-slide carousel__item">
+			<li class="swiper-slide carousel__item">
 
-						<a class="carousel__link" href="/">
+				<a class="carousel__link" href="/">
 
-							<span class="carousel__img">
+					<span class="carousel__img">
 
-								<picture>
+						<picture>
 
-									<source srcset="/img/carousel/{{ item.img }}@1x.webp 1x, /img/carousel/{{ item.img }}@2x.webp 2x" type="image/webp">
+							<source srcset="/img/carousel/{{ item.img }}@1x.webp 1x, /img/carousel/{{ item.img }}@2x.webp 2x" type="image/webp">
 
-									<source srcset="/img/carousel/{{ item.img }}@1x.jpg 1x, /img/carousel/{{ item.img }}@2x.jpg 2x">
+							<source srcset="/img/carousel/{{ item.img }}@1x.jpg 1x, /img/carousel/{{ item.img }}@2x.jpg 2x">
 
-									<img src="/img/carousel/{{ item.img }}@1x.jpg" alt="{{ item.name }}" loading="lazy" width="250" height="{{ heightImg }}">
+							<img src="/img/carousel/{{ item.img }}@1x.jpg" alt="{{ item.name }}" loading="lazy" width="250" height="{{ heightImg }}">
 
-								</picture>
+						</picture>
 
-							</span>
+					</span>
 
-							<span class="carousel__price">
+					<span class="carousel__price">
 
-								{% if item.priceOld %}
+						{% if item.priceOld %}
 
-								<span class="carousel__price-old">
+						<span class="carousel__price-old">
 
-									{{ item.priceOld }} <span class="rub">₽</span>
+							{{ item.priceOld }} <span class="rub">₽</span>
 
-								</span>
+						</span>
 
-								{% endif %}
+						{% endif %}
 
-								<span class="carousel__price-current">
+						<span class="carousel__price-current">
 
 {% set price = '' %}
 {% set return = item.price | int | string | reverse | batch(3) %}
@@ -41,20 +41,20 @@
 
 {% set price = price | reverse  %}
 
-									{{ price }} <span class="rub">₽</span>
+							{{ price }} <span class="rub">₽</span>
 
-								</span>
+						</span>
 
-							</span>
+					</span>
 
-							<span class="carousel__name">
+					<span class="carousel__name">
 
-								{{ item.name }}
+						{{ item.name }}
 
-							</span>
+					</span>
 
-						</a>
+				</a>
 
-					</li>
+			</li>
 
 {% endfor %}

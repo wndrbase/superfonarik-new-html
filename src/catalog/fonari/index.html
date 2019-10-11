@@ -21,8 +21,61 @@
 
 {% block content %}
 
-	<div class="catalog-img">
+{% include "catalog/fonari/catalog-section.html" %}
 
+	<div class="catalog">
+
+		<div class="catalog__filter">
+
+{% include "catalog/fonari/catalog-filter.html" %}
+
+		</div>
+
+		<div class="catalog__list">
+
+			<div class="catalog__sort">
+
+{% include "catalog/fonari/catalog-sort.html" %}
+
+			</div>
+
+			<div class="catalog__desc">
+
+				<p>
+					SuperFonarik – это один из крупнейших магазинов в Российской Федерации, в котором можно купить яркий фонарь с высоким качеством изготовления и превосходными характеристиками. Мы предлагаем купить яркие и мощные фонари по отличной цене.
+				</p>
+
+				<p>
+					Воспользуйтесь фильтром слева, чтобы подобрать фонарь по нужным параметрам
+				</p>
+
+			</div>
+
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+{% include "catalog/fonari/catalog-list.html" %}
+
+			<div class="catalog__more">
+
+				<button class="btn btn--more" type="button">
+					Показать ещё
+				</button>
+
+			</div>
+
+			<div class="catalog__pagination">
+
+{% include "template/pagination.html" %}
+
+			</div>
+
+		</div>
 
 	</div>
 
