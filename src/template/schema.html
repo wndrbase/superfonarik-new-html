@@ -1,0 +1,111 @@
+	<script type="application/ld+json">
+
+		[
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "{{ site }}",
+				"url": "{{ url }}",
+				"logo": "{{ url }}/og-236.png",
+				"telephone": [
+					{
+						"+7 800 100-2166"
+					},
+					{
+						"+7 495 369-3005"
+					}
+				],
+				"email": "sf@superfonarik.ru",
+				"address": {
+					"@type": "PostalAddress",
+					"postalCode": "115230",
+					"addressLocality": "г. Москва",
+					"streetAddress": "Варшавское ш., д.42. Бизнес-центр \"На Варшавке\". Офис 2314."
+				}
+			},
+			{
+				"@context": "https://schema.org",
+				"@type": "WPHeader",
+				"name": "{{ title }}",
+				"description": "{{ description }}"
+			},
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement":
+				[
+					{
+						"@type": "ListItem",
+						"position": "1",
+						"item":
+						{
+							"@id": "{{ url }}",
+							"name": "{{ site }}"
+						}
+					}
+				]
+			},
+{% if ogType == "article" %}
+			{
+				"@context": "https://schema.org",
+				"@type": "Article",
+				"name": "{{ title }}",
+				"headline": "{{ headline | truncate(110) }}",
+				"description": "{{ description }}",
+				"author": "{{ site }}",
+				"publisher": {
+					"@type": "Organization",
+					"name": "{{ site }}",
+					"url": "{{ url }}",
+					"logo": {
+						"@type": "ImageObject",
+						"name": "{{ site }}",
+						"url": "{{ url }}/og-236.png"
+					}
+				},
+				"dateModified": "2018-10-04",
+				"datePublished": "2018-10-04",
+				"url": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
+				"mainEntityOfPage": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
+				"image": "{{ url }}/{{ ogImage }}",
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "5",
+					"ratingCount": "6"
+				}
+			},
+{% endif %}
+{% if ogType == "product" %}
+			{
+				"@context": "https://schema.org",
+				"@type": "Product",
+				"name": "{{ title }}",
+				"headline": "{{ headline | truncate(110) }}",
+				"description": "{{ description }}",
+				"author": "{{ site }}",
+				"publisher": {
+					"@type": "Organization",
+					"name": "{{ site }}",
+					"url": "{{ url }}",
+					"logo": {
+						"@type": "ImageObject",
+						"name": "{{ site }}",
+						"url": "{{ url }}/og-236.png"
+					}
+				},
+				"dateModified": "2018-10-04",
+				"datePublished": "2018-10-04",
+				"url": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
+				"mainEntityOfPage": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
+				"image": "{{ url }}/{{ ogImage }}",
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "5",
+					"ratingCount": "6"
+				}
+			}
+{% endif %}
+
+		]
+
+	</script>

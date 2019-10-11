@@ -1,0 +1,31 @@
+	<ul class="breadcrumbs center">
+
+		<li class="breadcrumbs__item">
+
+			<a href="/">
+				Главная
+			</a>
+
+		</li>
+
+		{% for item in breadcrumbs %}
+
+		<li class="breadcrumbs__item">
+
+{% if loop.last %}
+
+			{{ item.name }}
+
+{% else %}
+
+			<a href="/{{ item.link }}/">
+				{{ item.name }}
+			</a>
+
+{% endif %}
+
+		</li>
+
+		{% endfor %}
+
+	</ul>

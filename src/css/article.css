@@ -29,6 +29,21 @@
 		line-height: 17px;
 		text-align: justify;
 
+		a {
+
+			color: var(--color);
+			text-decoration: underline;
+			text-decoration-color: var(--color);
+			transition: .3s;
+
+			&:hover {
+
+				text-decoration-color: color(var(--color) a(0%));
+
+			}
+
+		}
+
 	}
 
 }

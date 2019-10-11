@@ -21,3 +21,7 @@
 
 @import url(article.css);
 @import url(search-ajax-result.css);
+@import url(breadcrumbs.css);
+
+@import url(catalog-section.css);
+@import url(catalog.css);

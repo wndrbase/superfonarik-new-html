@@ -1,8 +1,8 @@
-				<nav class="menu-catalog">
+				<nav class="menu-catalog{% if menuCatalogMod %} menu-catalog--{{ menuCatalogMod }}{% endif %}">
 
 					<ul class="menu-catalog__list">
 
-						<li class="menu-catalog__item">
+						<li class="menu-catalog__item{% if urlPage == 'catalog/fonari' %} menu-catalog__item--current{% endif %}">
 							<a href="/catalog/fonari/">
 								<span class="menu-catalog__logo">
 									<svg width="33" height="15" viewBox="0 0 33 15">

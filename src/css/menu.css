@@ -37,6 +37,19 @@
 
 		width: 678px;
 		flex-shrink: 0;
+		position: relative;
+
+		&:not(&--not-line)::after {
+
+			position: absolute;
+			width: 100vw;
+			height: 2px;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background-color: var(--yellow);
+
+		}
 
 		&__list {
 
@@ -47,6 +60,16 @@
 		&__item {
 
 			width: 113px;
+
+			&--current {
+
+				a {
+
+					background-color: #eee !important;
+
+				}
+
+			}
 
 		}
 

@@ -47,6 +47,7 @@ const consolidate      = require('gulp-consolidate');
 
 let config             = null;
 
+const site             = 'СуперФонарик';
 const domain           = 'sf.wndrbase.com';
 
 try {

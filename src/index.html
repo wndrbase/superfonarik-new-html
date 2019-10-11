@@ -2,12 +2,14 @@
 
 {% set description = "Интернет-магазин SuperFonarik предлагает купить светодиодный фонарь высокого качества. У нас вы можете выбрать и купить светодиодный фонарик ведущих мировых производителей. Мы предлагаем купить фонарь по низкой цене в нашем магазине или заказать фонарик" %}
 
-{% set urlPage = "/" %}
+{% set article = "home" %}
+
+{% set menuCatalogMod = "not-line" %}
+
 {% extends "template/base.html" %}
 
 {% block content %}
 
-{% include "_include/home/article.html" %}
 {% include "_include/home/slider.html" %}
 {% include "_include/home/top.html" %}
 {% include "_include/home/articles-news.html" %}
