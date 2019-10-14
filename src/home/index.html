@@ -1,0 +1,20 @@
+{% set title = "SuperFonarik.ru - магазин, где можно купить светодиодный фонарь с ярким светом или компактный светодиодный фонарик по низкой цене." %}
+
+{% set description = "Интернет-магазин SuperFonarik предлагает купить светодиодный фонарь высокого качества. У нас вы можете выбрать и купить светодиодный фонарик ведущих мировых производителей. Мы предлагаем купить фонарь по низкой цене в нашем магазине или заказать фонарик" %}
+
+{% set article = "home" %}
+
+{% set sliderHome = true %}
+
+{% set menuCatalogMod = "not-line" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "home/top.html" %}
+{% include "home/articles-news.html" %}
+{% include "home/sale.html" %}
+{% include "home/actions.html" %}
+
+{% endblock %}
