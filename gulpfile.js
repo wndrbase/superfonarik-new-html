@@ -127,6 +127,7 @@ gulp.task('js', function() {
 
 		'src/js/min/*.js',
 
+		'!src/js/min/nouislider.min.js',
 		'!src/js/min/swiper.min.js',
 		'!src/js/min/inputmask.min.js',
 
@@ -273,6 +274,7 @@ gulp.task('copy-js', function() {
 
 // big scripts
 	return gulp.src([
+		'src/js/min/nouislider.min.js',
 		'src/js/min/swiper.min.js',
 		'src/js/min/inputmask.min.js'
 		])

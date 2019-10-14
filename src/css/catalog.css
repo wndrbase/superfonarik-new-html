@@ -1,14 +1,15 @@
 .catalog {
 
 	display: flex;
-	margin-bottom: 30px;
+	margin: 24px 0 30px;
+	align-items: flex-start;
 
 	&__filter {
 
 		width: 270px;
 		background-color: #eee;
 		position: relative;
-		padding: 38px 10px 40px 0;
+		padding: 40px 10px 40px 0;
 		flex-shrink: 0;
 
 		&::after {
@@ -35,7 +36,7 @@
 
 	&__sort {
 
-		margin: 10px 0;
+		margin: 8px 0 20px;
 
 	}
 
@@ -44,12 +45,8 @@
 		p {
 
 			text-align: justify;
-
-			& + p {
-
-				margin-top: 21px;
-
-			}
+			margin-top: 17px;
+			line-height: 17px;
 
 		}
 

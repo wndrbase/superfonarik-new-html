@@ -21,4 +21,15 @@ var SF = {};
 		return (rect.top >= 0 && rect.bottom <= window.innerHeight);
 	}
 
+	// отделяем тысячи
+	SF.sepNumber = function(str) {
+		str = parseInt(str, 10).toString();
+		return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	}
+
+	// склеиваем тысячи
+	SF.strToNumber = function(str) {
+		return parseInt(str.replace(/\s+/g,''), 10);
+	}
+
 })();

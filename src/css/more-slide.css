@@ -1,0 +1,31 @@
+.more-slide {
+
+	&__box {
+
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		transition: 1s;
+
+		&.is-open {
+
+			height: auto;
+			overflow: visible;
+
+		}
+
+	}
+
+	&__inner {
+
+		position: relative;
+
+	}
+
+	&__btn {
+
+		margin-top: 2px;
+
+	}
+
+}

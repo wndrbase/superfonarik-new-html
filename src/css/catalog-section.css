@@ -1,12 +1,17 @@
 .catalog-section {
 
-	margin-bottom: 40px;
+	& + & {
+
+		margin: 40px 0;
+
+	}
 
 	&__title {
 
+		margin: 0 0 13px;
+
 		a {
 
-			font-size: 26px;
 			color: var(--color);
 			text-decoration: underline;
 			text-decoration-color: color(var(--color) a(0%));
@@ -79,8 +84,9 @@
 	&__name {
 
 		display: block;
-		padding: 5px;
+		padding: 6px;
 		font-size: 13px;
+		line-height: 16px;
 		transition: .3s;
 		color: var(--color);
 		text-align: center;
