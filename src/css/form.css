@@ -67,6 +67,58 @@
 
 	}
 
+	&--download {
+
+		background-color: var(--yellow);
+		padding: 0 20px 0 80px;
+		display: inline-block;
+
+		&:hover {
+
+			color: #fff;
+			background-color: #4e4e4e;
+
+			svg {
+
+				fill: var(--yellow);
+
+			}
+
+			&::before {
+
+				background-color: #fff;
+
+			}
+
+		}
+
+		&::before {
+
+			position: absolute;
+			width: 2px;
+			height: 14px;
+			top: 0;
+			left: 60px;
+			bottom: 0;
+			margin: auto;
+			content: '';
+			background-color: var(--color);
+			transition: .3s;
+
+		}
+
+		svg {
+
+			position: absolute;
+			top: 12px;
+			left: 18px;
+			color: #555;
+			transition: .3s;
+
+		}
+
+	}
+
 	&--gray {
 
 		background-color: #eee;
@@ -74,6 +126,38 @@
 		&:hover {
 
 			background-color: #dadada;
+
+		}
+
+	}
+
+	&--dark {
+
+		color: #fff;
+		background-color: #4e4e4e;
+		transition: background-color .3s, color .3s;
+
+		&:hover {
+
+			color: #111;
+			background-color: var(--yellow);
+
+		}
+
+		&[data-open].is-open {
+
+			&::before {
+
+				color: #fff;
+				font-size: 14px;
+
+			}
+
+			&:hover::before {
+
+				color: #111;
+
+			}
 
 		}
 
@@ -350,32 +434,27 @@
 		line-height: 18px;
 		height: 18px;
 		border-bottom: 1px dotted;
-		transition: border .3s;
+		transition: border-color .3s;
 
 		&:hover {
 
 			border-bottom-color: transparent;
 
-			&::before {
-
-				border-bottom-color: transparent;
-
-			}
-
 		}
 
-		&.is-open {
-
-			font-size: 0;
-			color: transparent;
+		&[data-open].is-open {
 
 			&::before {
 
-				content: attr(data-open);
 				color: #010101;
 				font-size: 12px;
 				border-bottom: 1px dotted;
-				transition: border .3s;
+
+			}
+
+			&:hover::before {
+
+				border-bottom-color: transparent;
 
 			}
 

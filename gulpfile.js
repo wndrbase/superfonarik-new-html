@@ -65,14 +65,13 @@ try {
 
 gulp.task('html', function() {
 
-	const f = filter('**/*.html', {restore: true});
-
-	return gulp.src(['src/**/*.html','!src/_include/**/*.html','!src/template/*.html'], {since: gulp.lastRun('html')})
+	return gulp.src('src/**/index.html', {since: gulp.lastRun('html')})
 		.pipe(plumber())
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
 			data: {
-				url: 'http://' + domain
+				url: 'http://' + domain,
+				site: site
 			},
 			path: 'src/'
 		}))
@@ -91,7 +90,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('html-touch', function() {
-	return gulp.src(['src/**/*.html','!src/_include/**/*.html','!src/template/*.html'])
+	return gulp.src('src/**/index.html')
 		.pipe(touch());
 
 });
@@ -323,8 +322,8 @@ gulp.task('ftp', function () {
 gulp.task('watch', function() {
 	gulp.watch(['src/js/*.*','!src/js/scripts.min.js'], gulp.series('js'));
 	gulp.watch(['src/css/*.*','!src/css/styles.min.css'], gulp.series('css'));
-	gulp.watch(['src/**/*.html','!src/_include/**/*.html','!src/template/*.html'], gulp.series('html'));
-	gulp.watch(['src/_include/**/*.html','src/template/*.html'], gulp.series('html-touch'));
+	gulp.watch('src/**/index.html', gulp.series('html'));
+	gulp.watch(['src/**/*.html','!src/**/index.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
 	gulp.watch('src/images/*.svg', gulp.series('sprite'));

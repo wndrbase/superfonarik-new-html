@@ -26,6 +26,19 @@
 
 		margin-top: 2px;
 
+		&[data-open].is-open {
+
+			font-size: 0;
+			color: transparent;
+
+			&::before {
+
+				content: attr(data-open);
+
+			}
+
+		}
+
 	}
 
 }

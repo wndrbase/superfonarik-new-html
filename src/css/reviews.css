@@ -1,0 +1,107 @@
+.reviews {
+
+	&__item {
+
+		background-color: #fff;
+		padding: 10px;
+		font-size: 13px;
+		margin: 20px 0;
+
+		&-head {
+
+			line-height: 30px;
+			font-size: 12px;
+
+		}
+
+		&-autor {
+
+			font-weight: 700;
+			display: inline;
+
+		}
+
+		&-date {
+
+			display: inline;
+			color: #767676;
+
+		}
+
+		&-btn-quote {
+
+			font-size: 12px;
+			padding: 0;
+			height: 18px;
+			line-height: 18px;
+			color: #969696;
+			margin-top: 5px;
+			text-decoration: underline;
+			text-decoration-color: color(#969696 a(0%));
+			transition: .3s;
+
+			&:hover {
+
+				text-decoration-color: #969696;
+
+			}
+
+		}
+
+	}
+
+	&__form {
+
+		margin: 30px 0;
+
+		&-btn-toggle {
+
+			display: flex;
+			justify-content: center;
+			margin-bottom: 10px;
+
+		}
+
+	}
+
+	&__input {
+
+		display: block;
+		width: 100%;
+
+		&-label {
+
+			display: block;
+			margin-bottom: 10px;
+
+			&--required::after {
+
+				color: var(--red);
+				content: '*';
+
+			}
+
+		}
+
+		.input {
+
+			background-color: #fff;
+
+		}
+
+	}
+
+	&__captcha {
+
+		margin: 20px 0;
+
+		img {
+
+			border: 1px solid;
+
+		}
+
+	}
+
+
+}

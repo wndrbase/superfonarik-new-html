@@ -5,7 +5,7 @@
 	&__box {
 
 		background-color: #eee;
-		padding: 3px 10px 29px 37px;
+		padding: 25px 10px 29px 37px;
 		display: flex;
 		justify-content: space-between;
 		position: relative;

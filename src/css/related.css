@@ -1,0 +1,131 @@
+.related {
+
+	&__title {
+
+		margin-bottom: 21px;
+
+	}
+
+	&__head {
+
+		margin-bottom: 15px;
+
+	}
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -10px -25px;
+
+	}
+
+	&__item {
+
+		width: 190px;
+		margin: 10px 25px;
+
+	}
+
+	&__link {
+
+		display: block;
+
+	}
+
+	&__img {
+
+		height: 140px;
+		display: block;
+		position: relative;
+		background-color: #fff;
+
+		img {
+
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+
+		}
+
+	}
+
+	&__price {
+
+		height: 20px;
+		position: relative;
+		display: block;
+		background-color: #fff;
+
+		&-old {
+
+			color: rgba(85,85,85,.7);
+			font-size: 18px;
+			text-decoration: line-through;
+			position: absolute;
+			bottom: 32px;
+			right: 10px;
+
+		}
+
+		&-current {
+
+			color: rgba(0,0,0,.8);
+			font-weight: bold;
+			font-size: 20px;
+			position: absolute;
+			bottom: 5px;
+			right: 10px;
+
+		}
+
+		&::before {
+
+			border-right: 60px solid var(--yellow);
+			border-top: 60px solid transparent;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+		}
+
+	}
+
+	&__name {
+
+		display: block;
+		margin: 0 0 12px;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		min-height: 35px;
+
+		color: #555;
+		text-decoration: underline;
+		text-decoration-color: var(--color);
+		transition: .3s;
+
+	}
+
+	&__link:hover &__name {
+
+		color: #000;
+		text-decoration-color: color(var(--color) a(0%));
+
+	}
+
+	&__cart {
+
+		margin-top: 20px;
+
+		.btn--cart {
+
+			width: 100%;
+
+		}
+
+	}
+
+}

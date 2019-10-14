@@ -17,7 +17,6 @@
 
 			var h = inner.clientHeight;
 
-
 			if(btn.classList.contains('is-open')) {
 
 				h = 0;
@@ -30,7 +29,6 @@
 			btn.classList.toggle('is-open');
 
 		});
-
 
 		box.addEventListener(SF.cssAnimation('transition'),function(){
 

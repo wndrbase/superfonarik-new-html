@@ -14,6 +14,7 @@ SF.swiper = function(swiperContainer){
 			swipePrev = document.createElement('button'),
 			items = swipe.querySelectorAll('.swiper-slide'),
 			count = items.length,
+			initialSlide = swipe.getAttribute('data-start-slide') ? parseInt(swipe.getAttribute('data-start-slide')) : 0,
 			param = {
 				loop: true,
 				pagination: {
@@ -31,8 +32,10 @@ SF.swiper = function(swiperContainer){
 					delay: 6000
 				}
 			},
+			gallery = swipe.classList.contains('swiper-container--gallery'),
 			carousel = swipe.classList.contains('swiper-container--carousel'),
-			homeSlider = swipe.classList.contains('swiper-container--home-slider');
+			homeSlider = swipe.classList.contains('swiper-container--home-slider'),
+			product = swipe.classList.contains('swiper-container--product');
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls center';
@@ -104,6 +107,48 @@ SF.swiper = function(swiperContainer){
 			}
 
 		}
+
+		if (product) {
+
+			toggleSwipe = function() {
+
+				if(!mySwipe) {
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
+						}
+					});
+
+				}
+
+			}
+
+		}
+
+		if (gallery) {
+
+			toggleSwipe = function() {
+
+				if(!mySwipe) {
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						initialSlide: initialSlide,
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
+						}
+					});
+
+				}
+
+			}
+
+		}
+
 /*
 		if (faq) {
 

@@ -1,0 +1,64 @@
+{% set title = "Купить EagleTac T25C2 с инфракрасным модулем (850 нм) по низкой цене и с доставкой по всей России" %}
+
+{% set description = "EagleTac (EAGTAC) T25C2 IR 850 nm - отличный вариант специального фонаря для решения особых задач. Купить EagleTac (EAGTAC) T25C2 IR 850 nm с доставкой лучше всего в магазине Суперфонарик." %}
+
+{% set urlPage = "product" %}
+
+{% set ogType = "product" %}
+{% set ogImage = "product" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Каталог",
+		link: "catalog"
+	},
+	{
+		name : "Фонари",
+		link: "catalog/fonari"
+	},
+	{
+		name : "EagleTac (EAGTAC) T25C2 IR 850 nm",
+		link: "product"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="product">
+
+		<div class="product__body">
+
+			<div class="product__main">
+
+				<h1 class="product__title h1">
+					EagleTac (EAGTAC) T25C2 IR 850 nm
+				</h1>
+
+				<div class="product__flex">
+
+{% include "product/left.html" %}
+
+{% include "product/property.html" %}
+
+				</div>
+
+			</div>
+
+{% include "product/right.html" %}
+
+		</div>
+
+{% include "product/btns.html" %}
+
+{% include "product/nav.html" %}
+
+{% include "product/description.html" %}
+{% include "product/related.html" %}
+{% include "product/reviews.html" %}
+{% include "product/manual.html" %}
+
+	</article>
+
+{% endblock %}

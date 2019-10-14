@@ -34,7 +34,7 @@
 
 		setTimeout(function(){
 
-			document.body.classList.remove('scroll-behavior-off');
+			document.documentElement.classList.remove('scroll-behavior-off');
 
 		});
 
@@ -47,7 +47,7 @@
 
 	//	document.body.classList.toggle('menu-open', selector == 'menu');
 
-		document.body.classList.add('scroll-behavior-off');
+		document.documentElement.classList.add('scroll-behavior-off');
 	//	document.body.classList.remove('menu-show');
 
 		if(!SF.activeModal){
@@ -58,9 +58,9 @@
 
 		}
 
-		modal.classList.toggle('modal--wide', selector == 'rules');
-
 		SF.activeModal = modal.querySelector('.modal__item--' + selector);
+
+		modal.classList.toggle('modal--wide', SF.activeModal.classList.contains('is-wide'));
 
 		Array.prototype.forEach.call(items, function(el){
 

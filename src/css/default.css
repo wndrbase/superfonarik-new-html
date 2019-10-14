@@ -13,6 +13,13 @@ html {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	scroll-behavior: smooth;
+
+	&.scroll-behavior-off {
+
+		scroll-behavior: auto;
+
+	}
 
 }
 
@@ -30,18 +37,11 @@ body {
 	flex-grow: 1;
 	flex-direction: column;
 	overflow-y: scroll;
-	scroll-behavior: smooth;
 	position: relative;
 
 /* background-image: url(/css/1.png); */
 background-position: center 0;
 /* background-size: 1920px auto; */
-
-	&.scroll-behavior-off {
-
-		scroll-behavior: auto;
-
-	}
 
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -110,10 +110,22 @@ hr {
 	color: var(--yellow);
 
 }
+.color-dark {
+
+	color: var(--dark);
+
+}
 
 .rub {
 
 	font-family: 'PT Sans RUB';
+
+}
+
+table {
+
+	border: 0;
+	border-collapse: collapse;
 
 }
 
@@ -129,7 +141,6 @@ hr {
 
 	font-family: 'Hermes', 'Impact';
 	font-size: 36px;
-	margin: 22px 0 15px;
 	font-weight: 400;
 	text-transform: uppercase;
 
@@ -163,7 +174,6 @@ hr {
 
 	font-family: 'Hermes', 'Impact';
 	font-size: 18px;
-	margin: 50px 0 17px;
 	font-weight: 400;
 	text-transform: uppercase;
 

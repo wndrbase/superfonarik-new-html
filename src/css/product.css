@@ -1,0 +1,411 @@
+.product {
+
+	margin-bottom: 30px;
+
+	&__flex {
+
+		display: flex;
+
+	}
+
+	&__body {
+
+		display: flex;
+
+	}
+
+	&__main {
+
+		flex-grow: 1;
+
+	}
+
+	&__right {
+
+		width: 164px;
+		display: flex;
+		flex-shrink: 0;
+		flex-direction: column;
+
+	}
+
+	&__left {
+
+		width: 265px;
+		flex-shrink: 0;
+
+	}
+
+	&__property {
+
+		margin: 20px 40px 0;
+
+		p + table {
+
+			margin-top: 30px;
+
+		}
+
+		thead {
+
+			th, td {
+
+				background-color: #eee;
+
+			}
+
+		}
+
+		th, td {
+
+			width: 234px;
+
+		}
+
+	}
+
+	&__param {
+
+		border-collapse: separate;
+		border-spacing: 10px 0;
+		table-layout: fixed;
+		margin: 0 -10px;
+
+		ul {
+
+			li {
+
+				padding-left: 15px;
+				line-height: 18px;
+
+				&::before {
+
+					position: absolute;
+					width: 7px;
+					height: 7px;
+					top: 7px;
+					left: 0;
+					content: '';
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 77 78'%3E%3Cpath d='M13.17 28.4l16.22 17.51L62.58 0l14.18 17.28-47.88 60.11L0 43.31z'/%3E%3C/svg%3E%0A");
+					background-size: contain;
+					background-repeat: no-repeat;
+
+				}
+
+			}
+
+		}
+
+		th, td {
+
+			font-weight: 400;
+			text-align: center;
+			padding: 5px 10px;
+			line-height: 18px;
+
+		}
+
+		a {
+
+			color: var(--color);
+			text-decoration: underline;
+			text-decoration-color: var(--color);
+			transition: .3s;
+
+			&:hover {
+
+				text-decoration-color: color(var(--color) a(0%));
+
+			}
+
+		}
+
+		&--w100p {
+
+			width: 100%;
+
+		}
+
+		&--even {
+
+			tr:nth-child(odd) td,
+			tr:nth-child(odd) th {
+
+				background-color: #fff;
+
+			}
+
+			th:nth-child(odd) {
+
+				width: 300px;
+				font-weight: 700;
+
+			}
+
+			tr:nth-child(even) td,
+			tr:nth-child(even) th {
+
+				background-color: #eee;
+
+			}
+
+		}
+
+	}
+
+	&__btns {
+
+		display: flex;
+		margin: 30px 0 50px;
+
+		.btn {
+
+			margin-right: 30px;
+
+		}
+
+	}
+
+	&__preview {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -3px;
+
+		li {
+
+			width: 48px;
+			height: 48px;
+			margin: 3px;
+			cursor: pointer;
+			border: 1px solid #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+
+				border-color: var(--yellow);
+
+			}
+
+		}
+
+	}
+
+	&__img {
+
+		position: relative;
+		margin-top: 30px;
+
+		&-link {
+
+			&:hover::after {
+
+				opacity: .3;
+
+			}
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				right: 0;
+				content: '';
+				width: 29px;
+				height: 32px;
+				transition: .3s;
+				opacity: .1;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='32' viewBox='0 0 29 32'%3E%3Cg fill='%23555'%3E%3Cpath d='M7.476 18.448c-.666-.717-1.166-1.527-1.499-2.432-.333-.903-.499-1.823-.499-2.762 0-.938.166-1.865.499-2.779.333-.915.833-1.732 1.499-2.45.666-.718 1.417-1.251 2.255-1.599.838-.347 1.697-.52 2.578-.52.881 0 1.74.173 2.578.52.837.348 1.589.881 2.255 1.599.666.718 1.166 1.535 1.498 2.45.334.914.5 1.841.5 2.779 0 .939-.166 1.859-.5 2.762-.332.905-.832 1.715-1.498 2.432-.666.719-1.418 1.258-2.255 1.617-.838.358-1.697.537-2.578.537-.881 0-1.74-.179-2.578-.537-.838-.359-1.589-.898-2.255-1.617zM3.609 3.856C2.406 5.153 1.504 6.619.902 8.251.301 9.883 0 11.547 0 13.237c0 1.691.301 3.353.902 4.986.602 1.633 1.504 3.097 2.707 4.395.966 1.042 2.041 1.877 3.222 2.502 1.181.625 2.406 1.042 3.673 1.25 1.268.21 2.541.197 3.819-.034 1.278-.232 2.497-.671 3.657-1.32l5.542 5.976c.322.347.677.602 1.063.764.387.162.79.244 1.209.244.419 0 .822-.082 1.208-.244.387-.162.741-.417 1.063-.764.323-.347.559-.73.709-1.146.151-.418.226-.852.226-1.304 0-.451-.075-.886-.226-1.302-.15-.418-.386-.8-.709-1.148l-5.348-5.767c.752-1.274 1.278-2.641 1.579-4.101.3-1.459.381-2.917.241-4.377-.139-1.459-.505-2.878-1.095-4.256-.591-1.379-1.402-2.624-2.433-3.735-1.203-1.275-2.562-2.235-4.076-2.884C15.418.324 13.877 0 12.309 0c-1.568 0-3.11.324-4.624.972-1.514.648-2.873 1.609-4.076 2.884z'/%3E%3Cpath d='M8 12h9v3H8z'/%3E%3Cpath d='M11 8h3v10h-3z'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+			}
+
+		}
+
+		.swiper-controls {
+
+			position: relative;
+			margin-top: 10px;
+			padding: 0;
+
+		}
+
+	}
+
+	&__sku {
+
+		margin: 20px 0;
+		text-align: right;
+		font-family: monospace;
+
+	}
+
+	&__available {
+
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: auto;
+
+		&-value {
+
+			padding: 4px 14px;
+			font-weight: 700;
+			background-color: var(--yellow);
+
+		}
+
+		&.is-not &-value {
+
+			background-color: #eee;
+
+		}
+
+	}
+
+	&__price {
+
+		margin-top: 50px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		padding: 10px;
+
+		&-value {
+
+			font-size: 35px;
+			font-weight: 700;
+			color: #000;
+			position: relative;
+
+		}
+
+		&-old {
+
+			font-size: 22px;
+			position: relative;
+			color: #4c4c4c;
+			text-decoration: line-through;
+
+		}
+
+		&::before {
+
+			border-right: 105px solid var(--yellow);
+			border-top: 105px solid transparent;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+		}
+
+	}
+
+	&__cart {
+
+		display: flex;
+		justify-content: flex-end;
+		flex-shrink: 0;
+
+	}
+
+	&__detect {
+
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		top: -40px;
+
+	}
+
+	&__nav {
+
+		position: relative;
+		height: 40px;
+
+		&--fixed &-float {
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 9;
+			background-color: #fff;
+
+		}
+
+		&:not(&--fixed) .center {
+
+			padding: 0;
+
+		}
+
+		&-list {
+
+			display: flex;
+
+		}
+
+		a {
+
+			color: #5d5d5d;
+			display: block;
+			padding: 11px 30px 5px 47px;
+			line-height: 24px;
+
+			&.is-active {
+
+				background-color: #eee;
+				color: #353434;
+				pointer-events: none;
+
+				&::before {
+
+					border-top: 40px solid #fff;
+					border-right: 40px solid var(--yellow);
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__reviews,
+	&__description {
+
+		padding: 22px;
+		background-color: #eee;
+		margin-bottom: 10px;
+		position: relative;
+
+	}
+
+	&__manual,
+	&__related {
+
+		padding: 22px;
+		background-color: color(#eee a(50%));
+		margin-bottom: 10px;
+		position: relative;
+
+	}
+
+	&__manual {
+
+		&-item {
+
+			margin: 24px 0;
+
+		}
+
+	}
+
+}
