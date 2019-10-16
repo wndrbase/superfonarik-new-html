@@ -162,4 +162,12 @@
 
 	}
 
+	iframe {
+
+		margin: 20px 0;
+		border: 0;
+		max-width: 100%;
+
+	}
+
 }
