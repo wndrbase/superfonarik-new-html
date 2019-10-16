@@ -1,0 +1,86 @@
+		<article class="news__item">
+
+			<a href="/news/new" class="news__img">
+
+				{% if item.img %}
+
+{% set img = item.img %}
+
+				{% else %}
+
+{% set img = 'logo' %}
+
+				{% endif %}
+
+				<picture>
+
+					<source srcset="/img/news/{{ img }}--220@1x.webp 1x, /img/news/{{ img }}--220@2x.webp 2x" type="image/webp">
+					<source srcset="/img/news/{{ img }}--220@1x.jpg 1x, /img/news/{{ img }}--220@2x.jpg 2x">
+
+					<img src="/img/news/{{ img }}--220@1x.jpg" alt="{{ item.title | safe }}">
+
+				</picture>
+
+			</a>
+
+			<div class="news__body">
+
+				{% if item.date %}
+
+				<time datetime="{{ item.date }}" class="news__date">
+
+{% set year = '' %}
+{% set month = '' %}
+{% set day = '' %}
+
+{% for litteral in item.date | replace("-", "") %}
+
+	{% if year.length == 4 and month.length == 2 %}
+
+		{% set day = day + litteral %}
+
+	{% elseif year.length == 4 %}
+
+		{% set month = month + litteral %}
+
+	{% else %}
+
+		{% set year = year + litteral %}
+
+	{% endif %}
+
+{% endfor %}
+
+					{{ day }}.{{ month }}.{{ year }}
+
+				</time>
+
+				{% endif %}
+
+				<a href="/news/new" class="news__link">
+					{{ item.title }}
+				</a>
+
+				{% if item.tags %}
+
+				<ul class="news__tags">
+
+{% for tag in item.tags %}
+
+					<li>
+						{{ tag }}
+					</li>
+
+{% endfor %}
+
+				</ul>
+
+				{% endif %}
+
+				<p class="news__text">
+					{{ item.text | truncate(maxText, true, "...") }}
+				</p>
+
+			</div>
+
+		</article>

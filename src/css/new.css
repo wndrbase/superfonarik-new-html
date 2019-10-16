@@ -1,0 +1,15 @@
+.new {
+
+	margin-bottom: 30px;
+
+	&__head {
+
+		time {
+
+			margin: 20px 0;
+
+		}
+
+	}
+
+}

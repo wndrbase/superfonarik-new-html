@@ -1,0 +1,135 @@
+{% set title = "Суперфонарик на выставке Arms & Hunting 2019" %}
+
+{% set description = "Приглашаем вас на выставку Arms Hunting 2019, где вы увидите новинки EagleTac и сможете воочию познакомиться с ассортиментом магазина Суперфонарик" %}
+
+{% set urlPage = "news/new" %}
+
+{% set ogType = "article" %}
+{% set ogImage = "img/news/1.jpg" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Новости",
+		link: "news"
+	},
+	{
+		name : "Суперфонарик на выставке Arms & Hunting 2019",
+		link: "news/new"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="new">
+
+		<header class="new__head">
+
+			<script type="application/ld+json">
+
+				{
+
+					"@context": "https://schema.org",
+					"@type": "Article",
+					"name": "{{ title }}",
+					"headline": "{{ description | truncate(100) }}",
+					"description": "{{ description }}",
+					"author": "{{ site }}",
+					"publisher": {
+						"@type": "Organization",
+						"name": "{{ site }}",
+						"url": "{{ url }}",
+						"logo": {
+							"@type": "ImageObject",
+							"name": "{{ site }}",
+							"url": "{{ url }}/og-236.png"
+						}
+					},
+					"dateModified": "2019-10-07",
+					"datePublished": "2019-10-07",
+					"url": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
+					"mainEntityOfPage": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
+					"image": "{{ url }}/{{ ogImage }}"
+
+				}
+
+			</script>
+
+			<h1 class="h1">
+				{{ title }}
+			</h1>
+
+			<time datetime="2019-10-07">
+				07.10.2019
+			</time>
+
+		</header>
+
+		<div class="new__body article">
+
+			<p>
+				SuperFonarik примет участие в международной выставке <noindex><a href="http://www.armsandhunting.ru/" rel="nofollow" target="_blank">«ARMS &amp; Hunting 2019»</a></noindex>.
+			</p>
+
+			<p>
+				Выставка пройдёт с 10 по 13 октября 2019 года в выставочном комплексе «Гостиный двор».
+			</p>
+
+			<p>
+				Мы будем рады видеть Вас на нашем стенде <a href="/images/news_images/arms_hunting_102019_plan.jpg" target="_blank" style="font-weight:bold; font-size:15px;">E90</a>.<br>Найти нас легко - после входа в атриум спускаетесь по правой лестнице, проходите по прямой, почти до самого конца - мы будем располагаться по правую сторону от прохода.<br> У нас вы сможете вживую познакомиться с новинками EagleTac, попробовать их в деле и приобрести понравившиеся модели (вместе с аксессуарами, источниками питания и зарядными устройствами). Также будет представлен весь ассортимент оружейных креплений бренда SFM и готовых комплектов на их основе.
+			</p>
+
+			<h3>
+				План выставочного зала
+			</h3>
+
+			<p>
+				<a href="http://www.superfonarik.ru/images/news_images/arms_hunting_102019_plan.jpg" target="_blank" title="Нажмите для просмотра в большем разрешении"><img src="http://www.superfonarik.ru/images/news_images/arms_hunting_102019_plan_550.jpg" width="550"></a>
+			</p>
+
+			<p>
+				Выставка будет проходить с четверга, 10 октября, по воскресенье, 13 октября 2019 года, в атриуме выставочного комплекса «Гостиный двор».
+			</p>
+
+			<p>
+				<strong>Часы работы выставки</strong>:<br>
+				10 октября – с 10.00 до 18.00<br>
+				11 октября – с 10.00 до 18.00<br>
+				12 октября – с 10.00 до 18.00<br>
+				13 октября – с 10.00 до 16.00<br><br>
+				Стоимость входного билета (на 1 день) - 500 рублей. Дети до 6 лет - проходят бесплатно.
+			</p>
+
+			<p>
+				Как добраться до выставочного комплекса «Гостиный двор»: г. Москва, ул. Ильинка, д. 4. Вход со стороны ул. Ильинка.<br>Станция метро «Площадь Революции» (Арбатско-Покровская линия Московского метрополитена, №3 на схеме метрополитена), «Китай-Город» (Калужско-Рижская и Таганско-Краснопресненская линии Московского метрополитена, №6 и №7 на схеме метрополитена).
+			</p>
+
+			<p>
+				<noindex><a href="https://maps.yandex.ru/?um=uyPKcmlNrHWIp5uMA0pJW4TNXa5nhfxL&amp;l=map" target="_blank">Нажмите для просмотра схемы проезда к выставочному комплексу Гостиный двор</a></noindex>
+			</p>
+
+
+			<p>
+				<strong>Основные тематические направления выставки</strong>:
+			</p>
+
+			<ul>
+				<li>Охотничье и спортивное оружие</li>
+				<li>Холодное оружие</li>
+				<li>Оружие самообороны</li>
+				<li>Охотничьи и спортивные патроны</li>
+				<li>Снаряжение и оптика</li>
+				<li>Средства ухода за оружием</li>
+				<li>Одежда, принадлежности, экипировка и аксессуары для охоты</li>
+				<li>Охотничьи хозяйства</li>
+				<li>Охотничий туризм</li>
+				<li>Таксидермия</li>
+				<li>Сувениры и подарки</li>
+			</ul>
+
+		</div>
+
+	</article>
+
+{% endblock %}

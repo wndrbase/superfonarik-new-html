@@ -24,39 +24,7 @@
 				"@type": "WPHeader",
 				"name": "{{ title }}",
 				"description": "{{ description }}"
-			},
-
-{% if ogType == "article" %}
-			{
-				"@context": "https://schema.org",
-				"@type": "Article",
-				"name": "{{ title }}",
-				"headline": "{{ headline | truncate(110) }}",
-				"description": "{{ description }}",
-				"author": "{{ site }}",
-				"publisher": {
-					"@type": "Organization",
-					"name": "{{ site }}",
-					"url": "{{ url }}",
-					"logo": {
-						"@type": "ImageObject",
-						"name": "{{ site }}",
-						"url": "{{ url }}/og-236.png"
-					}
-				},
-				"dateModified": "2018-10-04",
-				"datePublished": "2018-10-04",
-				"url": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
-				"mainEntityOfPage": "{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}",
-				"image": "{{ url }}/{{ ogImage }}",
-				"aggregateRating": {
-					"@type": "AggregateRating",
-					"ratingValue": "5",
-					"ratingCount": "6"
-				}
 			}
-{% endif %}
-
 
 		]
 
