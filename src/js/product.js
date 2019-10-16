@@ -2,6 +2,53 @@
 
 	if(imgBlock) {
 
+		var gallery = document.querySelector('#modal-gallery');
+
+		function galleryInit(big){
+
+			var view = {
+					"img": []
+				},
+				template = document.querySelector('#gallery-template').innerHTML,
+				items = document.querySelectorAll('#gallery-product .swiper-slide'),
+				index = big.closest('.swiper-slide').getAttribute('data-swiper-slide-index');
+
+			if(gallery.querySelector('.swiper-container--gallery')){
+
+				galleryOpen(index);
+
+				return;
+
+			}
+
+			items.forEach(function(item){
+
+				var i = parseInt(item.getAttribute('data-swiper-slide-index')),
+					link = item.querySelector('.product__img-link');
+
+				view.img[i] = {
+					"img1x" : link.getAttribute('data-img1x'),
+					"img2x" : link.getAttribute('data-img2x'),
+					"webp1x" : link.getAttribute('data-webp1x'),
+					"webp2x" : link.getAttribute('data-webp2x')
+				};
+
+			});
+
+			gallery.innerHTML = Mustache.render(template, view);
+
+			gallery.querySelector('.swiper-container--gallery').setAttribute('data-start-slide', index);
+
+			SF.swiper(gallery.querySelectorAll('.swiper-container--gallery'));
+
+		}
+
+		function galleryOpen(index){
+
+			gallery.querySelector('.swiper-container--gallery').swiper.slideToLoop(parseInt(index), 0);
+
+		}
+
 		imgBlock.addEventListener('click', function(e){
 
 			var big = e.target.closest('.product__img-link');
@@ -11,41 +58,20 @@
 				e.preventDefault();
 				SF.modalShow('gallery');
 
-				var view = {
-						"img": []
-					},
-					gallery = document.querySelector('#modal-gallery'),
-					template = document.querySelector('#gallery-template').innerHTML,
-					items = document.querySelectorAll('#gallery-product .swiper-slide'),
-					index = big.closest('.swiper-slide').getAttribute('data-swiper-slide-index');
+				if(window.Swiper) {
 
-				if(gallery.querySelector('.swiper-container--gallery')){
-
-					gallery.querySelector('.swiper-container--gallery').swiper.slideToLoop(parseInt(index), 0);
-
-					return;
+					galleryInit(big);
 
 				}
+				else {
 
-				items.forEach(function(item){
+					PubSub.subscribe('swiperJsLoad', function(){
 
-					var i = parseInt(item.getAttribute('data-swiper-slide-index')),
-						link = item.querySelector('.product__img-link');
+						galleryInit(big);
 
-					view.img[i] = {
-						"img1x" : link.getAttribute('data-img1x'),
-						"img2x" : link.getAttribute('data-img2x'),
-						"webp1x" : link.getAttribute('data-webp1x'),
-						"webp2x" : link.getAttribute('data-webp2x')
-					};
+					});
 
-				});
-
-				gallery.innerHTML = Mustache.render(template, view);
-
-				gallery.querySelector('.swiper-container--gallery').setAttribute('data-start-slide', index);
-
-				SF.swiper(gallery.querySelectorAll('.swiper-container--gallery'));
+				}
 
 				return;
 

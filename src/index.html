@@ -6,11 +6,36 @@
 
 {% block content %}
 
+	<hr style="margin: 20px">
+
+	<h1 class="h1">Pages</h1>
+
 	<ul class="h1">
 		<li><a class="color-dark" href="/home">главная</a></li>
 		<li><a class="color-dark" href="/catalog">каталог</a></li>
 		<li><a class="color-dark" href="/catalog/fonari">фильтр</a></li>
 		<li><a class="color-dark" href="/product">товар</a></li>
 	</ul>
+
+	<hr style="margin: 20px">
+
+	<h1 class="h1">PageSpeed</h1>
+
+	<ul class="h3">
+		<li><a class="color-dark" target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsf.wndrbase.com%2Fhome%2F">главная <b>0|100</b></a></li>
+		<li><a class="color-dark" target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsf.wndrbase.com%2Fcatalog%2Ffonari">каталог <b>0|100</b></a></li>
+		<li><a class="color-dark" target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsf.wndrbase.com%2Fcatalog%2F">фильтр <b>0|100</b></a></li>
+		<li><a class="color-dark" target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsf.wndrbase.com%2Fproduct%2F">товар <b>0|100</b></a></li>
+	</ul>
+
+	<hr style="margin: 20px">
+
+	<h1 class="h1">Schema</h1>
+
+	<ul class="h3">
+		<li><a class="color-dark" target="_blank" href="https://search.google.com/structured-data/testing-tool?hl=ru#url=http%3A%2F%2Fsf.wndrbase.com%2Fproduct%2F">товар</a></li>
+	</ul>
+
+	<hr style="margin: 20px">
 
 {% endblock %}

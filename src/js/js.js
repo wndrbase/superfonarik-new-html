@@ -12,6 +12,45 @@ var SF = {};
 
 (function(){
 
+	SF.resizeTimeout = null,
+	SF.windowWidthOLd = null,
+
+	window.addEventListener("resize", function(){
+
+		window.requestAnimationFrame(function(){
+
+			if (!SF.resizeTimeout) {
+
+				SF.resizeTimeout = setTimeout(function() {
+
+					SF.resizeTimeout = null;
+
+					if(window.innerWidth !== SF.windowWidthOLd) {
+
+						PubSub.publish('windowWidthResize');
+
+					}
+
+				}, 100);
+
+			}
+
+		});
+
+	});
+
+	window.addEventListener("DOMContentLoaded", function(){
+
+		PubSub.publish('DOMContentLoaded');
+
+	});
+
+	window.addEventListener("load", function(){
+
+		PubSub.publish('pageLoad');
+
+	});
+
 	// обработчик анимаций
 	SF.cssAnimation = function(a){var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]}
 

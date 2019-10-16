@@ -3,8 +3,6 @@ SF.swiper = function(swiperContainer){
 	Array.prototype.forEach.call(swiperContainer, function(swipe){
 
 		var mySwipe = null,
-			resizeTimeout = null,
-			windowWidthOLd = null,
 			toggleSwipe = null,
 			resetSwipe = null,
 			swipeControls = document.createElement('div'),
@@ -194,37 +192,24 @@ SF.swiper = function(swiperContainer){
 
 		}
 */
-		window.addEventListener("resize", function(){
+		PubSub.subscribe('windowWidthResize', function(){
 
-			window.requestAnimationFrame(function(){
+			if (window.Swiper) {
 
-				if (window.Swiper && !resizeTimeout) {
+				toggleSwipe();
 
-					resizeTimeout = setTimeout(function() {
-
-						resizeTimeout = null;
-
-						if(window.innerWidth != windowWidthOLd){
-
-							windowWidthOLd = window.innerWidth;
-
-							toggleSwipe();
-
-						}
-
-					}, 1000);
-
-				}
-
-			});
+			}
 
 		});
+
+		PubSub.subscribe('swiperJsLoad', toggleSwipe);
 
 		if(window.Swiper) {
 
 			toggleSwipe();
 
 		}
+
 
 		if(!SF.swiper.init) {
 
@@ -240,14 +225,13 @@ SF.swiper = function(swiperContainer){
 
 				script.onload = function () {
 
-					var event = new Event('resize');
-					window.dispatchEvent(event);
+					PubSub.publish('swiperJsLoad');
 
 				};
 
 				document.head.appendChild(script);
 
-			},3000);
+			}, 1000);
 
 		}
 
