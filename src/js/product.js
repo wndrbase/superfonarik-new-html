@@ -30,9 +30,14 @@
 				items.forEach(function(item){
 
 					var i = parseInt(item.getAttribute('data-swiper-slide-index')),
-						src = item.querySelector('.product__img-link').getAttribute('href');
+						link = item.querySelector('.product__img-link');
 
-					view.img[i] = src;
+					view.img[i] = {
+						"img1x" : link.getAttribute('data-img1x'),
+						"img2x" : link.getAttribute('data-img2x'),
+						"webp1x" : link.getAttribute('data-webp1x'),
+						"webp2x" : link.getAttribute('data-webp2x')
+					};
 
 				});
 

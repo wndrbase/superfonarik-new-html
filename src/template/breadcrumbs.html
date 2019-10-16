@@ -29,3 +29,43 @@
 		{% endfor %}
 
 	</ul>
+
+	<script type="application/ld+json">
+
+		{
+
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement":
+			[
+
+				{
+					"@type": "ListItem",
+					"position": "1",
+					"item":
+					{
+						"@id": "{{ url }}",
+						"name": "{{ site }}"
+					}
+				}
+
+{% for item in breadcrumbs %}
+
+				,
+				{
+					"@type": "ListItem",
+					"position": "{{ loop.index + 1 }}",
+					"item":
+					{
+						"@id": "{{ url }}/{{ item.link }}",
+						"name": "{{ item.name }}"
+					}
+				}
+
+{% endfor %}
+
+			]
+
+		}
+
+	</script>

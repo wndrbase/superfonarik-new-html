@@ -20,10 +20,10 @@
 
 					<li class="swiper-slide">
 
-						<a class="product__img-link" href="/img/product/{{ item }}.jpg">
+						<a class="product__img-link" href="/img/product/{{ item }}.jpg" data-img1x="/img/product/{{ item }}--900@1x.jpg" data-img2x="/img/product/{{ item }}--900@2x.jpg" data-webp1x="/img/product/{{ item }}--900@1x.webp" data-webp2x="/img/product/{{ item }}--900@2x.webp">
 
 {% set mod = 270 %}
-{% include "product/img.html" %}
+{% include "product/picture.html" %}
 
 						</a>
 
@@ -42,7 +42,7 @@
 				<li data-preview="{{ loop.index0 }}">
 
 {% set mod = 46 %}
-{% include "product/img.html" %}
+{% include "product/picture.html" %}
 
 				</li>
 
@@ -66,7 +66,14 @@
 
 						<li class="swiper-slide">
 
-							<img src="{{.}}" alt="">
+							<picture>
+
+								<source srcset="{{ webp1x }} 1x, {{ webp2x }} 2x" type="image/webp">
+								<source srcset="{{ img1x }} 1x, {{ img2x }} 2x">
+
+								<img src="{{ img2x }}" alt="">
+
+							</picture>
 
 						</li>
 
