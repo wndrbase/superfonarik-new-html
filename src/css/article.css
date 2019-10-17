@@ -181,4 +181,11 @@
 
 	}
 
+	.img-left {
+
+		float: left;
+		margin: 12px 35px 12px 0;
+
+	}
+
 }

@@ -137,6 +137,12 @@ table {
 
 }
 
+.mb30 {
+
+	margin-bottom: 30px;
+
+}
+
 .h1 {
 
 	font-family: 'Hermes', 'Impact';
@@ -158,6 +164,10 @@ table {
 
 .h2 {
 
+	font-family: 'Hermes', 'Impact';
+	font-size: 32px;
+	font-weight: 400;
+	text-transform: uppercase;
 
 }
 
