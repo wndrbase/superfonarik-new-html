@@ -8,7 +8,7 @@
 
 	}
 
-	h1 {
+	h1:not([class]) {
 
 		font-family: 'Hermes', 'Impact';
 		font-size: 36px;
@@ -19,7 +19,7 @@
 
 	}
 
-	h2 {
+	h2:not([class]) {
 
 		font-family: 'Hermes', 'Impact';
 		font-size: 24px;
@@ -28,31 +28,16 @@
 
 	}
 
-	h3 {
+	h3:not([class]) {
 
 		font-family: 'Hermes', 'Impact';
+		font-size: 20px;
 		font-weight: 400;
 		text-transform: uppercase;
-		border-bottom: 1px solid #e8e8e8;
-		font-size: 20px;
-		margin: 0 0 35px;
-		padding: 0 0 5px;
-		position: relative;
-
-		&::after {
-
-			border-top: 30px solid var(--yellow);
-			border-right: 35px solid transparent;
-			content: "";
-			position: absolute;
-			bottom: -30px;
-			left: 0;
-
-		}
 
 	}
 
-	h4 {
+	h4:not([class]) {
 
 		font-family: 'Hermes', 'Impact';
 		font-size: 16px;
@@ -61,7 +46,7 @@
 
 	}
 
-	p {
+	p:not([class]) {
 
 		margin: 0 0 17px;
 		line-height: 17px;
@@ -84,7 +69,7 @@
 
 	}
 
-	ul {
+	ul:not([class]) {
 
 		margin: 0 0 17px;
 		line-height: 17px;

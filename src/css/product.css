@@ -379,6 +379,30 @@
 
 	}
 
+	&__description {
+
+		h3 {
+
+			border-bottom: 1px solid #e8e8e8;
+			margin: 0 0 35px;
+			padding: 0 0 5px;
+			position: relative;
+
+			&::after {
+
+				border-top: 30px solid var(--yellow);
+				border-right: 35px solid transparent;
+				content: "";
+				position: absolute;
+				bottom: -30px;
+				left: 0;
+
+			}
+
+		}
+
+	}
+
 	&__manual,
 	&__related {
 

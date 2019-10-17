@@ -1,0 +1,250 @@
+{% set title = "Скидки" %}
+
+{% set description = "Карта является накопительной: на размер вашей скидки влияет общая сумма всех оплаченных заказов." %}
+
+{% set urlPage = "discounts" %}
+
+{% set ogType = "article" %}
+{% set ogImage = "/img/discounts/card4.png" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Скидки",
+		link: "discounts"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="discounts article">
+
+		<h1>
+			{{ title }}
+		</h1>
+
+		<div class="discounts__top">
+
+			<div class="discounts__top-text">
+
+				<p>
+					В нашем магазине для постоянных покупателей действуют накопительные скидки. Вместе с вашим первым заказом (оставленным через интернет, по телефону или лично в нашем офисе) Вы получите дисконтную карту постоянного покупателя.
+				</p>
+
+				<p>
+					Карта является накопительной: на размер вашей скидки влияет общая сумма всех оплаченных заказов.
+				</p>
+
+			</div>
+
+			<ul class="discounts__top-list">
+				<li>Карта в подарок при первой покупке</li>
+				<li>Потеряли? Восстановим по номеру телефона</li>
+				<li>Гарантийное облуживание без чека, по номеру карты</li>
+			</ul>
+
+		</div>
+
+		<h3>
+			Внимание!<br>На фонари Яркий Луч максимальный размер скидки - 7%
+		</h3>
+
+		<div class="discounts__cards">
+
+			<div class="discounts__cards-item">
+
+				<picture>
+
+					<source srcset="/img/discounts/card-1@1x.webp 1x, /img/discounts/card-1@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/discounts/card-1@1x.png 1x, /img/discounts/card-1@2x.png 2x">
+
+					<img src="/img/discounts/card-1@1x.png" alt="Скидка 5%" loading="lazy" width="294" height="257">
+
+				</picture>
+
+			</div>
+
+			<div class="discounts__cards-item">
+
+				<picture>
+
+					<source srcset="/img/discounts/card-2@1x.webp 1x, /img/discounts/card-2@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/discounts/card-2@1x.png 1x, /img/discounts/card-2@2x.png 2x">
+
+					<img src="/img/discounts/card-2@1x.png" alt="Скидка 10%" loading="lazy" width="295" height="257">
+
+				</picture>
+
+			</div>
+
+			<div class="discounts__cards-item">
+
+				<picture>
+
+					<source srcset="/img/discounts/card-3@1x.webp 1x, /img/discounts/card-3@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/discounts/card-3@1x.png 1x, /img/discounts/card-3@2x.png 2x">
+
+					<img src="/img/discounts/card-3@1x.png" alt="Скидка 15%" loading="lazy" width="294" height="257">
+
+				</picture>
+
+			</div>
+
+		</div>
+
+		<h2 class="h3">
+			Как использовать карту
+		</h2>
+
+		<div class="discounts__card-use">
+
+			<figure class="discounts__card-use-item">
+
+				<picture>
+
+					<source srcset="/img/discounts/use-1@1x.webp 1x, /img/discounts/use-1@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/discounts/use-1@1x.png 1x, /img/discounts/use-1@2x.png 2x">
+
+					<img src="/img/discounts/use-1@1x.png" alt="использовать карту по телефону" loading="lazy" width="266" height="251">
+
+				</picture>
+
+				<figcaption>
+					При заказе по телефону - сообщить номер менеджеру
+				</figcaption>
+
+			</figure>
+
+			<figure class="discounts__card-use-item">
+
+				<picture>
+
+					<source srcset="/img/discounts/use-2@1x.webp 1x, /img/discounts/use-2@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/discounts/use-2@1x.png 1x, /img/discounts/use-2@2x.png 2x">
+
+					<img src="/img/discounts/use-2@1x.png" alt="использовать карту при быстром заказе" loading="lazy" width="266" height="251">
+
+				</picture>
+
+				<figcaption>
+					При «быстром заказе» - указать номер в комментариях
+				</figcaption>
+
+			</figure>
+
+			<figure class="discounts__card-use-item">
+
+				<picture>
+
+					<source srcset="/img/discounts/use-3@1x.webp 1x, /img/discounts/use-3@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/discounts/use-3@1x.png 1x, /img/discounts/use-3@2x.png 2x">
+
+					<img src="/img/discounts/use-3@1x.png" alt="использовать карту автоматически через личный кабинет" loading="lazy" width="266" height="251">
+
+				</picture>
+
+				<figcaption>
+					Через личный кабинет - автоматически
+				</figcaption>
+
+			</figure>
+
+		</div>
+
+		<div class="discounts__more">
+
+			<div class="discounts__more-row">
+
+				<div class="discounts__more-left">
+
+					<h2 class="h3">
+						Что еще можно делать с картой
+					</h2>
+
+					<div class="discounts__more-gray">
+
+						<picture>
+
+							<source srcset="/img/discounts/vizitki-na-plastike@1x.webp 1x, /img/discounts/vizitki-na-plastike@2x.webp 2x" type="image/webp">
+
+							<source srcset="/img/discounts/vizitki-na-plastike@1x.png 1x, /img/discounts/vizitki-na-plastike@2x.png 2x">
+
+							<img src="/img/discounts/vizitki-na-plastike@1x.png" alt="Что еще можно делать с картой" loading="lazy" width="339" height="255">
+
+						</picture>
+
+						<ul class="discounts__more-list-check h4">
+							<li>Можно привязать <br>к своему аккаунту</li>
+							<li>Получать гарантийное обслуживание (при утере документов на товар)</li>
+							<li>Передавать друзьям, <br>скидки суммируются</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="discounts__more-right">
+
+					<h3 class="h3">
+						Преимущества <span class="color-dark">регистрации</span>
+					</h3>
+
+					<ul class="discounts__more-list">
+						<li>Не надо вводить номер телефона и адрес доставки при новых заказах</li>
+						<li>Отслеживание истории покупок через личный кабинет</li>
+						<li>При заказе автоматически считается скидка</li>
+						<li>При накоплении нужной общей суммы придет уведомление о том, что у вас новая скидка</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<h3>
+				Отслеживать историю сделанных покупок
+			</h3>
+
+			<p>
+				Вы всегда сможете получить информацию о совершенных покупках, оформленных на карту. В случае утери гарантийного талона или товарного чека на приобретенные товары, у вас остается возможность получить гарантийное обслуживание даже без этих документов, просто назвав номер карты менеджеру.
+			</p>
+
+			<h3>
+				Привязать к аккаунту на сайте (для накопления суммы покупок)
+			</h3>
+
+			<p>
+				Если Вы не зарегистрированы, <strong>и делали заказ по телефону или «быстрым оформлением»</strong>, то для зачисления суммы покупки на карту Вам необходимо сообщить номер вашей карты менеджеру (по телефону при оформлении заказа, или ввести в специальное поле «комментарии к заказу» в конце «быстрого оформления» заказа).
+			</p>
+
+			<p>
+				Если Вы зарегистрированы в нашем магазине (т.е. у вас есть имя пользователя и пароль для входа в личный кабинет), при совершении покупок из-под своей учетной записи новые покупки автоматически зачисляются на счет карты.
+			</p>
+
+			<p>
+				Мы рекомендуем Вам <a href="/auth/?register=yes" target="_blank">зарегистрироваться</a> на нашем сайте. Это дает следующие удобства: Вам не придется каждый раз вводить номер телефона и адрес доставки; покупки будут добавляться в ваш личный кабинет, и вы сможете удобно их просматривать и отслеживать их прохождение. При достижении суммы покупок, необходимой для получения скидки, на Вашу электронную почту автоматически придет уведомление о переводе в группу постоянных покупателей со скидкой 5%, 10% или 15%, соответственно. Для всех последующих заказов скидка будет считаться автоматически при оформлении заказа, стоит только войти в личный кабинет.
+			</p>
+
+			<h3>
+				Передавать родственникам или друзьям
+			</h3>
+
+			<p>
+				Дисконтную карту <b>можно передавать</b> другим людям: друзьям, родственникам, коллегам. Это даст им возможность приобретать товары с вашей скидкой, а вам - копить сумму заказов.
+			</p>
+
+			<p>
+				Если вы потеряли карту, просто сообщите об этом нашим менеджерам при оформлении заказа (в поле «комментарии» при оформлении заказа или по телефону). Мы выдадим вам новую карту и привяжем к вашему профилю в магазине.
+			</p>
+
+		</div>
+
+	</article>
+
+{% endblock %}
