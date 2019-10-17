@@ -1,0 +1,88 @@
+{% set title = "Суперфонарик - магазин правильных фонарей, ведущий историю с 2007 года" %}
+
+{% set description = "Суперфонарик - это не просто магазин фонарей. Компания Superfonarik - стабильно развивающийся дистрибьютор и дилер правильных фонарей, светотехники и аксессуаров для оружия." %}
+
+{% set urlPage = "about" %}
+
+{% set breadcrumbs = [
+	{
+		name : "О компании",
+		link: "about"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="about">
+
+		<h1 class="h1">
+			О компании
+		</h1>
+
+		<div class="tabs">
+
+			<article class="tabs__item" id="tabs-1">
+
+				<h2 class="tabs__btn h4">
+					О компании
+				</h2>
+
+				<div class="article">
+
+{% include "about/tabs-1.html" %}
+
+				</div>
+
+{% include "about/comments.html" %}
+
+			</article>
+
+			<article class="tabs__item article visuallyhidden" id="tabs-2">
+
+				<h2 class="tabs__btn h4">
+					Бренды
+				</h2>
+
+{% include "about/tabs-2.html" %}
+
+			</article>
+
+			<article class="tabs__item article visuallyhidden" id="tabs-3">
+
+				<h2 class="tabs__btn h4">
+					Гарантии
+				</h2>
+
+{% include "about/tabs-3.html" %}
+
+			</article>
+
+			<article class="tabs__item article visuallyhidden" id="tabs-4">
+
+				<h2 class="tabs__btn h4">
+					Сертификаты
+				</h2>
+
+{% include "about/tabs-4.html" %}
+
+			</article>
+
+			<article class="tabs__item article visuallyhidden" id="tabs-5">
+
+				<h2 class="tabs__btn h4">
+					Вакансии
+				</h2>
+
+				<p>
+					На данный момент штат полностью укомплектован
+				</p>
+
+			</article>
+
+		</div>
+
+	</section>
+
+{% endblock %}

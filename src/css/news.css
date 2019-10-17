@@ -52,23 +52,6 @@
 
 	}
 
-	&__tags {
-
-		display: flex;
-		flex-wrap: wrap;
-		margin: 10px -3px;
-
-		li {
-
-			margin: 3px;
-			background-color: var(--yellow);
-			padding: 3px 17px 5px;
-			color: var(--dark);
-
-		}
-
-	}
-
 	&__last {
 
 		display: flex;

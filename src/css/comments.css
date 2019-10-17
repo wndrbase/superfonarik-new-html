@@ -1,0 +1,112 @@
+.comments {
+
+	&__title {
+
+		margin: 20px 0;
+
+	}
+
+	&__pagination {
+
+		margin: 30px 0;
+		padding-top: 30px;
+		border-top: 1px solid #fff;
+
+	}
+
+	&__item {
+
+		margin: 14px 0;
+		padding: 14px 20px;
+		border-top: 1px solid #fff;
+
+		&-head,
+		&-body {
+
+			display: flex;
+
+		}
+
+		&-body {
+
+			justify-content: flex-end;
+
+			p {
+
+				margin-top: 16px;
+
+			}
+
+		}
+
+		&-left {
+
+			width: 210px;
+
+		}
+
+		&-right {
+
+			width: calc(100% - 210px);
+			padding-left: 20px;
+			margin-left: auto;
+			padding-top: 5px;
+
+			&[data-stars]::before {
+
+				width: 90px;
+				height: 18px;
+				content: '';
+				display: inline-block;
+				margin-right: 20px;
+				margin-top: 4px;
+				vertical-align: middle;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='200' height='18' viewBox='0 0 200 18'%3E%3Cdefs%3E%3Cpath id='s' d='M7.148,-0.000 L9.406,4.085 L14.000,4.965 L10.802,8.371 L11.383,13.000 L7.148,11.018 L2.913,13.000 L3.493,8.371 L0.295,4.965 L4.889,4.085 L7.148,-0.000 '/%3E%3C/defs%3E%3Cg fill='%23353434'%3E%3Cuse xlink:href='%23s'/%3E%3Cuse xlink:href='%23s' x='18'/%3E%3Cuse xlink:href='%23s' x='36'/%3E%3Cuse xlink:href='%23s' x='54'/%3E%3Cuse xlink:href='%23s' x='72'/%3E%3C/g%3E%3Cg fill='%23fff'%3E%3Cuse xlink:href='%23s' x='90'/%3E%3Cuse xlink:href='%23s' x='108'/%3E%3Cuse xlink:href='%23s' x='126'/%3E%3Cuse xlink:href='%23s' x='144'/%3E%3Cuse xlink:href='%23s' x='162'/%3E%3C/g%3E%3C/svg%3E");
+			}
+
+			&[data-stars="4"]::before {
+
+				background-position: -18px 0;
+
+			}
+
+			&[data-stars="3"]::before {
+
+				background-position: -36px 0;
+
+			}
+
+			&[data-stars="2"]::before {
+
+				background-position: -54px 0;
+
+			}
+
+			&[data-stars="1"]::before {
+
+				background-position: -72px 0;
+
+			}
+
+		}
+
+		&-autor {
+
+			font-size: 18px;
+			color: #353434;
+			font-weight: 300;
+
+		}
+
+		&-date {
+
+			font-weight: 300;
+			line-height: 18px;
+			display: inline-block;
+			vertical-align: middle;
+
+		}
+
+	}
+
+}

@@ -1,0 +1,59 @@
+.tabs {
+
+	&__nav {
+
+		display: flex;
+		position: relative;
+
+	}
+
+	&__btn {
+
+		color: #5d5d5d;
+		padding: 11px 30px 5px 50px;
+		line-height: 24px;
+		height: 40px;
+		position: relative;
+
+		&--active {
+
+			background-color: #eee;
+			color: #353434;
+			pointer-events: none;
+
+			&::before {
+
+				border-top: 40px solid #fff;
+				border-right: 40px solid var(--yellow);
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+
+			}
+
+		}
+
+		&:hover {
+
+			color: #353434;
+
+		}
+
+		&--active {
+
+			opacity: 1;
+			pointer-events: none;
+
+		}
+
+	}
+
+	&__item {
+
+		background-color: #eee;
+		padding: 22px;
+
+	}
+
+}
