@@ -209,6 +209,17 @@ time {
 
 }
 
+.hash-detect {
+
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	top: -40px;
+
+}
+
+
+
 /* hidden
 -----------------------------------------------------------------------------*/
 .hide {
