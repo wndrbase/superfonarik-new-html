@@ -86,10 +86,12 @@
 
 	ul {
 
+		margin: 0 0 17px;
+		line-height: 17px;
+
 		li {
 
 			padding-left: 15px;
-			line-height: 18px;
 
 			&::before {
 

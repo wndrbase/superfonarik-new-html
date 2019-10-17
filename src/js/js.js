@@ -39,6 +39,16 @@ var SF = {};
 
 	});
 
+	window.addEventListener("scroll", function(){
+
+		window.requestAnimationFrame(function(){
+
+			PubSub.publish('windowScroll');
+
+		});
+
+	});
+
 	window.addEventListener("DOMContentLoaded", function(){
 
 		PubSub.publish('DOMContentLoaded');

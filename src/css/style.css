@@ -26,6 +26,7 @@
 @import url(sort.css);
 @import url(tabs.css);
 @import url(tags.css);
+@import url(table.css);
 
 @import url(catalog-section.css);
 @import url(catalog.css);
@@ -43,3 +44,4 @@
 @import url(about.css);
 @import url(comments.css);
 @import url(brands.css);
+@import url(service.css);

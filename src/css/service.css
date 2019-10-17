@@ -1,0 +1,22 @@
+.service {
+
+	.h3 {
+
+		margin: 34px 0 14px;
+		line-height: 30px;
+
+	}
+
+	&__text {
+
+		margin-left: 44px;
+
+	}
+
+	.tabs__nav {
+
+		margin-bottom: 20px;
+
+	}
+
+}

@@ -17,17 +17,22 @@
 
 	<section class="about">
 
-		<h1 class="h1">
+		<h1 class="about__title h1">
 			О компании
 		</h1>
 
-		<div class="tabs">
+		<div class="tabs-hash">
 
-			<article class="tabs__item">
+<!--
+в зависимости от hash адресной строки расставлять tabs-hash__btn--active и visuallyhidden
+по умолчанию (если отсуствйет hash) - текущее состояние,
+оно аналогично состоянию /about/#tabs-1
+-->
+			<article class="tabs-hash__item">
 
 				<div class="hash-detect" id="tabs-1"></div>
 
-				<h2 class="tabs__btn h4">
+				<h2 class="tabs-hash__btn tabs-hash__btn--active h4">
 					О компании
 				</h2>
 
@@ -41,11 +46,11 @@
 
 			</article>
 
-			<article class="tabs__item article visuallyhidden">
+			<article class="tabs-hash__item visuallyhidden">
 
 				<div class="hash-detect" id="tabs-2"></div>
 
-				<h2 class="tabs__btn h4">
+				<h2 class="tabs-hash__btn h4">
 					Бренды
 				</h2>
 
@@ -53,11 +58,11 @@
 
 			</article>
 
-			<article class="tabs__item article visuallyhidden">
+			<article class="tabs-hash__item visuallyhidden">
 
 				<div class="hash-detect" id="tabs-3"></div>
 
-				<h2 class="tabs__btn h4">
+				<h2 class="tabs-hash__btn h4">
 					Гарантии
 				</h2>
 
@@ -65,11 +70,11 @@
 
 			</article>
 
-			<article class="tabs__item article visuallyhidden">
+			<article class="tabs-hash__item visuallyhidden">
 
 				<div class="hash-detect" id="tabs-4"></div>
 
-				<h2 class="tabs__btn h4">
+				<h2 class="tabs-hash__btn h4">
 					Сертификаты
 				</h2>
 
@@ -77,11 +82,11 @@
 
 			</article>
 
-			<article class="tabs__item article visuallyhidden">
+			<article class="tabs-hash__item visuallyhidden">
 
 				<div class="hash-detect" id="tabs-5"></div>
 
-				<h2 class="tabs__btn h4">
+				<h2 class="tabs-hash__btn h4">
 					Вакансии
 				</h2>
 

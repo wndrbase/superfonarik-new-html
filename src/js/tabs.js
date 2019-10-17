@@ -1,5 +1,55 @@
 SF.tabs = function(elems){
 
+	Array.prototype.forEach.call(elems, function(tab){
+
+		var btn = tab.querySelectorAll('.tabs__btn'),
+			item = tab.querySelectorAll('.tabs__item'),
+			nav = document.createElement('div');
+
+		Array.prototype.forEach.call(btn, function(el,index){
+
+			nav.appendChild(el);
+
+			el.addEventListener('click',function(){
+
+				Array.prototype.forEach.call(btn, function(e,i){
+
+					if(i == index) {
+
+						e.classList.add('tabs__btn--active');
+						item[i].classList.remove('visuallyhidden');
+
+					}
+					else{
+
+						e.classList.remove('tabs__btn--active');
+						item[i].classList.add('visuallyhidden');
+
+					}
+
+				});
+
+			});
+
+		});
+
+		nav.classList.add('tabs__nav');
+
+		tab.insertBefore(nav, item[0]);
+
+	});
+
+};
+
+
+if(document.querySelectorAll('.tabs').length) {
+
+	SF.tabs(document.querySelectorAll('.tabs'));
+
+}
+
+SF.tabsHash = function(elems){
+
 	function deleteSlash(str) {
 
 		if(str.slice(-1) == '/'){
@@ -22,24 +72,24 @@ SF.tabs = function(elems){
 
 	Array.prototype.forEach.call(elems, function(tab){
 
-		var btn = tab.querySelectorAll('.tabs__btn'),
-			item = tab.querySelectorAll('.tabs__item'),
+		var btn = tab.querySelectorAll('.tabs-hash__btn'),
+			item = tab.querySelectorAll('.tabs-hash__item'),
 			nav = document.createElement('div');
 
-		Array.prototype.forEach.call(btn, function(el,index){
+		Array.prototype.forEach.call(btn, function(el){
 
 			var _btn = document.createElement('a'),
-				id = deleteSlash(el.closest('.tabs__item').getAttribute('id'));
+				id = deleteSlash(el.closest('.tabs-hash__item').querySelector('.hash-detect').getAttribute('id'));
 
 			_btn.setAttribute('href','#' + id);
 
-			_btn.className = 'tabs__btn h4';
+			_btn.className = 'tabs-hash__btn h4';
 
 			_btn.textContent = el.textContent;
 
-			if(index == 0){
+			if(el.classList.contains('tabs-hash__btn--active')){
 
-				_btn.classList.add('tabs__btn--active');
+				_btn.classList.add('tabs-hash__btn--active');
 
 			}
 
@@ -49,30 +99,30 @@ SF.tabs = function(elems){
 
 		});
 
-		nav.classList.add('tabs__nav');
+		nav.classList.add('tabs-hash__nav');
 
 		tab.insertBefore(nav, item[0]);
 
-		btn = nav.querySelectorAll('.tabs__btn');
+		btn = nav.querySelectorAll('.tabs-hash__btn');
 
 		Array.prototype.forEach.call(item, function(el){
 
-			var id = deleteSlash(el.getAttribute('id'));
+			var id = deleteSlash(el.querySelector('.hash-detect').getAttribute('id'));
 
 			PubSub.subscribe('tab-show#' + id, function(msg, hash){
 
 				Array.prototype.forEach.call(item, function(el,index){
 
-					if(el.getAttribute('id') === hash) {
+					if(el.querySelector('.hash-detect').getAttribute('id') === hash) {
 
 						el.classList.remove('visuallyhidden');
-						btn[index].classList.add('tabs__btn--active');
+						btn[index].classList.add('tabs-hash__btn--active');
 
 					}
 					else{
 
 						el.classList.add('visuallyhidden');
-						btn[index].classList.remove('tabs__btn--active');
+						btn[index].classList.remove('tabs-hash__btn--active');
 
 					}
 
@@ -95,8 +145,8 @@ SF.tabs = function(elems){
 };
 
 
-if(document.querySelectorAll('.tabs').length) {
+if(document.querySelectorAll('.tabs-hash').length) {
 
-	SF.tabs(document.querySelectorAll('.tabs'));
+	SF.tabsHash(document.querySelectorAll('.tabs-hash'));
 
 }
