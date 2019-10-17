@@ -1,0 +1,38 @@
+.certificate {
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+
+	}
+
+	&__item {
+
+		width: 190px;
+		margin: 20px;
+
+		figcaption {
+
+			color: var(--color);
+			text-decoration: underline;
+			text-decoration-color: var(--color);
+			transition: .3s;
+			margin-top: 10px;
+
+		}
+
+	}
+
+	&__link {
+
+		&:hover figcaption {
+
+			text-decoration-color: color(var(--color) a(0%));
+
+		}
+
+	}
+
+}
