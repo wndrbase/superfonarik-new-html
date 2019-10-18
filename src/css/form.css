@@ -532,6 +532,24 @@
 
 	}
 
+	&--tab {
+
+		border: 2px solid #eee;
+		font-weight: bold;
+		padding: 0 10px;
+		height: 26px;
+		line-height: 22px;
+
+		&:hover,
+		&.is-active {
+
+			border-color: var(--yellow);
+			background-color: var(--yellow);
+
+		}
+
+	}
+
 }
 
 .input {

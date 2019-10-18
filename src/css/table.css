@@ -36,4 +36,35 @@
 
 	}
 
+	&-characteristics {
+
+		td {
+
+			padding: 2px 14px;
+			vertical-align: middle;
+			text-align: center;
+
+		}
+
+		tr:nth-child(2n) td,
+		tr:nth-child(2n) td {
+
+			background-color: #fff;
+		}
+
+		tr:nth-child(2n-1) td,
+		tr:nth-child(2n-1) td {
+
+			background-color: #eee;
+		}
+
+		td:not([colspan])first-child {
+
+			border-right: 10px solid #fff;
+			width: 104px;
+
+		}
+
+	}
+
 }

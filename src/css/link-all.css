@@ -3,7 +3,8 @@
 	display: flex;
 	position: relative;
 
-	a {
+	a,
+	.button {
 
 		position: relative;
 		border: 2px solid var(--yellow);
@@ -12,6 +13,7 @@
 		transition: .3s;
 		line-height: 44px;
 		white-space: nowrap;
+		font-size: 14px;
 
 		&:hover {
 
@@ -77,6 +79,48 @@
 
 			color: #fff;
 			background-color: #4e4e4e;
+			border: 0;
+			padding-right: 63px;
+
+			svg {
+
+				fill: var(--yellow);
+
+			}
+
+			&:hover {
+
+				background-color: var(--yellow);
+
+				svg {
+
+					fill: #fff;
+
+				}
+
+			}
+
+			&::before {
+
+				width: 46px;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background-color: var(--dark);
+
+			}
+
+		}
+
+	}
+
+	&--gray {
+
+		a,
+		.button {
+
+			color: var(--color);
+			background-color: #eee;
 			border: 0;
 			padding-right: 63px;
 

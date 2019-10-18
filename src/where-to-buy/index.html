@@ -1,0 +1,215 @@
+{% set title = "Где купить?" %}
+
+{% set description = "Мы осуществим доставку в любую точку России, Белоруссия, Казахстана, Армении и Таджикистана." %}
+
+{% set urlPage = "where-to-buy" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Где купить?",
+		link: "where-to-buy"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="address article">
+
+		<h1>
+			{{ title }}
+		</h1>
+
+		<div class="address__box">
+
+			<div class="address__left">
+
+				<form class="address__city" id="address-city" action="/">
+
+					<label class="btn btn--tab is-active">
+						Москва
+						<input type="radio" value="Москва" name="address-city" class="visuallyhidden" checked="checked">
+					</label>
+
+					<label class="btn btn--tab">
+						Екатеринбург
+						<input type="radio" value="Екатеринбург" name="address-city" class="visuallyhidden">
+					</label>
+
+					<label class="btn btn--tab">
+						Курск
+						<input type="radio" value="Курск" name="address-city" class="visuallyhidden">
+					</label>
+
+					<label class="btn btn--tab">
+						Самара
+						<input type="radio" value="Самара" name="address-city" class="visuallyhidden">
+					</label>
+
+					<label class="btn btn--tab">
+						Санкт-Петербург
+						<input type="radio" value="Санкт-Петербург" name="address-city" class="visuallyhidden">
+					</label>
+
+					<label class="btn btn--tab">
+						Якутск
+						<input type="radio" value="Якутск" name="address-city" class="visuallyhidden">
+					</label>
+
+				</form>
+
+				<div class="address__map">
+
+				</div>
+
+			</div>
+
+			<div class="address__right">
+
+				<h2>
+					Не нашли свой Город?
+				</h2>
+
+				<p class="h4">
+					Мы осуществим доставку в любую точку <span>России, Белоруссия, Казахстана, Армении и Таджикистана.</span>
+				</p>
+
+			</div>
+
+		</div>
+
+		<div class="address-shop">
+
+			<div class="address-shop__item">
+
+				<h3 class="address-shop__title">
+					Магазин Суперфонарик
+				</h3>
+
+				<table class="table-characteristics">
+					<tbody>
+						<tr>
+							<td>Телефоны:</td>
+							<td>
+								<a href="tel:+74953693005">+7 (495) 369-30-05</a><br>
+								<a href="tel:+79261715254">+7 (926) 171-52-54</a><br>
+								<a href="tel:+78001002166">+7 (800) 100-21-66</a><br>
+								<a href="tel:+74959698447">+7 (495) 969-84-47</a>
+							</td>
+						</tr>
+						<tr>
+							<td>E-Mai:</td>
+							<td>
+								<a href="mailto:sf@superfonarik.ru">sf@superfonarik.ru</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<b>Информация:</b> <br>
+								г. Москва, Варшавское шоссе, д. 42, офис 2314. Бизнес-центр "На Варшавке", 2-й этаж. К вашим услугам - высококвалифицированные консультанты, демо-зал со всей продукцией, мягкий кожаный диван и приятная музыка ;) Время работы офиса: с понедельника по пятницу, с 10:00 до 20:00. По субботам - по предварительной договорённости (по телефону), после 13:00.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="link-all link-all--gray">
+
+					<button type="button" class="button" data-show-map="Магазин Суперфонарик">
+						Посмотреть на карте
+						<svg width="24" height="18" viewBox="0 0 24 18">
+							<path d="M23.85 7.59C23.63 7.28 18.53 0 12 0S.37 7.28.15 7.59a.88.88 0 000 1c.21.31 5.32 7.59 11.85 7.59s11.63-7.29 11.85-7.6a.88.88 0 000-.99zM12 14.5c-4.81 0-9-4.83-10.2-6.41C3 6.5 7.18 1.67 12 1.67s9 4.83 10.2 6.41C21 9.67 16.82 14.5 12 14.5z"/>
+							<path d="M12 3.27A4.75 4.75 0 1016.75 8 4.75 4.75 0 0012 3.27zm0 7.91A3.17 3.17 0 1115.17 8 3.17 3.17 0 0112 11.18z"/>
+						</svg>
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="address-shop__item">
+
+				<h3 class="address-shop__title">
+					Магазин Спорт-Марафон
+				</h3>
+
+				<table class="table-characteristics">
+					<tbody>
+						<tr>
+							<td>Телефоны:</td>
+							<td>
+								<a href="tel:88003331441">8 (800) 333-14-41</a><br>
+								<a href="tel:+74956681497">+7 (495) 668-14-97</a>
+							</td>
+						</tr>
+						<tr>
+							<td>E-Mai:</td>
+							<td>
+								<a href="mailto:a.kalashnikov@sport-marafon.ru">a.kalashnikov@sport-marafon.ru</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<b>Информация:</b> <br>
+								г. Москва, ул. Сайкина д. 4, Время работы: ежедневно с 10:00 до 24:00 Один из крупнейших в России специализированных магазинов снаряжения для горнолыжного спорта и сноубординга, всех видов туризма, кемпинга и путешествий, альпинизма и скалолазания, бега и мультигонок.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="link-all link-all--gray">
+
+					<button type="button" class="button" data-show-map="Магазин Спорт-Марафон">
+						Посмотреть на карте
+						<svg width="24" height="18" viewBox="0 0 24 18">
+							<path d="M23.85 7.59C23.63 7.28 18.53 0 12 0S.37 7.28.15 7.59a.88.88 0 000 1c.21.31 5.32 7.59 11.85 7.59s11.63-7.29 11.85-7.6a.88.88 0 000-.99zM12 14.5c-4.81 0-9-4.83-10.2-6.41C3 6.5 7.18 1.67 12 1.67s9 4.83 10.2 6.41C21 9.67 16.82 14.5 12 14.5z"/>
+							<path d="M12 3.27A4.75 4.75 0 1016.75 8 4.75 4.75 0 0012 3.27zm0 7.91A3.17 3.17 0 1115.17 8 3.17 3.17 0 0112 11.18z"/>
+						</svg>
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="address-shop__item">
+
+				<h3 class="address-shop__title">
+					Торговый комплекс "Спорт-Хит"
+				</h3>
+
+				<table class="table-characteristics">
+					<tbody>
+						<tr>
+							<td>Телефон:</td>
+							<td>
+								<a href="tel:+79175393953">+7 (917) 539-39-53</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<b>Информация:</b> <br>
+								Сколковское шоссе, д.31, торговый комплекс "Спорт-Хит", павильон 10А, (2-й этаж, с эскалатора - направо). Магазин Proper-Light.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="link-all link-all--gray">
+
+					<button type="button" class="button" data-show-map="Торговый комплекс Спорт-Хит">
+						Посмотреть на карте
+						<svg width="24" height="18" viewBox="0 0 24 18">
+							<path d="M23.85 7.59C23.63 7.28 18.53 0 12 0S.37 7.28.15 7.59a.88.88 0 000 1c.21.31 5.32 7.59 11.85 7.59s11.63-7.29 11.85-7.6a.88.88 0 000-.99zM12 14.5c-4.81 0-9-4.83-10.2-6.41C3 6.5 7.18 1.67 12 1.67s9 4.83 10.2 6.41C21 9.67 16.82 14.5 12 14.5z"/>
+							<path d="M12 3.27A4.75 4.75 0 1016.75 8 4.75 4.75 0 0012 3.27zm0 7.91A3.17 3.17 0 1115.17 8 3.17 3.17 0 0112 11.18z"/>
+						</svg>
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}
