@@ -54,7 +54,13 @@
 
 	}
 
-	a {
+	a[href^="tel"] {
+
+		color: var(--color);
+
+	}
+
+	a:not([href^="tel"]) {
 
 		color: var(--color);
 		text-decoration: underline;
@@ -163,6 +169,7 @@
 		margin: 20px 0;
 		border: 0;
 		max-width: 100%;
+		display: block;
 
 	}
 

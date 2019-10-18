@@ -1,0 +1,132 @@
+{% set title = "Доставка и оплата" %}
+
+{% set description = "Мы осуществим доставку в любую точку России, Белоруссия, Казахстана, Армении и Таджикистана." %}
+
+{% set urlPage = "delivery-and-payment" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Доставка и оплата",
+		link: "delivery-and-payment"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="delivery-and-payment">
+
+		<h1 class="h1">
+			{{ title }}
+		</h1>
+
+		<div class="delivery-and-payment__card">
+
+			<figure class="delivery-and-payment__card-item">
+
+				<picture>
+
+					<source srcset="/img/delivery-and-payment/pickpoint@1x.webp 1x, /img/delivery-and-payment/pickpoint@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/delivery-and-payment/pickpoint@1x.png 1x, /img/delivery-and-payment/pickpoint@2x.png 2x">
+
+					<img src="/img/delivery-and-payment/pickpoint@1x.png" alt="Бесплатная доставка PickPoint" loading="lazy" width="210" height="182">
+
+				</picture>
+
+				<figcaption>
+					Бесплатная доставка PickPoint
+					<b class="h3">от 15 000 <span class="rub">₽</span></b>
+				</figcaption>
+
+			</figure>
+
+			<figure class="delivery-and-payment__card-item">
+
+				<picture>
+
+					<source srcset="/img/delivery-and-payment/1@1x.webp 1x, /img/delivery-and-payment/1@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/delivery-and-payment/1@1x.png 1x, /img/delivery-and-payment/1@2x.png 2x">
+
+					<img src="/img/delivery-and-payment/1@1x.png" alt="Бесплатная доставка курьерскими службами" loading="lazy" width="210" height="182">
+
+				</picture>
+
+				<figcaption>
+					Бесплатная доставка курьерскими службами
+					<b class="h3">от 15 000 <span class="rub">₽</span></b>
+				</figcaption>
+
+			</figure>
+
+			<figure class="delivery-and-payment__card-item">
+
+				<picture>
+
+					<source srcset="/img/delivery-and-payment/1@1x.webp 1x, /img/delivery-and-payment/1@2x.webp 2x" type="image/webp">
+
+					<source srcset="/img/delivery-and-payment/1@1x.png 1x, /img/delivery-and-payment/1@2x.png 2x">
+
+					<img src="/img/delivery-and-payment/1@1x.png" alt="Бесплатная доставка по Москве и Почтой по России — в подарок" loading="lazy" width="210" height="182">
+
+				</picture>
+
+				<figcaption>
+					Бесплатная доставка по Москве и Почтой по России — в подарок
+					<b class="h3">от 8 000 <span class="rub">₽</span></b>
+				</figcaption>
+
+			</figure>
+
+		</div>
+
+		<div class="tabs-hash">
+
+<!--
+в зависимости от hash адресной строки расставлять tabs-hash__btn--active и visuallyhidden
+по умолчанию (если отсуствйет hash) - текущее состояние,
+оно аналогично состоянию /delivery-and-payment/#tabs-1
+-->
+			<article class="tabs-hash__item">
+
+				<div class="hash-detect" id="tabs-1"></div>
+
+				<h2 class="tabs-hash__btn tabs-hash__btn--active h4">
+					Доставка по Москве
+				</h2>
+
+{% include "delivery-and-payment/tabs-1.html" %}
+
+			</article>
+
+			<article class="tabs-hash__item visuallyhidden">
+
+				<div class="hash-detect" id="tabs-2"></div>
+
+				<h2 class="tabs-hash__btn h4">
+					Доставка по России и в страны ТС
+				</h2>
+
+{% include "delivery-and-payment/tabs-2.html" %}
+
+			</article>
+
+			<article class="tabs-hash__item visuallyhidden">
+
+				<div class="hash-detect" id="tabs-3"></div>
+
+				<h2 class="tabs-hash__btn h4">
+					Оплата
+				</h2>
+
+{% include "delivery-and-payment/tabs-3.html" %}
+
+			</article>
+
+		</div>
+
+	</section>
+
+{% endblock %}
