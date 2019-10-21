@@ -1,0 +1,56 @@
+.p404 {
+
+	margin: 60px 0 30px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	&__yellow {
+
+		background-color: var(--yellow);
+		padding: 20px 28px 48px;
+		width: 278px;
+		position: relative;
+		margin-left: 80px;
+		flex-shrink: 0;
+
+		.h1 {
+
+			line-height: 1.2;
+			margin-bottom: 14px;
+
+			span {
+
+				display: block;
+
+			}
+
+		}
+
+		&::before {
+
+			border-left: 70px solid transparent;
+			border-bottom: 70px solid var(--yellow);
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 99%;
+
+		}
+
+		&::after {
+
+			background-color: var(--yellow);
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			width: 100vw;
+
+		}
+
+	}
+
+}
