@@ -6,6 +6,33 @@
 	align-items: flex-start;
 	justify-content: space-between;
 
+	@media ($mdWidth) {
+
+		display: block;
+		margin: 0 0 30px;
+
+	}
+
+	&__img {
+
+		@media ($mdWidth) {
+
+			max-width: 400px;
+			margin: auto;
+
+			img {
+
+				width: 258px;
+				height: 142px;
+				margin: 20px auto;
+				display: block;
+
+			}
+
+		}
+
+	}
+
 	&__yellow {
 
 		background-color: var(--yellow);
@@ -15,14 +42,36 @@
 		margin-left: 80px;
 		flex-shrink: 0;
 
+		@media ($mdWidth) {
+
+			margin: 0;
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+
+			&::before {
+
+				border: 0;
+				top: 0;
+				width: 100vw;
+				background-color: var(--yellow);
+
+			}
+
+		}
+
 		.h1 {
 
 			line-height: 1.2;
 			margin-bottom: 14px;
 
-			span {
+			@media ($desktop) {
 
-				display: block;
+				span {
+
+					display: block;
+
+				}
 
 			}
 

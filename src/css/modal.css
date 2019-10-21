@@ -54,6 +54,7 @@
 				max-height: 80vh;
 				margin: auto;
 				display: block;
+				max-width: calc(100% - 96px);
 
 			}
 

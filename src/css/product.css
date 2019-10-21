@@ -40,6 +40,12 @@
 
 		margin: 20px 40px 0;
 
+		@media ($mdWidth) {
+
+			margin: 15px;
+
+		}
+
 		p + table {
 
 			margin-top: 30px;
@@ -316,6 +322,12 @@
 		position: relative;
 		height: 40px;
 
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
+
 		&--fixed &-float {
 
 			position: fixed;
@@ -370,12 +382,21 @@
 	}
 
 	&__reviews,
-	&__description {
+	&__description,
+	&__manual,
+	&__related {
 
 		padding: 22px;
 		background-color: #eee;
 		margin-bottom: 10px;
 		position: relative;
+
+		@media ($mdWidth) {
+
+			margin: 10px -15px;
+			padding: 15px;
+
+		}
 
 	}
 
@@ -406,10 +427,7 @@
 	&__manual,
 	&__related {
 
-		padding: 22px;
 		background-color: color(#eee a(50%));
-		margin-bottom: 10px;
-		position: relative;
 
 	}
 

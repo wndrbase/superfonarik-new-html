@@ -26,6 +26,27 @@
 		display: flex;
 		flex-direction: column;
 
+		@media ($mdWidth) {
+
+			width: 130px;
+
+		}
+
+	}
+
+	&__body {
+
+		flex-grow: 1;
+		display: flex;
+		padding-left: 15px;
+
+		@media ($mdWidth) {
+
+			display: block;
+			width: calc(100% - 130px);
+
+		}
+
 	}
 
 	&__center {
@@ -33,7 +54,15 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 19px 10px 15px 15px;
+		padding: 19px 10px 15px 0;
+		position: relative;
+		z-index: 1;
+
+		@media ($mdWidth) {
+
+			padding: 15px 0 0;
+
+		}
 
 	}
 
@@ -43,6 +72,13 @@
 		flex-shrink: 0;
 		display: flex;
 		flex-direction: column;
+		position: relative;
+
+		@media ($mdWidth) {
+
+			width: 100%;
+
+		}
 
 	}
 
@@ -65,6 +101,12 @@
 		img {
 
 			max-width: 100%;
+
+			@media ($mdWidth) {
+
+				height: auto;
+
+			}
 
 		}
 
@@ -132,6 +174,12 @@
 		margin-top: auto;
 		display: flex;
 
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
+
 		.btn {
 
 			margin-right: 30px;
@@ -144,6 +192,12 @@
 
 		text-align: right;
 		margin: 16px 0 8px;
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 		a {
 
@@ -170,6 +224,12 @@
 		justify-content: flex-end;
 		margin-bottom: auto;
 
+		@media ($mdWidth) {
+
+			justify-content: flex-start;
+
+		}
+
 		&-value {
 
 			font-size: 12px;
@@ -195,6 +255,12 @@
 		justify-content: flex-end;
 		align-items: flex-end;
 		padding: 10px;
+
+		@media ($mdWidth) {
+
+			margin-top: 0;
+
+		}
 
 		&-value {
 

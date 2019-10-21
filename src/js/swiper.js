@@ -36,7 +36,7 @@ SF.swiper = function(swiperContainer){
 			product = swipe.classList.contains('swiper-container--product');
 
 		swipeNav.className = 'swiper-pagination';
-		swipeControls.className = 'swiper-controls center';
+		swipeControls.className = 'swiper-controls';
 
 		swipeBtns.className = 'swiper-navigation';
 		swipePrev.className = 'swiper-button-prev button';
@@ -69,6 +69,8 @@ SF.swiper = function(swiperContainer){
 		resetSwipe();
 
 		if (homeSlider) {
+
+			swipeControls.classList.add('center');
 
 			toggleSwipe = function() {
 

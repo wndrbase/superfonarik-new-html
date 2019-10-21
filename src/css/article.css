@@ -180,4 +180,15 @@
 
 	}
 
+	@media ($mdWidth) {
+
+		.md-img-left-off {
+
+			float: none;
+			margin: 12px 0;
+
+		}
+
+	}
+
 }

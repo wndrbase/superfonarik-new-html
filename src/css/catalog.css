@@ -11,6 +11,13 @@
 		position: relative;
 		padding: 40px 10px 40px 0;
 		flex-shrink: 0;
+		margin-right: 48px;
+
+		@media ($mdWidth) {
+
+			margin-right: 15px;
+
+		}
 
 		&::after {
 
@@ -29,7 +36,6 @@
 
 	&__list {
 
-		padding-left: 48px;
 		flex-grow: 1;
 
 	}

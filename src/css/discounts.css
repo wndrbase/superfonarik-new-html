@@ -6,12 +6,18 @@
 
 		display: flex;
 		margin: 20px 0;
+		align-items: flex-start;
 
 		&-text {
 
-			width: 678px;
-			flex-shrink: 0;
+			flex-grow: 1;
 			padding-right: 128px;
+
+			@media ($mdWidth) {
+
+				padding-right: 15px;
+
+			}
 
 			p {
 
@@ -24,7 +30,8 @@
 
 		&-list {
 
-			flex-grow: 1;
+			width: 272px;
+			flex-shrink: 0;
 			background-color: var(--yellow);
 			padding: 10px 0 10px 52px;
 			position: relative;
@@ -95,6 +102,17 @@
 
 			}
 
+			@media ($mdWidth) {
+
+				img {
+
+					max-width: 90%;
+					height: auto;
+
+				}
+
+			}
+
 		}
 
 	}
@@ -111,6 +129,12 @@
 			width: 270px;
 			position: relative;
 
+			@media ($mdWidth) {
+
+				width: calc(100% / 3 - 10px);
+
+			}
+
 		}
 
 		figcaption {
@@ -122,6 +146,14 @@
 			font-size: 16px;
 			line-height: 20px;
 
+			@media ($mdWidth) {
+
+				left: 18px;
+				bottom: 18px;
+				font-size: 14px;
+
+			}
+
 		}
 
 	}
@@ -132,6 +164,12 @@
 
 			display: flex;
 			margin: 72px 0 36px;
+
+			@media ($mdWidth) {
+
+				display: block;
+
+			}
 
 		}
 
@@ -178,16 +216,24 @@
 
 		&-left {
 
-			width: 678px;
-			flex-shrink: 0;
+			flex-grow: 1;
 
 		}
 
 		&-right {
 
-			flex-grow: 1;
+			width: 272px;
+			flex-shrink: 0;
 			border: 2px solid #eee;
 			padding: 12px 31px;
+
+			@media ($mdWidth) {
+
+				width: auto;
+				border-top: 0;
+				padding: 14px 20px;
+
+			}
 
 		}
 

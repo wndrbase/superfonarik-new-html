@@ -6,24 +6,44 @@
 		align-items: flex-start;
 		margin: 20px 0;
 
+		@media ($mdWidth) {
+
+			flex-direction: column-reverse;
+
+		}
+
 	}
 
 	&__left {
 
-		width: 678px;
-		flex-shrink: 0;
+		flex-grow: 1;
 		position: relative;
 		padding-right: 14px;
+
+		@media ($mdWidth) {
+
+			padding: 0;
+			width: 100%;
+
+		}
 
 	}
 
 	&__right {
 
-		flex-grow: 1;
+		width: 272px;
+		flex-shrink: 0;
 		position: relative;
 		padding: 12px 0 12px 20px;
 		color: var(--dark);
 		background-color: var(--yellow);
+
+		@media ($mdWidth) {
+
+			width: auto;
+			margin-bottom: 20px;
+
+		}
 
 		p {
 

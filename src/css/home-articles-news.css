@@ -2,6 +2,12 @@
 
 	flex-shrink: 0;
 
+	@media ($mdWidth) {
+
+		margin: 0 -15px;
+
+	}
+
 	&__box {
 
 		background-color: #eee;
@@ -9,6 +15,24 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
+
+		@media ($mdWidth) {
+
+			padding: 25px 15px;
+
+			&::after {
+
+				position: absolute;
+				width: 100vw;
+				top: 0;
+				right: 99%;
+				bottom: 0;
+				content: '';
+				background-color: #eee;
+
+			}
+
+		}
 
 		&::before {
 
@@ -71,7 +95,8 @@
 
 	&__grid {
 
-		width: 526px;
+		flex-grow: 1;
+		padding-right: 26px;
 
 		&-list {
 
@@ -150,6 +175,7 @@
 
 		width: 300px;
 		padding-bottom: 45px;
+		flex-shrink: 0;
 
 		.link-all {
 

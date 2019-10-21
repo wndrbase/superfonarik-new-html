@@ -5,18 +5,45 @@
 		display: flex;
 		margin: 15px 0 40px;
 
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
+
 	}
 
 	&__left {
 
 		flex-shrink: 0;
 		width: 324px;
+		margin-right: 40px;
+
+		@media ($mdWidth) {
+
+			margin-right: 0;
+			width: 100%;
+
+		}
 
 	}
 
 	&__right {
 
 		flex-grow: 1;
+
+		@media ($mdWidth) {
+
+			width: 100%;
+			margin-top: 10px;
+
+		}
+
+		iframe& {
+
+			min-height: 40vw;
+
+		}
 
 	}
 
@@ -56,8 +83,6 @@
 	}
 
 	&__geo {
-
-		padding-right: 40px;
 
 		.h3 {
 
