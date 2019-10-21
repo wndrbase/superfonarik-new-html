@@ -7,11 +7,24 @@
 		position: relative;
 		z-index: 1;
 
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
 		&__list {
 
 			display: flex;
 			justify-content: space-between;
 			width: 410px;
+
+			@media ($mdWidth) {
+
+				width: 50%;
+				justify-content: space-around;
+
+			}
 
 		}
 
@@ -35,9 +48,8 @@
 
 	&-catalog {
 
-		width: 678px;
-		flex-shrink: 0;
 		position: relative;
+		padding-top: 12px;
 
 		&:not(&--not-line)::after {
 
@@ -59,7 +71,7 @@
 
 		&__item {
 
-			width: 113px;
+			width: calc(100% / 6);
 
 			&--current {
 

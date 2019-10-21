@@ -2,6 +2,10 @@
 
 	flex-shrink: 0;
 
+	@media ($smWidth) {
+
+	}
+
 	.swiper-pagination {
 
 		top: -1px;

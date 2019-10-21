@@ -3,11 +3,37 @@
 	padding-top: 22px;
 	flex-shrink: 0;
 
+	@media ($smWidth) {
+
+		display: flex;
+		flex-direction: column-reverse;
+
+	}
+
+	&__box {
+
+		position: relative;
+		padding-right: 272px;
+
+		@media ($mdWidth) {
+
+			padding: 0;
+			margin-top: 30px;
+
+		}
+
+	}
+
 	&__top {
 
-		padding-top: 44px;
-		position: relative;
 		display: flex;
+		align-items: flex-end;
+
+		@media ($mdWidth) {
+
+			justify-content: space-between;
+
+		}
 
 	}
 
@@ -74,37 +100,51 @@
 
 	&__logo {
 
-		position: absolute;
 		top: -24px;
-		left: 0;
-		right: 88px;
 		width: 301px;
 		height: 146px;
-		margin: auto;
+		position: relative;
+		margin-left: 76px;
 
 		@media ($mdWidth) {
+
+			top: 0;
+			margin: 0;
+			height: 98px;
+			flex-grow: 1;
+			display: flex;
+			justify-content: center;
+
+			img {
+
+				width: 200px;
+				height: 98px;
+
+			}
 
 		}
 
 		@media ($smWidth) {
 
+			width: 100px;
+			height: 48px;
 
 		}
 
 	}
 
-	&__bottom {
-
-		display: flex;
-		align-items: flex-end;
-
-	}
-
 	&__user {
 
-		flex-grow: 1;
-		position: relative;
-		margin-top: -10px;
+		position: absolute;
+		width: 272px;
+		right: 0;
+		bottom: 0;
+
+		@media ($mdWidth) {
+
+			position: relative;
+
+		}
 
 		&-btns {
 
@@ -188,9 +228,7 @@
 
 	&__whatsapp {
 
-		position: absolute;
-		top: -25px;
-		left: 0;
+		margin-bottom: 5px;
 
 		a {
 
@@ -220,7 +258,7 @@
 }
 
 
-@media ($mdWidth) {
+@media ($smWidth) {
 
 	.btn-menu-toggle {
 
