@@ -20,6 +20,25 @@
 		background-color: var(--yellow);
 		padding: 14px 30px 30px 0;
 
+		@media ($smWidth) {
+
+			margin: 0 -20px;
+			padding: 7px;
+
+			&::before {
+
+				display: none;
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
+
+		}
+
 		&::before {
 
 			position: absolute;
@@ -56,6 +75,14 @@
 		word-spacing: 2.5px;
 		text-transform: uppercase;
 
+		@media ($smWidth) {
+
+			color: var(--dark);
+			font: 15px/18px Hermes;
+			border-bottom: 1px solid;
+
+		}
+
 		&::after {
 
 			position: absolute;
@@ -85,6 +112,15 @@
 			margin-top: 14px;
 			line-height: 17px;
 
+			@media ($smWidth) {
+
+				font-size: 12px;
+				line-height: 16px;
+				color: var(--dark);
+				margin-top: 10px;
+
+			}
+
 		}
 
 	}
@@ -94,11 +130,30 @@
 		flex-shrink: 0;
 		margin: 7px 28px 7px 0;
 
+		img {
+
+			max-width: 100%;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0 20px 0 0;
+			width: 120px;
+
+		}
+
 	}
 
 	&__content {
 
 		flex-grow: 1;
+
+		@media ($smWidth) {
+
+			margin: 18px 0;
+
+		}
 
 	}
 
@@ -106,6 +161,14 @@
 
 		display: flex;
 		justify-content: flex-end;
+
+		@media ($smWidth) {
+
+			position: absolute;
+			top: 6px;
+			right: 0;
+
+		}
 
 	}
 

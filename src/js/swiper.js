@@ -74,13 +74,10 @@ SF.swiper = function(swiperContainer){
 
 			toggleSwipe = function() {
 
-		//		resetSwipe();
+				console.log('homeSlider');
 
-/*				swipeNav.classList.remove('hide');
-				swipeNext.classList.remove('hide');
-				swipePrev.classList.remove('hide');
-*/
-				mySwipe = new Swiper(swipe, param);
+				new Swiper(swipe, param);
+				toggleSwipe = null;
 
 			}
 
@@ -93,16 +90,29 @@ SF.swiper = function(swiperContainer){
 			param.slidesPerGroup = 3;
 			param.spaceBetween = 59;
 			param.loopFillGroupWithBlank = true;
+			param.loopAdditionalSlides = 1;
+			param.breakpoints = {
+				320: {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+					spaceBetween: 0
+				},
+				768: {
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+					spaceBetween: 20
+				},
+				1200: {
+					spaceBetween: 59
+				}
+			};
 
 			toggleSwipe = function() {
 
-		//		resetSwipe();
+				console.log('carousel')
 
-/*				swipeNav.classList.remove('hide');
-				swipeNext.classList.remove('hide');
-				swipePrev.classList.remove('hide');*/
-
-				mySwipe = new Swiper(swipe, param);
+				new Swiper(swipe, param);
+				toggleSwipe = null;
 
 			}
 
@@ -114,7 +124,9 @@ SF.swiper = function(swiperContainer){
 
 				if(!mySwipe) {
 
-					mySwipe = new Swiper(swipe, {
+					console.log('product')
+
+					new Swiper(swipe, {
 						loop: true,
 						navigation: {
 							nextEl: swipeNext,
@@ -133,6 +145,8 @@ SF.swiper = function(swiperContainer){
 			toggleSwipe = function() {
 
 				if(!mySwipe) {
+
+					console.log('gallery')
 
 					mySwipe = new Swiper(swipe, {
 						loop: true,
@@ -194,9 +208,10 @@ SF.swiper = function(swiperContainer){
 
 		}
 */
+
 		PubSub.subscribe('windowWidthResize', function(){
 
-			if (window.Swiper) {
+			if (window.Swiper && toggleSwipe) {
 
 				toggleSwipe();
 
@@ -204,14 +219,16 @@ SF.swiper = function(swiperContainer){
 
 		});
 
-		PubSub.subscribe('swiperJsLoad', toggleSwipe);
-
-		if(window.Swiper) {
+		if(window.Swiper && toggleSwipe) {
 
 			toggleSwipe();
 
 		}
+		else {
 
+			PubSub.subscribe('swiperJsLoad', toggleSwipe);
+
+		}
 
 		if(!SF.swiper.init) {
 

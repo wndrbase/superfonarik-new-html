@@ -3,9 +3,84 @@
 	flex-shrink: 0;
 	margin-bottom: 23px;
 
+	@media ($smWidth) {
+
+		margin: 30px 0 40px;
+
+	}
+
+	@media ($xsWidth) {
+
+		margin: 20px 0 30px;
+
+	}
+
 	.swiper-container {
 
 		padding-bottom: 56px;
+
+		@media ($smWidth) {
+
+			width: 280px;
+			overflow: visible;
+			margin: 0;
+			padding-bottom: 40px;
+
+			.swiper-navigation {
+
+				display: none;
+
+			}
+
+			.swiper-slide {
+
+				padding-right: 20px;
+
+				&:not(.swiper-slide-active) {
+
+					opacity: .5;
+
+				}
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			width: auto;
+			margin: 0 -10px;
+
+			&::after,
+			&::before {
+
+				position: absolute;
+				width: 20px;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				content: '';
+				background-image: linear-gradient(to right, #fff, color(#fff a(0)));
+				z-index: 5;
+				pointer-events: none;
+
+			}
+
+			&::after {
+
+				left: auto;
+				right: 0;
+				background-image: linear-gradient(to left, #fff, color(#fff a(0)));
+
+			}
+
+			.swiper-slide {
+
+				padding: 0 10px;
+
+			}
+
+		}
 
 	}
 
@@ -20,11 +95,37 @@
 		max-width: calc((100% - 59px - 59px) / 3);
 		margin-right: 59px;
 
+		@media ($mdWidth) {
+
+			max-width: calc((100% - 20px - 20px) / 3);
+			margin-right: 20px;
+
+		}
+
+		@media ($smWidth) {
+
+			max-width: 100%;
+			margin-right: 0;
+
+		}
+
 	}
 
 	&__link {
 
 		display: block;
+
+		@media ($smWidth) {
+
+			max-width: 240px;
+
+		}
+
+		@media ($xsWidth) {
+
+			max-width: 100%;
+
+		}
 
 	}
 
@@ -33,12 +134,19 @@
 		height: 140px;
 		display: block;
 		position: relative;
+		text-align: center;
 
 		img {
 
 			max-width: 100%;
 			max-height: 100%;
 			object-fit: contain;
+
+			@media ($mdWidth) {
+
+				max-width: 140px;
+
+			}
 
 		}
 
@@ -59,6 +167,12 @@
 			top: -28px;
 			right: 25px;
 
+			@media ($smWidth) {
+
+				font-size: 18px;
+
+			}
+
 		}
 
 		&-current {
@@ -69,6 +183,12 @@
 			position: absolute;
 			bottom: 12px;
 			right: 30px;
+
+			@media ($smWidth) {
+
+				font-size: 21px;
+
+			}
 
 		}
 
@@ -97,6 +217,12 @@
 		position: relative;
 		line-height: 22px;
 
+		@media ($mdWidth) {
+
+			font: 15px/18px Hermes;
+
+		}
+
 		&::before {
 
 			border-left: 35px solid var(--yellow);
@@ -122,6 +248,13 @@
 		position: absolute;
 		top: 18px;
 		right: 0;
+
+		@media ($smWidth) {
+
+			position: relative;
+			top: 0;
+
+		}
 
 	}
 

@@ -5,6 +5,12 @@
 	flex-shrink: 0;
 	margin-top: 4px;
 
+	@media ($smWidth) {
+
+		background: #202020;
+
+	}
+
 	a {
 
 		color: #fff;
@@ -17,6 +23,13 @@
 		justify-content: space-between;
 		padding: 14px 0 42px;
 
+		@media ($smWidth) {
+
+			padding: 20px 0;
+			flex-direction: column-reverse;
+
+		}
+
 	}
 
 	&__contacts {
@@ -27,6 +40,27 @@
 		@media ($mdWidth) {
 
 			width: 200px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+
+		&-head {
+
+			@media ($smWidth) {
+
+				font-family: Hermes;
+				font-size: 14px;
+				line-height: 26px;
+				color: #777;
+
+			}
 
 		}
 
@@ -44,6 +78,18 @@
 
 				margin-top: 4px;
 
+				@media ($smWidth) {
+
+					margin-top: 14px;
+
+				}
+
+			}
+
+			@media ($smWidth) {
+
+				width: 50%;
+
 			}
 
 		}
@@ -60,6 +106,7 @@
 		span {
 
 			display: flex;
+			align-items: center;
 
 		}
 
@@ -80,11 +127,23 @@
 			margin-top: 6px;
 			display: flex;
 
+			@media ($smWidth) {
+
+				margin: 0 -5px;
+
+			}
+
 		}
 
 		li {
 
 			margin-right: 8px;
+
+			@media ($smWidth) {
+
+				margin: 5px;
+
+			}
 
 		}
 
@@ -98,6 +157,26 @@
 			position: relative;
 			transition: .3s;
 			border-radius: 50%;
+
+			@media ($smWidth) {
+
+				border-radius: 0;
+				background-color: #292929;
+
+				svg {
+
+					fill: #fff;
+
+				}
+
+			}
+
+			@media ($xsWidth) {
+
+				height: 30px;
+				width: 30px;
+
+			}
 
 			&:hover {
 
@@ -141,6 +220,41 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: 100%;
+			flex-wrap: wrap;
+
+			ul {
+
+				width: 50%;
+
+			}
+
+			li {
+
+				margin-bottom: 8px;
+
+			}
+
+			a {
+
+				color: var(--yellow);
+				font-size: 13px;
+				line-height: 16px;
+				border-bottom: 1px solid;
+
+				&:hover {
+
+					color: var(--yellow);
+					border-bottom-color: var(--yellow);
+
+				}
+
+			}
+
+		}
+
 		a {
 
 			font-size: 15px;
@@ -173,6 +287,14 @@
 
 		}
 
+		@media ($smWidth) {
+
+			background: #292929;
+			margin: 0 -15px;
+			padding: 10px 20px 25px;
+
+		}
+
 		&-system {
 
 			font-size: 12px;
@@ -185,17 +307,26 @@
 				margin-left: 10px;
 				flex-shrink: 0;
 
+				@media ($smWidth) {
+
+					margin-left: 26px;
+					width: 39px;
+					height: 34px;
+
+				}
+
 			}
 
 			@media ($mdWidth) {
 
 				justify-content: flex-end;
 
-				br {
+			}
 
-					display: none;
+			@media ($smWidth) {
 
-				}
+				justify-content: flex-start;
+				margin-top: 26px;
 
 			}
 
@@ -218,12 +349,44 @@
 			display: flex;
 			align-items: center;
 
+			@media ($smWidth) {
+
+				margin: 20px -7px;
+
+			}
+
+			@media ($xsWidth) {
+
+				margin: 10px 0;
+				justify-content: space-between;
+
+			}
+
 		}
 
 		li {
 
 			margin-right: 22px;
 			flex-shrink: 0;
+
+			@media ($smWidth) {
+
+				margin: 7px;
+
+				img {
+
+					width: 34px;
+					height: 34px;
+
+ 				}
+
+			}
+
+			@media ($xsWidth) {
+
+				margin: 0;
+
+			}
 
 		}
 

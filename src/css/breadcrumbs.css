@@ -4,6 +4,12 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	@media ($smWidth) {
+
+		display: none;
+
+	}
+
 	&__item {
 
 		display: flex;

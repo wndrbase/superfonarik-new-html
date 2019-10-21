@@ -8,6 +8,18 @@
 
 	}
 
+	@media ($smWidth) {
+
+		margin: 0 -20px;
+
+	}
+
+	@media ($xsWidth) {
+
+		margin: 0 -10px;
+
+	}
+
 	&__box {
 
 		background-color: #eee;
@@ -34,6 +46,25 @@
 
 		}
 
+		@media ($smWidth) {
+
+			padding: 40px 20px 15px;
+			display: block;
+
+			&::after {
+
+				display: none;
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			padding: 20px 10px;
+
+		}
+
 		&::before {
 
 			position: absolute;
@@ -57,6 +88,14 @@
 		border-bottom: 1px solid #000;
 		text-decoration: none;
 		transition: all .3s;
+
+		@media ($smWidth) {
+
+			color: var(--dark);
+			font: 15px/18px Hermes;
+			border-color: var(--dark);
+
+		}
 
 		&::after {
 
@@ -85,6 +124,12 @@
 		font-size: 20px;
 		margin: 2px 0;
 
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
 		span {
 
 			color: #bbb;
@@ -98,6 +143,12 @@
 		flex-grow: 1;
 		padding-right: 26px;
 
+		@media ($smWidth) {
+
+			padding: 0;
+
+		}
+
 		&-list {
 
 			position: relative;
@@ -106,6 +157,21 @@
 			flex-wrap: wrap;
 			padding: 1px;
 			margin-top: 58px;
+
+			@media ($smWidth) {
+
+				display: block;
+				padding: 0;
+				margin: 20px 0;
+				background-color: transparent;
+
+				&::before {
+
+					display: none;
+
+				}
+
+			}
 
 			&::before {
 
@@ -130,6 +196,16 @@
 			display: flex;
 			position: relative;
 
+			@media ($smWidth) {
+
+				width: 100%;
+				min-height: 0px;
+				margin: 7px 0;
+				background-color: transparent;
+				padding: 0;
+
+			}
+
 			&--first {
 
 				width: 100%;
@@ -137,13 +213,41 @@
 				min-height: 0;
 				background-color: transparent;
 
+				@media ($smWidth) {
+
+					padding: 7px;
+					width: auto;
+					margin: 0 -20px;
+					background-color: var(--yellow);
+
+				}
+
+				@media ($xsWidth) {
+
+					margin: 0 -10px;
+
+				}
+
 			}
 
 			&-img {
 
 				flex-shrink: 0;
 				padding: 7px 0;
-				margin-right: 19px;
+				margin-right: 20px;
+
+				img {
+
+					max-width: 100%;
+
+				}
+
+				@media ($smWidth) {
+
+					padding: 0;
+					width: 120px;
+
+				}
 
 			}
 
@@ -151,12 +255,27 @@
 
 				flex-grow: 1;
 
+				@media ($smWidth) {
+
+					padding-top: 18px;
+
+				}
+
 			}
 
 			p {
 
 				margin-top: 8px;
 				line-height: 17px;
+
+				@media ($smWidth) {
+
+					font-size: 12px;
+					line-height: 16px;
+					color: var(--dark);
+					margin-top: 10px;
+
+				}
 
 			}
 
@@ -167,6 +286,14 @@
 			display: flex;
 			justify-content: flex-end;
 
+			@media ($smWidth) {
+
+				position: absolute;
+				top: 6px;
+				right: 0;
+
+			}
+
 		}
 
 	}
@@ -176,12 +303,30 @@
 		width: 300px;
 		padding-bottom: 45px;
 		flex-shrink: 0;
+		position: relative;
+
+		@media ($smWidth) {
+
+			padding: 0;
+			margin-top: 40px;
+			width: 100%;
+
+		}
 
 		.link-all {
 
 			position: absolute;
 			left: 0;
 			bottom: 0;
+
+			@media ($smWidth) {
+
+				top: 6px;
+				right: 0;
+				left: auto;
+				bottom: auto;
+
+			}
 
 		}
 
@@ -193,6 +338,15 @@
 
 				margin-top: 8px;
 				line-height: 17px;
+
+				@media ($smWidth) {
+
+					font-size: 12px;
+					line-height: 16px;
+					color: var(--dark);
+					margin-top: 10px;
+
+				}
 
 			}
 

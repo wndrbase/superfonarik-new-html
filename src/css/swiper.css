@@ -24,6 +24,17 @@
 		z-index: 5;
 		display: flex;
 		justify-content: space-between;
+		pointer-events: none;
+
+		@media ($smWidth) {
+
+			top: 0;
+			margin-top: auto;
+			margin-bottom: auto;
+			height: 35px;
+			padding: 0;
+
+		}
 
 	}
 
@@ -35,30 +46,7 @@
 		list-style: none;
 		padding: 0;
 		z-index: 1;
-/*
-		&::after,
-		&::before {
 
-			position: absolute;
-			width: 50px;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			content: '';
-			background-image: linear-gradient(to right, #fff, color(#fff a(0)));
-			z-index: 5;
-			pointer-events: none;
-
-		}
-
-		&::after {
-
-			left: auto;
-			right: 0;
-			background-image: linear-gradient(to left, #fff, color(#fff a(0)));
-
-		}
- */
 	}
 
 	.swiper-container-no-flexbox .swiper-slide {
@@ -141,6 +129,19 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: 100%;
+			justify-content: space-between;
+
+			&::before {
+
+				display: none;
+
+			}
+
+		}
+
 	}
 
 	.swiper-button-prev,
@@ -151,6 +152,23 @@
 		height: 48px;
 		position: relative;
 		background-color: #4e4e4e;
+		pointer-events: auto;
+
+		@media ($smWidth) {
+
+			width: 35px;
+			height: 35px;
+			background-color: color(#eff0f1 a(30%));
+
+			svg {
+
+				width: 7px;
+				height: 10px;
+				fill: #fff;
+
+			}
+
+		}
 
 		svg {
 
@@ -211,6 +229,12 @@
 		position: relative;
 		top: -6px;
 
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
 		.button {
 
 			background-color: color(#4e4e4e a(66%));
@@ -218,6 +242,7 @@
 			width: 19px;
 			transition: .3s;
 			margin-left: 6px;
+			pointer-events: auto;
 
 			&.is-active {
 

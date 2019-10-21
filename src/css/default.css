@@ -152,11 +152,14 @@ table {
 
 	@media ($mdWidth) {
 
+		font-size: 32px;
 
 	}
 
 	@media ($smWidth) {
 
+		font-size: 21px;
+		color: var(--dark);
 
 	}
 

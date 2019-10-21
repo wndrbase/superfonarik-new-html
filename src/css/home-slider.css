@@ -4,6 +4,14 @@
 
 	@media ($smWidth) {
 
+		margin-bottom: 30px;
+
+	}
+
+	@media ($xsWidth) {
+
+		margin-bottom: 10px;
+
 	}
 
 	.swiper-pagination {
@@ -43,6 +51,12 @@
 		overflow: hidden;
 		position: relative;
 
+		@media ($smWidth) {
+
+			height: 100vw;
+
+		}
+
 		img {
 
 			position: absolute;
@@ -75,6 +89,12 @@
 		display: flex;
 		align-items: center;
 		position: relative;
+
+		@media ($smWidth) {
+
+			height: 100vw;
+
+		}
 
 	}
 

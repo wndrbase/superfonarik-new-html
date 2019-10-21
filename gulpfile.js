@@ -76,12 +76,13 @@ gulp.task('html', function() {
 			path: 'src/'
 		}))
 		.pipe(w3cjs({
-			callback: function (error, res) {
-				console.log(error || res);
-				if (res && res.messages.length > 0 ) {
-					throw {error: 'html errors have been found', results: res};
-				};
-				done();
+			verifyMessage: function(type, message) {
+
+				// prevent logging error message
+				if(message.indexOf('Attribute “loading” not allowed on element “img” at this point.') === 0) return false;
+
+				// allow message to pass through
+				return true;
 			}
 		}))
 //		.pipe(w3cjs.reporter())
@@ -149,7 +150,7 @@ gulp.task('js', function() {
 
 // prod
 
-/*		.pipe(minify({
+		.pipe(minify({
 			preserveComments: "some",
 			ext : {
 				min:'.min.js'
@@ -163,14 +164,14 @@ gulp.task('js', function() {
 				return (/min$/.test(file.stem));
 			},
 			gulp.dest('src/js')
-		));*/
+		));
 
 
 // dev, off minify
-		.pipe(gulp.dest('build/js'))
+/*		.pipe(gulp.dest('build/js'))
 		.pipe(rename({suffix: ".min"}))
 		.pipe(gulp.dest('build/js'))
-		.pipe(gulp.dest('src/js'))
+		.pipe(gulp.dest('src/js'))*/
 
 
 });

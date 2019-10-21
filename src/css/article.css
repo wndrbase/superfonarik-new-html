@@ -6,6 +6,18 @@
 
 		order: 10;
 
+		@media ($smWidth) {
+
+			margin: 20px 0;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 10px 0;
+
+		}
+
 	}
 
 	h1:not([class]) {
@@ -16,6 +28,15 @@
 		margin: 21px 0 15px;
 		font-weight: 400;
 		text-transform: uppercase;
+
+		@media ($smWidth) {
+
+			font-size: 21px;
+			line-height: 1.24;
+			text-transform: none;
+			color: var(--dark);
+
+		}
 
 	}
 
@@ -48,9 +69,16 @@
 
 	p:not([class]) {
 
-		margin: 0 0 17px;
+		margin: 0 0 1em;
 		line-height: 17px;
 		text-align: justify;
+
+		@media ($smWidth) {
+
+			line-height: 1.5;
+			text-align: left;
+
+		}
 
 	}
 
@@ -77,8 +105,16 @@
 
 	ul:not([class]) {
 
-		margin: 0 0 17px;
+		margin: 0 0 1em;
 		line-height: 17px;
+		text-align: justify;
+
+		@media ($smWidth) {
+
+			line-height: 1.5;
+			text-align: left;
+
+		}
 
 		li {
 

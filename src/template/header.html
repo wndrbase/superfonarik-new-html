@@ -10,6 +10,10 @@
 
 {% include "template/header__contacts.html" %}
 
+					<button class="button btn-menu-toggle visible-sm" type="button">
+						<span>открыть меню</span>
+					</button>
+
 					<div class="header__logo">
 
 						<a href="/">
@@ -22,23 +26,17 @@
 
 				</div>
 
-{% include "template/menu-catalog.html" %}
-
-			</div>
-
-			<div class="visible-sm">
-
-				<button class="button btn-menu-toggle" type="button">
-					<span>открыть меню</span>
-				</button>
-
-				<button class="button btn-menu-toggle btn-menu-toggle--close" type="button">
-					<span>закрыть меню</span>
-				</button>
-
 			</div>
 
 		</div>
+
+		<div class="header__catalog center">
+
+{% include "template/menu-catalog.html" %}
+
+		</div>
+
+{% include "template/menu-mobile.html" %}
 
 {% if sliderHome %}
 
