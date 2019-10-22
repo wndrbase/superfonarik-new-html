@@ -39,6 +39,12 @@ body {
 	overflow-y: scroll;
 	position: relative;
 
+	&.bg-footer {
+
+		background-color: #292929;
+
+	}
+
 /* background-image: url(/css/1.png); */
 background-position: center 0;
 /* background-size: 1920px auto; */
