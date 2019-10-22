@@ -217,6 +217,8 @@ time {
 	position: relative;
 	overflow: hidden;
 	flex-shrink: 0;
+	background-color: #fff;
+	flex-grow: 1;
 
 }
 

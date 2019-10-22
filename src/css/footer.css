@@ -284,11 +284,6 @@
 		@media ($mdWidth) {
 
 			display: block;
-
-		}
-
-		@media ($smWidth) {
-
 			background: #292929;
 			margin: 0 -15px;
 			padding: 10px 20px 25px;
@@ -307,7 +302,7 @@
 				margin-left: 10px;
 				flex-shrink: 0;
 
-				@media ($smWidth) {
+				@media ($mdWidth) {
 
 					margin-left: 26px;
 					width: 39px;
@@ -318,12 +313,6 @@
 			}
 
 			@media ($mdWidth) {
-
-				justify-content: flex-end;
-
-			}
-
-			@media ($smWidth) {
 
 				justify-content: flex-start;
 				margin-top: 26px;
@@ -369,7 +358,7 @@
 			margin-right: 22px;
 			flex-shrink: 0;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				margin: 7px;
 

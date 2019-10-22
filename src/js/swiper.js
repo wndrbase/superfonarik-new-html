@@ -250,7 +250,7 @@ SF.swiper = function(swiperContainer){
 
 				document.head.appendChild(script);
 
-			}, 1000);
+			}, 10000);
 
 		}
 

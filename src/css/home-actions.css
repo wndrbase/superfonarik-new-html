@@ -75,7 +75,7 @@
 		word-spacing: 2.5px;
 		text-transform: uppercase;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			color: var(--dark);
 			font: 15px/18px Hermes;
@@ -112,7 +112,7 @@
 			margin-top: 14px;
 			line-height: 17px;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				font-size: 12px;
 				line-height: 16px;
@@ -136,7 +136,7 @@
 
 		}
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			margin: 0 20px 0 0;
 			width: 120px;
@@ -149,7 +149,7 @@
 
 		flex-grow: 1;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			margin: 18px 0;
 

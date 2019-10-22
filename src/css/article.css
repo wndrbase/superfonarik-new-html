@@ -29,7 +29,7 @@
 		font-weight: 400;
 		text-transform: uppercase;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			font-size: 21px;
 			line-height: 1.24;
@@ -73,7 +73,7 @@
 		line-height: 17px;
 		text-align: justify;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			line-height: 1.5;
 			text-align: left;
@@ -109,7 +109,7 @@
 		line-height: 17px;
 		text-align: justify;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			line-height: 1.5;
 			text-align: left;
