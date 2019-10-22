@@ -234,23 +234,19 @@ SF.swiper = function(swiperContainer){
 
 			SF.swiper.init = true;
 
-			setTimeout(function(){
+			var script = document.createElement('script');
 
-				var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.async = true;
+			script.src = '/js/swiper.min.js';
 
-				script.type = 'text/javascript';
-				script.async = true;
-				script.src = '/js/swiper.min.js';
+			script.onload = function () {
 
-				script.onload = function () {
+				PubSub.publish('swiperJsLoad');
 
-					PubSub.publish('swiperJsLoad');
+			};
 
-				};
-
-				document.head.appendChild(script);
-
-			}, 10000);
+			document.head.appendChild(script);
 
 		}
 
