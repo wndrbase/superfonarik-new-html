@@ -18,12 +18,25 @@
 		flex-wrap: wrap;
 		margin: -10px -25px;
 
+		@media ($smWidth) {
+
+			margin: -10px;
+
+		}
+
 	}
 
 	&__item {
 
 		width: 190px;
 		margin: 10px 25px;
+
+		@media ($smWidth) {
+
+			margin: 10px;
+			width: calc(50% - 20px);
+
+		}
 
 	}
 
@@ -120,7 +133,7 @@
 
 		margin-top: 20px;
 
-		.btn--cart {
+		.btn {
 
 			width: 100%;
 

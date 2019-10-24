@@ -51,11 +51,18 @@
 
 		imgBlock.addEventListener('click', function(e){
 
+			e.preventDefault();
+
+			if(window.innerWidth < 768) {
+
+				return;
+
+			}
+
 			var big = e.target.closest('.product__img-link');
 
 			if(big) {
 
-				e.preventDefault();
 				SF.modalShow('gallery');
 
 				if(window.Swiper) {
