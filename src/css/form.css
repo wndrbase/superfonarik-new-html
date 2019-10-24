@@ -66,6 +66,14 @@
 
 		}
 
+		@media ($smWidth) {
+
+			height: 50px;
+			font: 15px/50px Hermes;
+			color: var(--dark);
+
+		}
+
 	}
 
 	&--download {

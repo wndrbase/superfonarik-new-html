@@ -201,16 +201,29 @@
 	&-mobile {
 
 		display: none;
-		margin: 30px;
-		padding-left: 22px;
+		margin: 0 20px 32px;
 
-		a {
+		&__list {
 
-			font-family: Hermes;
-			font-size: 18px;
-			line-height: 2.39;
-			color: var(--dark);
-			text-transform: uppercase;
+			padding-left: 22px;
+			margin: 10px;
+
+			a {
+
+				font-family: Hermes;
+				font-size: 18px;
+				line-height: 2.39;
+				color: var(--dark);
+				text-transform: uppercase;
+
+			}
+
+		}
+
+		.btn {
+
+			width: 100%;
+			margin: 15px 0;
 
 		}
 

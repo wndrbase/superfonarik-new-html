@@ -711,12 +711,6 @@
 
 				}
 
-				.product__param ~ *:not(p) {
-
-					display: none;
-
-				}
-
 			}
 
 		}

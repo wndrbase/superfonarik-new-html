@@ -15,6 +15,7 @@ SF.swiper = function(swiperContainer){
 			initialSlide = swipe.getAttribute('data-start-slide') ? parseInt(swipe.getAttribute('data-start-slide')) : 0,
 			param = {
 				loop: true,
+				preloadImages: false,
 				pagination: {
 					clickable: true,
 					bulletElement: 'button',
