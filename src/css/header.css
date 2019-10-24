@@ -196,6 +196,7 @@
 		width: 272px;
 		right: 0;
 		bottom: -110px;
+		z-index: 1;
 
 		@media ($mdWidth) {
 

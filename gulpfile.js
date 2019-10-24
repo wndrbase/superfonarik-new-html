@@ -284,7 +284,7 @@ gulp.task('copy-js', function() {
 
 gulp.task('copy', function() {
 
-	return gulp.src(['src/**/*.*', '!src/**/*.{css,html,js}'])
+	return gulp.src(['src/**/*.*', '!src/**/*.{css,html,js}'], {since: gulp.lastRun('copy')})
 			.pipe(debug({title: 'copy:'}))
 			.pipe(newer('build'))
 			.pipe(debug({title: 'copy:newer'}))

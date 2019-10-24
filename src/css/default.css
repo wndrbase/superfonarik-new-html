@@ -187,6 +187,20 @@ table {
 	font-weight: 400;
 	text-transform: uppercase;
 
+	@media ($mdWidth) {
+
+		font-size: 24px;
+
+	}
+
+	@media ($smWidth) {
+
+		font-size: 21px;
+		color: var(--dark);
+		text-transform: none;
+
+	}
+
 }
 
 .h4 {
