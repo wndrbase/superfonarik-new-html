@@ -16,6 +16,7 @@
 		@media ($mdWidth) {
 
 			margin-right: 15px;
+			display: none;
 
 		}
 

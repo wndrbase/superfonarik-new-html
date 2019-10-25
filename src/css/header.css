@@ -48,6 +48,12 @@
 			order: 3;
 			left: 0;
 
+			&:not(&--not-line) {
+
+				display: none;
+
+			}
+
 		}
 
 	}

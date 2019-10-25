@@ -97,6 +97,36 @@
 
 	}
 
+	&--hide-img-mobile &__item {
+
+
+		@media ($mdWidth) {
+
+			width: auto !important;
+			background-color: #f7f7f7;
+
+		}
+
+	}
+
+	&--hide-img-mobile &__img {
+
+		display: none;
+
+	}
+
+	&--hide-img-mobile &__name {
+
+		@media ($mdWidth) {
+
+			padding: 5px;
+			font: 12px/14px Hermes;
+			text-transform: uppercase;
+
+		}
+
+	}
+
 	&__img {
 
 		height: 80px;
@@ -142,8 +172,6 @@
 		@media ($mdWidth) {
 
 			padding: 0 10px 20px;
-			font-size: 13px;
-			line-height: 16px;
 			font: 13px/15px Hermes;
 			color: var(--dark);
 

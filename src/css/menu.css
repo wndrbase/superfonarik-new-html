@@ -87,16 +87,6 @@
 
 		}
 
-		&:not(&--not-line) &__list {
-
-			@media ($smWidth) {
-
-				display: none;
-
-			}
-
-		}
-
 		&__list {
 
 			display: flex;
