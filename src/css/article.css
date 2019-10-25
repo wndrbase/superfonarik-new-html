@@ -75,8 +75,9 @@
 
 		@media ($mdWidth) {
 
-			line-height: 1.5;
+			line-height: 19px;
 			text-align: left;
+			color: var(--dark);
 
 		}
 
@@ -111,8 +112,9 @@
 
 		@media ($mdWidth) {
 
-			line-height: 1.5;
+			line-height: 19px;
 			text-align: left;
+			color: var(--dark);
 
 		}
 
@@ -243,6 +245,12 @@
 
 		max-width: 100%;
 
+		@media ($mdWidth) {
+
+			height: auto;
+
+		}
+
 		@media ($smWidth) {
 
 			&[style*="float"] {
@@ -261,6 +269,12 @@
 		border: 0;
 		max-width: 100%;
 		display: block;
+
+		@media ($smWidth) {
+
+			height: calc(56.25vw - 40px);
+
+		}
 
 	}
 

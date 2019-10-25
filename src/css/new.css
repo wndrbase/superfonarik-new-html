@@ -10,6 +10,17 @@
 
 		}
 
+		@media ($mdWidth) {
+
+			.h1 {
+
+				text-transform: none;
+				color: var(--dark);
+
+			}
+
+		}
+
 	}
 
 	&__tags {

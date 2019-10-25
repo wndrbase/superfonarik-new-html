@@ -11,6 +11,14 @@
 		padding: 3px 17px 5px;
 		color: var(--dark);
 
+		@media ($mdWidth) {
+
+			font: 12px/14px Hermes;
+			padding: 5px;
+			text-transform: uppercase;
+
+		}
+
 	}
 
 }

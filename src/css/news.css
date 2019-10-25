@@ -2,9 +2,35 @@
 
 	margin-bottom: 50px;
 
+	&__title {
+
+		@media ($mdWidth) {
+
+			text-transform: none;
+			margin-bottom: 30px;
+			color: var(--dark);
+
+		}
+
+	}
+
 	&__item {
 
 		display: flex;
+
+		@media ($smWidth) {
+
+			display: block;
+
+			&::after {
+
+				display: table;
+				content: ' ';
+				width: 100%;
+
+			}
+
+		}
 
 	}
 
@@ -20,11 +46,31 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: 120px;
+			margin-right: 20px;
+			float: left;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin-right: 10px;
+
+		}
+
 	}
 
 	&__date {
 
 		margin-bottom: 21px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 0;
+
+		}
 
 	}
 
@@ -50,11 +96,25 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font: 15px/18px Hermes;
+
+		}
+
 	}
 
 	&__text {
 
 		margin-top: 10px;
+
+		@media ($smWidth) {
+
+			font-size: 12px;
+			line-height: 16px;
+			color: var(--dark);
+
+		}
 
 	}
 
@@ -86,6 +146,49 @@
 				}
 
 			}
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0 -20px;
+			padding: 7px;
+
+			&-yellow {
+
+				padding-bottom: 10px;
+
+				.news__img {
+
+					width: 133px;
+
+				}
+
+			}
+
+			&-white,
+			&-column {
+
+				.news__img {
+
+					width: 118px;
+					float: left;
+
+				}
+
+				.news__item {
+
+					margin: 7px -15px 0;
+
+				}
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
 
 		}
 
