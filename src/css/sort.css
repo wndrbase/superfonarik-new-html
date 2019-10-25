@@ -64,4 +64,31 @@
 
 	}
 
+	&-mobile {
+
+		height: 34px;
+		line-height: 34px;
+		background-color: #fff;
+		position: relative;
+		display: flex;
+		padding: 0 6px;
+		white-space: nowrap;
+
+		&__title {
+
+			font-size: 12px;
+			font-weight: bold;
+			color: var(--dark);
+			padding: 0 6px;
+
+			@media ($xsWidth) {
+
+				font-weight: 400;
+
+			}
+
+		}
+
+	}
+
 }

@@ -4,14 +4,38 @@
 	justify-content: center;
 	margin: -4px;
 
+	@media ($mdWidth) {
+
+		margin: -6px;
+
+	}
+
+	@media ($xsWidth) {
+
+		margin: -5px;
+
+	}
+
 	&__item {
 
 		margin: 4px;
 
+		@media ($mdWidth) {
+
+			margin: 6px;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 5px;
+
+		}
+
 		a,
 		span {
 
-			color: #444;
+			color: var(--color);
 			padding: 0 8px;
 			display: block;
 			background-color: #eff0f1;
@@ -20,6 +44,23 @@
 			text-align: center;
 			height: 32px;
 			line-height: 32px;
+
+			@media ($mdWidth) {
+
+				line-height: 35px;
+				min-width: 35px;
+				height: 35px;
+				border-radius: 0;
+
+			}
+
+			@media ($xsWidth) {
+
+				line-height: 32px;
+				min-width: 32px;
+				height: 32px;
+
+			}
 
 		}
 
@@ -50,6 +91,27 @@
 		&--prev,
 		&--next {
 
+			svg {
+
+				display: none;
+				pointer-events: none;
+				fill: none;
+				stroke: #4e4e4e;
+
+				@media ($mdWidth) {
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					display: block;
+
+				}
+
+			}
+
 			a,
 			span {
 
@@ -58,6 +120,16 @@
 				background-color: #fff;
 				border: 2px solid #eff0f1;
 				line-height: 28px;
+
+				@media ($mdWidth) {
+
+					font-size: 0;
+					color: transparent;
+					padding: 0;
+					border: 0;
+					background-color: #eff0f1;
+
+				}
 
 			}
 

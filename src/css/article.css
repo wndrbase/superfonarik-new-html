@@ -243,6 +243,16 @@
 
 		max-width: 100%;
 
+		@media ($smWidth) {
+
+			&[style*="float"] {
+
+				max-width: 30%;
+
+			}
+
+		}
+
 	}
 
 	iframe {

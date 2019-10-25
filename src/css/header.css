@@ -3,6 +3,37 @@
 	padding-top: 22px;
 	flex-shrink: 0;
 
+	&--home {
+
+		.menu-catalog {
+
+			&::after {
+
+				display: none;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			.header__catalog {
+
+				display: block;
+
+			}
+
+			& ~ .main {
+
+				border-top: 0;
+				padding-top: 0;
+
+			}
+
+		}
+
+	}
+
 	@media ($smWidth) {
 
 		display: flex;
@@ -40,6 +71,7 @@
 		@media ($mdWidth) {
 
 			padding: 0;
+			left: 0;
 
 		}
 
@@ -47,12 +79,7 @@
 
 			order: 3;
 			left: 0;
-
-			&:not(&--not-line) {
-
-				display: none;
-
-			}
+			display: none;
 
 		}
 

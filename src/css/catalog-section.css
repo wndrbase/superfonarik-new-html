@@ -97,27 +97,21 @@
 
 	}
 
-	&--hide-img-mobile &__item {
+	@media ($mdWidth) {
 
-
-		@media ($mdWidth) {
+		&--hide-img-mobile &__item {
 
 			width: auto !important;
-			background-color: #f7f7f7;
 
 		}
 
-	}
+		&--hide-img-mobile &__img {
 
-	&--hide-img-mobile &__img {
+			display: none;
 
-		display: none;
+		}
 
-	}
-
-	&--hide-img-mobile &__name {
-
-		@media ($mdWidth) {
+		&--hide-img-mobile &__name {
 
 			padding: 5px;
 			font: 12px/14px Hermes;

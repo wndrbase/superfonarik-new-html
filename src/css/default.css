@@ -242,6 +242,19 @@ time {
 	flex-direction: column;
 	flex-shrink: 0;
 
+	@media ($smWidth) {
+
+		padding-top: 30px;
+		border-top: 2px solid var(--yellow);
+
+	}
+
+	@media ($xsWidth) {
+
+		padding-top: 30px;
+
+	}
+
 }
 
 .hash-detect {

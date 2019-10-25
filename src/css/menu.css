@@ -51,39 +51,28 @@
 		position: relative;
 		margin-top: 10px;
 
-		@media ($smWidth) {
+		&::after {
 
-			margin: 0;
+			position: absolute;
+			width: 100vw;
+			height: 2px;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background-color: var(--yellow);
+
+			@media ($mdWidth) {
+
+				width: 200vw;
+				right: -100vw;
+
+			}
 
 		}
 
-		&:not(&--not-line) {
+		@media ($smWidth) {
 
-			@media ($smWidth) {
-
-				height: 2px;
-				margin-bottom: 30px;
-
-			}
-
-			&::after {
-
-				position: absolute;
-				width: 100vw;
-				height: 2px;
-				right: 0;
-				bottom: 0;
-				content: '';
-				background-color: var(--yellow);
-
-				@media ($mdWidth) {
-
-					width: 200vw;
-					right: -100vw;
-
-				}
-
-			}
+			margin: 0;
 
 		}
 

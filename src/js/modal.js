@@ -70,6 +70,7 @@
 
 		modal.classList.remove('visuallyhidden');
 
+		document.body.classList.remove('menu-show');
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
 

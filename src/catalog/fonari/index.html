@@ -21,7 +21,37 @@
 
 {% block content %}
 
+	<div class="catalog-head">
+
 {% include "catalog/fonari/catalog-section.html" %}
+
+		<div class="visible-md">
+
+			<div class="catalog-head__filter">
+
+{% include "catalog/fonari/catalog-sort-mobile.html" %}
+
+				<button class="btn btn--filter" type="button">
+					Фильтр
+					<svg width="17" height="12" viewBox="0 0 17 12">
+						<g class="stroke">
+							<path d="M2.5.5h1v11h-1z"/>
+							<path d="M7.5.5h1v11h-1z"/>
+							<path d="M13.5.5h1v11h-1z"/>
+						</g>
+						<g class="fill">
+							<path d="M0 2h6v2H0z"/>
+							<path d="M5 8h6v2H5z"/>
+							<path d="M11 2h6v2h-6z"/>
+						</g>
+					</svg>
+				</button>
+
+			</div>
+
+		</div>
+
+	</div>
 
 	<div class="catalog">
 
@@ -33,7 +63,7 @@
 
 		<div class="catalog__list">
 
-			<div class="catalog__sort">
+			<div class="catalog__sort hidden-md">
 
 {% include "catalog/fonari/catalog-sort.html" %}
 

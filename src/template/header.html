@@ -1,4 +1,4 @@
-	<header class="header">
+	<header class="header{% if headerMod %} header--{{ headerMod }}{% endif %}">
 
 		<div class="center">
 
@@ -30,7 +30,7 @@
 
 		</div>
 
-		<div class="header__catalog center{% if menuCatalogMod %} header__catalog--{{ menuCatalogMod }}{% endif %}">
+		<div class="header__catalog center">
 
 {% include "template/menu-catalog.html" %}
 
