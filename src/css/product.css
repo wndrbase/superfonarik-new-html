@@ -645,6 +645,12 @@
 		margin-bottom: 10px;
 		position: relative;
 
+		&:nth-child(2n+1) {
+
+			background-color: color(#eee a(50%));
+
+		}
+
 		@media ($mdWidth) {
 
 			margin: 0 -20px;

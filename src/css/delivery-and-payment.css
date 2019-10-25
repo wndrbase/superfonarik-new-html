@@ -14,7 +14,6 @@
 			width: 214px;
 			height: 204px;
 			border: 2px solid var(--yellow);
-			padding: 15px 24px;
 			margin: 10px;
 
 			&::before {
@@ -28,11 +27,20 @@
 
 			}
 
+			figcaption {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 15px 24px;
+
+			}
+
 			b {
 
 				position: absolute;
-				right: 0;
-				bottom: 0;
 				color: #565656;
 				bottom: 8px;
 				right: 7px;

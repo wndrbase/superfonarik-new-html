@@ -213,6 +213,7 @@
 		padding-right: 48px;
 		display: flex;
 		justify-content: space-between;
+		position: relative;
 
 		@media ($mdWidth) {
 
@@ -235,19 +236,12 @@
 
 				margin-bottom: 8px;
 
-			}
-
-			a {
-
-				color: var(--yellow);
-				font-size: 13px;
-				line-height: 16px;
-				border-bottom: 1px solid;
-
-				&:hover {
+				a {
 
 					color: var(--yellow);
-					border-bottom-color: var(--yellow);
+					font-size: 13px;
+					line-height: 16px;
+					border-bottom: 1px solid;
 
 				}
 
@@ -255,7 +249,29 @@
 
 		}
 
-		a {
+		&-reviews {
+
+			position: absolute;
+			right: 0;
+			bottom: 0;
+
+			img {
+
+				width: 120px;
+				height: 80px;
+
+				@media ($smWidth) {
+
+					width: 90px;
+					height: 60px;
+
+				}
+
+			}
+
+		}
+
+		li a {
 
 			font-size: 15px;
 			line-height: 22px;
