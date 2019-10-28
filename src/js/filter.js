@@ -27,7 +27,7 @@
 })(document.querySelector('.filter'));
 
 
-// иницыализация слайдеров
+// инициализация слайдеров
 
 SF.sliderRangeInit = function(elems){
 
@@ -110,3 +110,21 @@ SF.sliderRangeInit = function(elems){
 	});
 
 };
+
+// мобильный фильтр
+
+(function(btn){
+
+	if(btn) {
+
+		btn.addEventListener('click', function(){
+
+			SF.windowScroll = window.pageYOffset;
+			document.body.classList.add('filter-show');
+			window.scrollTo(0,0);
+
+		});
+
+	}
+
+})(document.querySelector('.js-open-filter'));

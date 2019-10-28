@@ -117,3 +117,34 @@
 	}
 
 }
+
+@media ($mdWidth) {
+
+	.filter-show {
+
+		background-color: var(--bg);
+
+		.main > *,
+		.footer,
+		.catalog__list {
+
+			display: none;
+
+		}
+
+		.catalog,
+		.catalog__filter {
+
+			display: block;
+
+		}
+
+		.wrapper {
+
+			background-color: var(--bg);
+
+		}
+
+	}
+
+}
