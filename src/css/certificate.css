@@ -1,5 +1,11 @@
 .certificate {
 
+	@media ($smWidth) {
+
+		color: var(--dark);
+
+	}
+
 	&__list {
 
 		display: flex;

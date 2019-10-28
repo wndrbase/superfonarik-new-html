@@ -284,6 +284,31 @@ time {
 
 	}
 
+	@media ($smWidth) {
+
+		color: var(--dark);
+		font: 15px/18px Hermes;
+		text-transform: none;
+		padding: 9px 15px 8px 10px;
+		position: relative;
+		margin-left: 35px;
+		background-color: #fff;
+		display: inline-block;
+
+		&::before {
+
+			width: 25px;
+			height: 25px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='none' stroke='%23272827' stroke-width='2' d='M1 3.43L3.949 6 9 1'/%3E%3C/svg%3E%0A");
+			border: 5px solid #fff;
+			position: absolute;
+			top: 0;
+			left: -35px;
+
+		}
+
+	}
+
 }
 
 .chk-title-w {

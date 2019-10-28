@@ -11,11 +11,71 @@
 
 		margin-left: 44px;
 
+		@media ($smWidth) {
+
+			margin-left: 0;
+
+		}
+
 	}
 
 	.tabs__nav {
 
 		margin-bottom: 20px;
+
+	}
+
+	@media ($smWidth) {
+
+		.chk-title {
+
+			font: 15px/18px Hermes;
+			margin: 40px 0 15px;
+			padding: 35px 0 0;
+			border-top: 1px solid #e0e0e0;
+			text-transform: uppercase;
+
+			&::before,
+			&::before {
+
+				display: none;
+
+			}
+
+		}
+
+		&__table-mobile {
+
+			display: block;
+
+			thead,
+			table,
+			td:first-child {
+
+				display: none;
+
+			}
+
+			tbody, td, th, tr {
+
+				display: block;
+				padding: 0;
+				margin: 0;
+				font-size: 12px;
+				line-height: 1.33;
+				color: var(--dark);
+				border: 0 !important;
+
+			}
+
+			td:nth-child(2) {
+
+				font: 15px/18px Hermes;
+				margin: 25px 0 15px;
+
+			}
+
+		}
 
 	}
 

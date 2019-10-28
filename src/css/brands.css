@@ -5,6 +5,27 @@
 	flex-wrap: wrap;
 	border: 1px solid var(--yellow);
 
+	@media ($smWidth) {
+
+		border: 0;
+		margin: -5px;
+		background-color: transparent;
+
+		&__item {
+
+			width: calc(50% - 10px);
+			height: 140px;
+			background-color: #fff;
+			text-align: center;
+			margin: 5px;
+			padding: 10px;
+			border: 0;
+			display: flex !important;
+
+		}
+
+	}
+
 	&__item {
 
 		border: 1px solid var(--yellow);
@@ -16,6 +37,12 @@
 		display: flex;
 		flex-direction: column;
 		font-size: 16px;
+
+		&.visible-sm {
+
+			display: none;
+
+		}
 
 		&--full {
 
@@ -53,11 +80,25 @@
 		transition: .3s;
 		margin-top: 100px;
 
+		@media ($smWidth) {
+
+			font: 15px/18px Hermes;
+			color: var(--dark);
+			margin: auto;
+
+		}
+
 	}
 
 	&__img + &__name {
 
 		margin-top: 20px;
+
+		@media ($smWidth) {
+
+			margin-top: 10px;
+
+		}
 
 	}
 
@@ -65,6 +106,23 @@
 
 		height: 60px;
 		margin-top: 20px;
+
+		@media ($smWidth) {
+
+			height: 77px;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+
+				max-height: 60px;
+				max-width: calc(100% - 50px);
+
+			}
+
+		}
 
 		img {
 
