@@ -1,0 +1,21 @@
+.lab {
+
+	font-size: 12px;
+	line-height: 1.33;
+	color: var(--dark);
+
+	h1 {
+
+		margin-top: 0 !important;
+
+	}
+
+	.h3 {
+
+		font-size: 15px;
+		line-height: 1.33;
+		color: var(--dark);
+
+	}
+
+}

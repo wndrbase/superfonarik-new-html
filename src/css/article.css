@@ -47,6 +47,15 @@
 		font-weight: 400;
 		text-transform: uppercase;
 
+		@media ($smWidth) {
+
+			font-size: 15px;
+			line-height: 18px;
+			color: var(--dark);
+			margin: 2em 0 1em;
+
+		}
+
 	}
 
 	h3:not([class]) {
@@ -297,6 +306,7 @@
 		.md-img-left-off {
 
 			float: none;
+			display: block;
 			margin: 12px 0;
 
 		}

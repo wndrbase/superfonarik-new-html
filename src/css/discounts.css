@@ -16,7 +16,7 @@
 		@media ($mdWidth) {
 
 			text-transform: none;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			color: var(--dark);
 
 		}
@@ -32,6 +32,7 @@
 		@media ($smWidth) {
 
 			display: block;
+			margin: 0;
 
 		}
 
@@ -221,6 +222,12 @@
 				left: 0;
 
 			}
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 20px 0 30px;
 
 		}
 

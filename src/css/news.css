@@ -1,6 +1,10 @@
 .news {
 
-	margin-bottom: 50px;
+	.pagination {
+
+		margin-bottom: 50px;
+
+	}
 
 	&__title {
 
@@ -275,6 +279,18 @@
 		@media ($mdWidth) {
 
 			margin-top: 30px;
+
+		}
+
+	}
+
+	&__link-all {
+
+		@media ($smWidth) {
+
+			position: absolute;
+			top: 6px;
+			right: 0;
 
 		}
 
