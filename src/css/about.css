@@ -2,6 +2,12 @@
 
 	margin-bottom: 30px;
 
+	@media ($smWidth) {
+
+		margin-bottom: 0;
+
+	}
+
 	&__title {
 
 		margin-bottom: 30px;
@@ -21,6 +27,13 @@
 		&-btn {
 
 			display: flex;
+
+			@media ($smWidth) {
+
+				margin: 25px 0;
+				display: block;
+
+			}
 
 		}
 

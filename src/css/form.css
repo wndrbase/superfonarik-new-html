@@ -583,6 +583,25 @@
 
 		}
 
+		@media ($smWidth) {
+
+			height: 50px;
+			font: 15px/50px Hermes;
+			color: var(--dark);
+			background-color: var(--yellow);
+			padding: 0;
+			border: 0;
+
+			&::after,
+			&::before,
+			svg {
+
+				display: none;
+
+			}
+
+		}
+
 	}
 
 	&--tab {

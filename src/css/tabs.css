@@ -114,6 +114,12 @@
 				color: #353434;
 				pointer-events: none;
 
+				@media ($smWidth) {
+
+					background-color: #f7f7f7;
+
+				}
+
 				&::before {
 
 					border-top: 40px solid transparent;
@@ -162,6 +168,7 @@
 				font-size: 12px;
 				line-height: 1.33;
 				color: var(--dark);
+				background-color: #f7f7f7;
 
 			}
 

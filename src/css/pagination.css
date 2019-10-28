@@ -149,4 +149,28 @@
 
 	}
 
+	&--white,
+	&--white &__item--prev,
+	&--white &__item--next {
+
+		a,
+		span {
+
+			background-color: #fff;
+
+		}
+
+	}
+
+	&--white &__item--active {
+
+		span {
+
+			color: #fff;
+			background-color: #4e4e4e;
+
+		}
+
+	}
+
 }
