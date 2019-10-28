@@ -1,5 +1,57 @@
 .contacts {
 
+	&__title {
+
+		@media ($mdWidth) {
+
+			text-transform: none;
+			margin-bottom: 20px;
+			color: var(--dark);
+
+		}
+
+	}
+
+	@media ($smWidth) {
+
+		font-size: 12px;
+		line-height: 16px;
+		color: var(--dark);
+		margin-bottom: 30px;
+
+		.flag-title {
+
+			font-size: 15px;
+			color: var(--color);
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+
+			&::after {
+
+				display: none;
+
+			}
+
+			h3 {
+
+				font-size: 15px;
+				color: var(--color);
+				margin: 0;
+				padding: 0;
+				text-transform: none;
+
+				&::after {
+
+					display: none;
+
+				}
+
+			}
+
+		}
+
+	}
+
 	&__row {
 
 		display: flex;
@@ -8,6 +60,12 @@
 		@media ($mdWidth) {
 
 			display: block;
+
+		}
+
+		@media ($smWidth) {
+
+			margin-bottom: 30px;
 
 		}
 
@@ -52,12 +110,32 @@
 		border: 2px solid var(--yellow);
 		padding: 14px 23px;
 
+		@media ($smWidth) {
+
+			padding: 0;
+			border: 0;
+			margin-bottom: 24px;
+
+			a[href^="mailto"] {
+
+				text-decoration: underline;
+
+			}
+
+		}
+
 		.h3 {
 
 			text-transform: none;
 			font-size: 24px;
 			margin-bottom: 6px;
 			color: var(--dark);
+
+			@media ($smWidth) {
+
+				font-size: 15px;
+
+			}
 
 			& ~ .h3 {
 
@@ -88,9 +166,21 @@
 
 			font-size: 20px;
 
+			@media ($smWidth) {
+
+				margin-top: 20px;
+
+			}
+
 			& ~ .h3 {
 
 				margin-top: 20px;
+
+				@media ($smWidth) {
+
+					margin-top: 30px;
+
+				}
 
 			}
 
@@ -139,6 +229,17 @@
 
 		}
 
+		@media ($smWidth) {
+
+			img {
+
+				max-width: 100%;
+				height: auto;
+
+			}
+
+		}
+
 	}
 
 	.article {
@@ -146,6 +247,12 @@
 		.flag-title {
 
 			margin-top: 36px;
+
+			@media ($smWidth) {
+
+				margin-top: 30px;
+
+			}
 
 		}
 
