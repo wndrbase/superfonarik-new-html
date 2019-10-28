@@ -189,6 +189,7 @@
 		@media ($smWidth) {
 
 			font: 15px/18px Hermes;
+			color: var(--dark);
 
 		}
 

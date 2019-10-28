@@ -16,6 +16,18 @@
 
 		margin: 0 0 13px;
 
+		@media ($mdWidth) {
+
+			color: var(--dark);
+
+			a {
+
+				color: var(--dark);
+
+			}
+
+		}
+
 		a {
 
 			color: var(--color);
@@ -99,9 +111,16 @@
 
 	@media ($mdWidth) {
 
+		&--hide-img-mobile &__list {
+
+			margin: -3px;
+
+		}
+
 		&--hide-img-mobile &__item {
 
 			width: auto !important;
+			margin: 3px;
 
 		}
 

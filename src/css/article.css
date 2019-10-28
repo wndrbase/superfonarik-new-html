@@ -272,7 +272,7 @@
 
 		@media ($smWidth) {
 
-			height: calc(56.25vw - 40px);
+			height: calc((100vw - 40px) * 0.5625);
 
 		}
 
