@@ -612,6 +612,28 @@
 		height: 26px;
 		line-height: 22px;
 
+		@media ($smWidth) {
+
+			font: 15px/18px Hermes;
+			height: 38px;
+			color: var(--dark);
+			padding: 10px 15px;
+			border: 0;
+
+			&.is-active {
+
+				background-color: #f7f7f7;
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			padding: 10px;
+
+		}
+
 		&:hover,
 		&.is-active {
 

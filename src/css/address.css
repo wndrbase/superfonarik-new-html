@@ -1,5 +1,17 @@
 .address {
 
+	&__title {
+
+		@media ($mdWidth) {
+
+			text-transform: none;
+			color: var(--dark);
+			margin-bottom: 20px;
+
+		}
+
+	}
+
 	&__box {
 
 		display: flex;
@@ -9,6 +21,12 @@
 		@media ($mdWidth) {
 
 			flex-direction: column-reverse;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0;
 
 		}
 
@@ -42,6 +60,33 @@
 
 			width: auto;
 			margin-bottom: 20px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0 -20px;
+			padding: 30px 20px;
+
+			h2 {
+
+				margin-top: 0 !important;
+
+			}
+
+			p {
+
+				font: 12px/16px Tahoma;
+				color: var(--dark);
+
+			}
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
+			padding: 20px 10px;
 
 		}
 
@@ -81,7 +126,26 @@
 
 			margin: 5px;
 
+			@media ($smWidth) {
+
+				margin: 5px 0;
+
+			}
+
 		}
+
+		@media ($smWidth) {
+
+			margin: -5px -15px 5px;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: -5px -10px 5px;
+
+		}
+
 	}
 
 	&__map {
@@ -91,6 +155,23 @@
 		position: relative;
 		margin: 10px 0;
 
+		@media ($smWidth) {
+
+			margin: 0 -20px;
+			padding: 20px;
+			border: 0;
+			height: 40vw;
+			background-color: #f7f7f7;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
+			padding: 10px;
+
+		}
+
 	}
 
 	&-shop {
@@ -98,6 +179,23 @@
 		display: flex;
 		margin: 20px -10px;
 		counter-reset: headings 0;
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 0 -20px;
+			padding: 30px 20px;
+			border: 0;
+			background-color: #f7f7f7;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
+			padding: 20px 10px;
+
+		}
 
 		&__item {
 
@@ -115,6 +213,26 @@
 
 			}
 
+			@media ($smWidth) {
+
+				margin: 0;
+
+				&::before {
+
+					display: none;
+
+				}
+
+				& + & {
+
+					border-top: 1px solid #e0e0e0;
+					margin-top: 30px;
+					padding-top: 25px;
+
+				}
+
+			}
+
 		}
 
 		&__title {
@@ -128,6 +246,23 @@
 			margin-bottom: 16px;
 			position: relative;
 
+			@media ($smWidth) {
+
+				font: 15px/18px Hermes;
+				color: var(--dark);
+				padding: 0;
+				border: 0;
+				margin: 15px 0;
+				min-height: 0;
+
+				&::before {
+
+					display: none;
+
+				}
+
+			}
+
 			&::before {
 
 				border-top: 30px solid #fff95a;
@@ -136,6 +271,45 @@
 				position: absolute;
 				top: 0;
 				left: 0;
+
+			}
+
+		}
+
+	}
+
+	@media ($smWidth) {
+
+		.table-characteristics {
+
+			display: block;
+			margin: 0;
+
+			tbody, head, tr, th, td {
+
+				display: block;
+				background-color: transparent !important;
+				padding: 0;
+				border: 0;
+				text-align: left;
+				font-size: 12px;
+				line-height: 1.33;
+				color: var(--dark);
+
+			}
+
+			br {
+
+				display: none;
+
+			}
+
+			td:first-child:not([colspan="2"]),
+			b {
+
+				font: 12px/26px Hermes;
+				display: block;
+				margin: 20px 0 7px;
 
 			}
 

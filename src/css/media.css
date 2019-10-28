@@ -23,6 +23,18 @@
 
 }
 
+.mb30 {
+
+	margin-bottom: 30px;
+
+}
+
+.mb50 {
+
+	margin-bottom: 50px;
+
+}
+
 @media ($wideWidth) {
 
 
@@ -44,6 +56,12 @@
 	.visible-md {
 
 		display: block;
+
+	}
+
+	.mb30--md {
+
+		margin-bottom: 30px;
 
 	}
 
