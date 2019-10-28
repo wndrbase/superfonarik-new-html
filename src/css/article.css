@@ -56,6 +56,13 @@
 		font-weight: 400;
 		text-transform: uppercase;
 
+		@media ($smWidth) {
+
+			font-size: 15px;
+			line-height: 18px;
+
+		}
+
 	}
 
 	h4:not([class]) {
