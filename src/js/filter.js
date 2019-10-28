@@ -108,6 +108,12 @@ SF.sliderRangeInit = function(elems){
 		});
 
 	});
+/*
+	PubSub.subscribe('windowWidthResize', function(){
+
+
+
+	});*/
 
 };
 

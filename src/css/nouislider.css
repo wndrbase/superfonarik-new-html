@@ -43,7 +43,7 @@
   background-color: #000;
 }
 .noUi-origin {
-  height: 10%;
+  height: 0;
   width: 10%;
   left: auto;
   right: 0;
@@ -51,14 +51,7 @@
 /* Give origins 0 height/width so they don't interfere with clicking the
  * connect elements.
  */
-.noUi-vertical .noUi-origin {
-  width: 0;
-}
-.noUi-horizontal .noUi-origin {
-  height: 0;
-}
 .noUi-handle {
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
 }
@@ -81,7 +74,8 @@
 .noUi-handle {
   width: 20px;
   height: 20px;
-  left: 10px;
+  left: auto;
+  right: -10px;
   top: -10px;
   cursor: pointer;
 
