@@ -43,6 +43,18 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 0 -20px;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
+
+		}
+
 		.visuallyhidden .hash-detect {
 
 			top: 1px;
@@ -55,6 +67,13 @@
 			display: flex;
 			position: relative;
 			white-space: nowrap;
+
+			@media ($smWidth) {
+
+				padding: 0 5px;
+				overflow-y: auto;
+
+			}
 
 		}
 
@@ -70,6 +89,22 @@
 			@media ($mdWidth) {
 
 				padding: 10px 15px 6px;
+
+			}
+
+			@media ($smWidth) {
+
+				font: 15px/18px Hermes;
+				color: var(--dark);
+				padding: 10px 15px;
+				margin: 0;
+				text-transform: none;
+
+				&::before {
+
+					display: none;
+
+				}
 
 			}
 
@@ -116,6 +151,21 @@
 			left: 0;
 
 			@media ($mdWidth) {
+
+				padding: 15px;
+
+			}
+
+			@media ($smWidth) {
+
+				padding: 20px;
+				font-size: 12px;
+				line-height: 1.33;
+				color: var(--dark);
+
+			}
+
+			@media ($xsWidth) {
 
 				padding: 15px;
 

@@ -6,6 +6,14 @@
 
 		margin-bottom: 30px;
 
+		@media ($mdWidth) {
+
+			text-transform: none;
+			margin-bottom: 20px;
+			color: var(--dark);
+
+		}
+
 	}
 
 	&__rating {
@@ -19,6 +27,13 @@
 		.h4 {
 
 			margin: 14px 0;
+
+			@media ($smWidth) {
+
+				font: 14px/18px Hermes;
+				color: var(--dark);
+
+			}
 
 		}
 
@@ -38,6 +53,17 @@
 					text-decoration-color: color(var(--color) a(0%));
 
 				}
+
+			}
+
+		}
+
+		&-img-market {
+
+			@media ($smWidth) {
+
+				width: 90px;
+				height: 60px;
 
 			}
 
