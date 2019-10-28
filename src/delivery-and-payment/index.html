@@ -17,7 +17,7 @@
 
 	<section class="delivery-and-payment">
 
-		<h1 class="h1">
+		<h1 class="delivery-and-payment__title h1">
 			{{ title }}
 		</h1>
 
@@ -26,6 +26,9 @@
 			<figure class="delivery-and-payment__card-item">
 
 				<picture>
+
+					<source srcset="/img/delivery-and-payment/pickpoint--mobile@1x.webp 1x, /img/delivery-and-payment/pickpoint--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+					<source srcset="/img/delivery-and-payment/pickpoint--mobile@1x.png 1x, /img/delivery-and-payment/pickpoint--mobile@2x.png 2x" media="(max-width: 767px)">
 
 					<source srcset="/img/delivery-and-payment/pickpoint.webp" type="image/webp">
 					<source srcset="/img/delivery-and-payment/pickpoint.png">
@@ -45,6 +48,9 @@
 
 				<picture>
 
+					<source srcset="/img/delivery-and-payment/tc--mobile@1x.webp 1x, /img/delivery-and-payment/tc--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+					<source srcset="/img/delivery-and-payment/tc--mobile@1x.png 1x, /img/delivery-and-payment/tc--mobile@2x.png 2x" media="(max-width: 767px)">
+
 					<source srcset="/img/delivery-and-payment/tc.webp" type="image/webp">
 					<source srcset="/img/delivery-and-payment/tc.png">
 
@@ -61,7 +67,15 @@
 
 			<figure class="delivery-and-payment__card-item">
 
-				<img src="/img/delivery-and-payment/gift.svg" alt="Бесплатная доставка по Москве и Почтой по России — в подарок" loading="lazy" width="210" height="200">
+				<picture>
+
+					<source srcset="/img/delivery-and-payment/gift--mobile.svg" media="(max-width: 767px)">
+
+					<source srcset="/img/delivery-and-payment/gift.svg">
+
+					<img src="/img/delivery-and-payment/gift.svg" alt="Бесплатная доставка по Москве и Почтой по России — в подарок" loading="lazy" width="210" height="200">
+
+				</picture>
 
 				<figcaption>
 					Бесплатная доставка по Москве и Почтой по России — в подарок
@@ -84,7 +98,7 @@
 				<div class="hash-detect" id="tabs-1"></div>
 
 				<h2 class="tabs-hash__btn tabs-hash__btn--active h4">
-					Доставка по Москве
+					<span class="hidden-sm">Доставка</span> по Москве
 				</h2>
 
 {% include "delivery-and-payment/tabs-1.html" %}
@@ -96,7 +110,7 @@
 				<div class="hash-detect" id="tabs-2"></div>
 
 				<h2 class="tabs-hash__btn h4">
-					Доставка по России и в страны ТС
+					<span class="hidden-sm">Доставка</span> по России и в страны ТС
 				</h2>
 
 {% include "delivery-and-payment/tabs-2.html" %}

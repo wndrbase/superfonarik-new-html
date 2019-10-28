@@ -13,6 +13,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		margin: -30px 0 30px;
+
+	}
+
 	&__img {
 
 		@media ($mdWidth) {

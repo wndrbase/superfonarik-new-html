@@ -85,7 +85,7 @@ SF.tabsHash = function(elems){
 
 			_btn.className = 'tabs-hash__btn h4';
 
-			_btn.textContent = el.textContent;
+			_btn.innerHTML = el.innerHTML;
 
 			if(el.classList.contains('tabs-hash__btn--active')){
 
