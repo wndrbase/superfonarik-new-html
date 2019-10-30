@@ -121,21 +121,14 @@ SF.swiper = function(swiperContainer){
 
 		if (product) {
 
+			param.autoplay = false;
+
 			toggleSwipe = function() {
 
-				if(!mySwipe) {
+				console.log('product')
 
-					console.log('product')
-
-					new Swiper(swipe, {
-						loop: true,
-						navigation: {
-							nextEl: swipeNext,
-							prevEl: swipePrev
-						}
-					});
-
-				}
+				new Swiper(swipe, param);
+				toggleSwipe = null;
 
 			}
 

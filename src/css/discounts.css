@@ -437,7 +437,7 @@
 
 			@media ($smWidth) {
 
-				font: 12px/16px Tahoma;
+				font: 12px/16px Tahoma, 'Helvetica';
 				text-transform: none;
 				width: auto;
 				color: var(--dark);

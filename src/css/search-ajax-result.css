@@ -12,7 +12,7 @@
 	&__head {
 
 		line-height: 17px;
-		font-family: Tahoma;
+		font-family: Tahoma, 'Helvetica';
 		font-size: 14px;
 		font-weight: bold;
 		color: #000;
@@ -32,7 +32,7 @@
 		a {
 
 			line-height: 17px;
-			font-family: Tahoma;
+			font-family: Tahoma, 'Helvetica';
 			font-size: 14px;
 			color: #565656;
 			text-decoration: none;

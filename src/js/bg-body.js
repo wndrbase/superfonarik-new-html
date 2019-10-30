@@ -12,7 +12,7 @@
 
 			Array.prototype.forEach.call(entries, function(entry){
 
-				document.body.classList.toggle('bg-footer', entry.intersectionRatio > 0);
+				document.body.classList.toggle('bg-footer', entry.intersectionRatio > 0.1);
 
 			});
 

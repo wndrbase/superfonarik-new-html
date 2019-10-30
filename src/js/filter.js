@@ -125,9 +125,21 @@ SF.sliderRangeInit = function(elems){
 
 		btn.addEventListener('click', function(){
 
-			SF.windowScroll = window.pageYOffset;
 			document.body.classList.add('filter-show');
-			window.scrollTo(0,0);
+
+			var mainTop = document.querySelector('.main').getBoundingClientRect().top;
+
+			if(mainTop < 0) {
+
+				window.scrollTo(0, window.pageYOffset + mainTop);
+
+			}
+
+		});
+
+		document.querySelector('.js-close-filter').addEventListener('click', function(){
+
+			document.body.classList.remove('filter-show');
 
 		});
 

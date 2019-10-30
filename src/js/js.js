@@ -13,7 +13,7 @@ var SF = {};
 (function(){
 
 	SF.resizeTimeout = null,
-	SF.windowWidthOLd = null,
+	SF.windowWidthOLd = window.innerWidth,
 
 	window.addEventListener("resize", function(){
 
@@ -25,7 +25,9 @@ var SF = {};
 
 					SF.resizeTimeout = null;
 
-					if(window.innerWidth !== SF.windowWidthOLd) {
+					if(SF.windowWidthOLd !== window.innerWidth) {
+
+						SF.windowWidthOLd = window.innerWidth;
 
 						PubSub.publish('windowWidthResize');
 
