@@ -303,7 +303,7 @@ gulp.task('ftp', function () {
 	const f = filter('**/*.html', {restore: true});
 	const cssInline = fs.readFileSync('build/css/styles.min.css', "utf8");
 
-	return gulp.src('build/**/*.{css,html,js,svg,png,jpg,json}', {since: gulp.lastRun('ftp')})
+	return gulp.src('build/**/*.{css,html,js,svg,json}', {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 //		.pipe(replace('<link href="/css/styles.css" rel="stylesheet">', '<style>' + cssInline + '</style>'))
