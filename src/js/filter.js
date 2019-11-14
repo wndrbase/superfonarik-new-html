@@ -35,13 +35,32 @@ SF.sliderRangeInit = function(elems){
 
 		var min = parseInt(el.getAttribute('data-min'), 10),
 			max = parseInt(el.getAttribute('data-max'), 10),
+			start = el.getAttribute('data-start'),
 			input = el.querySelectorAll('.slider-range__input-control .input'),
 			inputMin = el.querySelector('.slider-range__input-min'),
 			inputMax = el.querySelector('.slider-range__input-max'),
 			track = el.querySelector('.slider-range__track');
 
+		if(start) {
+
+			start = start.split(',');
+			start = start.map(function(el){
+
+				return parseInt(el, 10);
+
+			});
+
+		}
+		else {
+
+			start = [min, max];
+
+		}
+
+		console.log(start)
+
 		noUiSlider.create(track, {
-			start: [min, max],
+			start: start,
 			connect: true,
 			range: {
 				'min': min,
