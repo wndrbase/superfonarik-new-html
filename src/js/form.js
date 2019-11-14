@@ -47,6 +47,8 @@
 
 })(document.querySelectorAll('.js-btn-rules'));
 
+// уведомить
+
 (function(forms){
 
 	if(!forms.length) {
@@ -70,3 +72,54 @@
 	});
 
 })(document.querySelectorAll('.js-modal-notify'));
+
+// купить в 1 клик
+(function(forms){
+
+	if(!forms.length) {
+
+		return;
+
+	}
+
+	Array.prototype.forEach.call(forms, function(form){
+
+		form.addEventListener('submit', function (e) {
+
+			e.preventDefault();
+
+			document.querySelector('#popup_one_click-buy').value = form.getAttribute('data-id');
+
+			SF.modalShow('one-click-buy');
+
+		});
+
+	});
+
+})(document.querySelectorAll('.js-modal-one-click-buy'));
+
+
+// предзаказ
+(function(forms){
+
+	if(!forms.length) {
+
+		return;
+
+	}
+
+	Array.prototype.forEach.call(forms, function(form){
+
+		form.addEventListener('submit', function (e) {
+
+			e.preventDefault();
+
+			document.querySelector('#popup_pre_order').value = form.getAttribute('data-id');
+
+			SF.modalShow('pre-order');
+
+		});
+
+	});
+
+})(document.querySelectorAll('.js-modal-pre-order'));

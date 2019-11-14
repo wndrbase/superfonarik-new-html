@@ -43,7 +43,6 @@
 
 	&__right {
 
-		width: 164px;
 		display: flex;
 		flex-shrink: 0;
 		flex-direction: column;
@@ -56,7 +55,13 @@
 			justify-content: space-between;
 			align-items: center;
 			margin: 20px 0 30px 20px;
-			width: auto;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0 0 20px;
+			flex-wrap: wrap;
 
 		}
 
@@ -534,6 +539,7 @@
 		justify-content: flex-end;
 		align-items: flex-end;
 		padding: 10px;
+		white-space: nowrap;
 
 		@media ($mdWidth) {
 
@@ -546,6 +552,12 @@
 				display: none;
 
 			}
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 10px 20px 10px 0;
 
 		}
 

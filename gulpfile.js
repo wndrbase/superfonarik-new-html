@@ -91,8 +91,13 @@ gulp.task('html', function() {
 });
 
 gulp.task('html-touch', function() {
+
 	return gulp.src('src/**/index.html')
-		.pipe(touch());
+		.on('data', function(file,enc,cb){
+			let date = new Date();
+			file.stat.atime = date;
+			file.stat.mtime = date;
+		});
 
 });
 
