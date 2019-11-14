@@ -46,3 +46,27 @@
 	});
 
 })(document.querySelectorAll('.js-btn-rules'));
+
+(function(forms){
+
+	if(!forms.length) {
+
+		return;
+
+	}
+
+	Array.prototype.forEach.call(forms, function(form){
+
+		form.addEventListener('submit', function (e) {
+
+			e.preventDefault();
+
+			document.querySelector('#popup_notify_url').value = form.getAttribute('data-url');
+
+			SF.modalShow('notify');
+
+		});
+
+	});
+
+})(document.querySelectorAll('.js-modal-notify'));

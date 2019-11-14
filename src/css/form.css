@@ -198,7 +198,7 @@
 
 	&--user {
 
-		padding-right: 78px;
+		padding-right: 70px;
 
 		&::before {
 
@@ -711,6 +711,13 @@
 			fill: var(--dark);
 
 		}
+
+	}
+
+	&--notify {
+
+		font-size: 13px;
+		padding: 0 24px;
 
 	}
 

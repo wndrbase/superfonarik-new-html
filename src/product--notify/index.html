@@ -1,0 +1,112 @@
+{% set title = "Купить EagleTac T25C2 с инфракрасным модулем (850 нм) по низкой цене и с доставкой по всей России" %}
+
+{% set description = "EagleTac (EAGTAC) T25C2 IR 850 nm - отличный вариант специального фонаря для решения особых задач. Купить EagleTac (EAGTAC) T25C2 IR 850 nm с доставкой лучше всего в магазине Суперфонарик." %}
+
+{% set urlPage = "product" %}
+
+{% set ogType = "product" %}
+{% set ogImage = "img/product/a50dcffbca8b3de81268af6fd6a5fa9e.jpg" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Каталог",
+		link: "catalog"
+	},
+	{
+		name : "Фонари",
+		link: "catalog/fonari"
+	},
+	{
+		name : "EagleTac (EAGTAC) T25C2 IR 850 nm",
+		link: "product"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="product">
+
+		<script type="application/ld+json">
+
+			{
+				"@context": "https://schema.org",
+				"@type": "Product",
+				"name": "EagleTac (EAGTAC) T25C2 IR 850 nm",
+				"description": "Велофара Fenix BC30. Система двойного освещения, дистанционная кнопка включения дальнего света, быстросъемное крепление, превосходный дизайн. 6 режимов работы. Максимальный световой поток - 1800 ANSI лм. Дистанция освещения - до 170 метров. Работает от четырех батарей CR123 или двух аккумуляторов 18650. Корпус выполнен из алюминиевого сплава.",
+				"image": "{{ url }}/{{ ogImage }}",
+				"url": "{{ url }}/{{ urlPage }}",
+				"brand": "EagleTac",
+				"sku": "301228",
+				"gtin13": "глобальный идентификатор товара, например код ISBN, MPN или GTIN8",
+				"offers": {
+					"@type": "Offer",
+					"price": "6990",
+					"priceValidUntil": "2019-03-03",
+					"availability": "https://schema.org/InStock",
+					"priceCurrency": "RUB",
+					"url": "{{ url }}/{{ urlPage }}"
+				},
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "5",
+					"reviewCount": "4"
+				},
+				"review": [
+					{
+						"@type": "Review",
+						"author": "Покупатель2",
+						"datePublished": "2019-12-31",
+						"description": "Реально мощная ИК подсветка. Субъективно дальность видимости выросла процентов на 30-40. Правда желательно знать в каком ИК диапазоне работает теплак, если не угадать, то такого эффекта не будет.",
+						"reviewRating": {
+							"@type": "Rating",
+							"ratingValue": "5"
+						}
+					},
+					{
+						"@type": "Review",
+						"author": "Покупатель",
+						"datePublished": "2019-09-02",
+						"description": "Реально мощная ИК подсветка. Субъективно дальность видимости выросла процентов на 30-40. Правда желательно знать в каком ИК диапазоне работает теплак, если не угадать, то такого эффекта не будет.",
+						"reviewRating": {
+							"@type": "Rating",
+							"ratingValue": "5"
+						}
+					}
+				]
+
+			}
+
+		</script>
+
+		<h1 class="product__title h1">
+			EagleTac (EAGTAC) T25C2 IR 850 nm
+		</h1>
+
+		<div class="product__body">
+
+{% include "product/left.html" %}
+
+			<div class="product__main">
+
+{% include "product/property.html" %}
+
+{% include "product/right--notify.html" %}
+
+			</div>
+
+		</div>
+
+{% include "product/btns.html" %}
+
+{% include "product/nav.html" %}
+
+{% include "product/description.html" %}
+{% include "product/related.html" %}
+{% include "product/reviews.html" %}
+{% include "product/manual.html" %}
+
+	</article>
+
+{% endblock %}
