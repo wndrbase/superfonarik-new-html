@@ -37,11 +37,7 @@ SF.mask = function(elems){
 
 		};
 
-		setTimeout(function(){
-
-			document.head.appendChild(script);
-
-		}, 3000);
+		document.head.appendChild(script);
 
 	} else {
 
