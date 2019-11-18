@@ -28,10 +28,11 @@ SF.swiper = function(swiperContainer){
 					prevEl: swipePrev
 				},
 				autoplay: {
-					delay: 6000
+					delay: 996000
 				}
 			},
 			gallery = swipe.classList.contains('swiper-container--gallery'),
+			related = swipe.classList.contains('swiper-container--related'),
 			carousel = swipe.classList.contains('swiper-container--carousel'),
 			homeSlider = swipe.classList.contains('swiper-container--home-slider'),
 			product = swipe.classList.contains('swiper-container--product');
@@ -61,10 +62,6 @@ SF.swiper = function(swiperContainer){
 
 			}
 
-/*			swipeNav.classList.add('hide');
-			swipeNext.classList.add('hide');
-			swipePrev.classList.add('hide');
-*/
 		}
 
 		resetSwipe();
@@ -79,6 +76,64 @@ SF.swiper = function(swiperContainer){
 
 				new Swiper(swipe, param);
 				toggleSwipe = null;
+
+			}
+
+		}
+
+		if (related) {
+
+			param.loopFillGroupWithBlank = true;
+
+			swipeNav.classList.add('hide');
+			swipeNext.classList.add('hide');
+			swipePrev.classList.add('hide');
+
+			toggleSwipe = function() {
+
+				resetSwipe();
+
+				swipeNav.classList.add('hide');
+				swipeNext.classList.add('hide');
+				swipePrev.classList.add('hide');
+
+				swipe.parentNode.classList.remove('swiper-container-style');
+
+				if (count > 4 && window.innerWidth >= 1200) {
+
+					swipe.parentNode.classList.add('swiper-container-style');
+					swipeNext.classList.remove('hide');
+					swipePrev.classList.remove('hide');
+
+					param.slidesPerView = 4;
+					param.slidesPerGroup = 4;
+					param.spaceBetween = 48;
+					mySwipe = new Swiper(swipe, param);
+
+				}
+				else if (count > 3 && window.innerWidth < 1200 &&  window.innerWidth >= 768) {
+
+					swipe.parentNode.classList.add('swiper-container-style');
+					swipeNext.classList.remove('hide');
+					swipePrev.classList.remove('hide');
+
+					param.slidesPerView = 3;
+					param.slidesPerGroup = 3;
+					param.spaceBetween = 20;
+					mySwipe = new Swiper(swipe, param);
+
+				}
+				else if (count > 2 && window.innerWidth < 768) {
+
+					swipe.parentNode.classList.add('swiper-container-style');
+					swipeNav.classList.remove('hide');
+
+					param.slidesPerView = 2;
+					param.slidesPerGroup = 2;
+					param.spaceBetween = 10;
+					mySwipe = new Swiper(swipe, param);
+
+				}
 
 			}
 
@@ -156,52 +211,6 @@ SF.swiper = function(swiperContainer){
 			}
 
 		}
-
-/*
-		if (faq) {
-
-			toggleSwipe = function() {
-
-				resetSwipe();
-
-				// удаляем/добавляем классы, чтобы не переопределять стили, когда свайп отключен
-				swipe.parentNode.classList.toggle('swiper-container-style', window.innerWidth < 768);
-
-				if (window.innerWidth < 768) {
-
-					Array.prototype.forEach.call(swipe.querySelectorAll('.faq__visuallyhidden'), function(el){
-
-						el.classList.remove('visuallyhidden');
-
-					});
-
-					swipeNext.classList.remove('hide');
-					swipePrev.classList.remove('hide');
-
-					mySwipe = new Swiper(swipe, {
-						loop: true,
-						autoHeight: true,
-						navigation: {
-							nextEl: swipeNext,
-							prevEl: swipePrev
-						}
-					});
-
-				}
-				else {
-
-					Array.prototype.forEach.call(swipe.querySelectorAll('.faq__visuallyhidden'), function(el){
-
-						el.classList.add('visuallyhidden');
-
-					});
-
-				}
-
-			}
-
-		}
-*/
 
 		PubSub.subscribe('windowWidthResize', function(){
 
