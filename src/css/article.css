@@ -47,6 +47,15 @@
 		font-weight: 400;
 		text-transform: uppercase;
 
+		@media ($mdWidth) {
+
+			font-size: 21px;
+			line-height: 1.24;
+			text-transform: none;
+			color: var(--dark);
+
+		}
+
 		@media ($smWidth) {
 
 			font-size: 15px;
@@ -289,6 +298,18 @@
 		@media ($smWidth) {
 
 			height: calc((100vw - 40px) * 0.5625);
+
+		}
+
+	}
+
+	.clr {
+
+		&::after {
+
+			display: table;
+			width: 100%;
+			content: '';
 
 		}
 

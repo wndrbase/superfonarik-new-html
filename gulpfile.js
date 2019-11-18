@@ -75,7 +75,7 @@ gulp.task('html', function() {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
+/*		.pipe(w3cjs({
 			verifyMessage: function(type, message) {
 
 				// prevent logging error message
@@ -85,7 +85,7 @@ gulp.task('html', function() {
 				return true;
 			}
 		}))
-//		.pipe(w3cjs.reporter())
+*///		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build'))
 
 });
@@ -93,11 +93,12 @@ gulp.task('html', function() {
 gulp.task('html-touch', function() {
 
 	return gulp.src('src/**/index.html')
-		.on('data', function(file,enc,cb){
+/*		.on('data', function(file,enc,cb){
 			let date = new Date();
 			file.stat.atime = date;
 			file.stat.mtime = date;
-		});
+		})
+*/		.pipe(touch());
 
 });
 
