@@ -39,7 +39,7 @@
 		});
 
 		// clear video
-	//	document.getElementById('modal-video').innerHTML = '';
+		document.getElementById('modal-video').innerHTML = '';
 
 	};
 
@@ -61,6 +61,7 @@
 		SF.activeModal = modal.querySelector('.modal__item--' + selector);
 
 		modal.classList.toggle('modal--wide', SF.activeModal.classList.contains('is-wide'));
+		modal.classList.toggle('modal--video', SF.activeModal.classList.contains('is-video'));
 
 		Array.prototype.forEach.call(items, function(el){
 
