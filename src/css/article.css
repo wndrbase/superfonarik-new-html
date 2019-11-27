@@ -114,7 +114,7 @@
 
 	}
 
-	a:not([href^="tel"]) {
+	a:not([href^="tel"]):not([class]) {
 
 		color: var(--color);
 		text-decoration: underline;

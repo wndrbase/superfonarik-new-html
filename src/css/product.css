@@ -762,16 +762,6 @@
 
 		}
 
-		&-manual {
-
-			&-item {
-
-				margin: 24px 0;
-
-			}
-
-		}
-
 		&--video {
 
 			.link-video {
@@ -781,6 +771,12 @@
 			}
 
 		}
+
+	}
+
+	&__btn-download {
+
+		margin: 24px 0;
 
 	}
 
