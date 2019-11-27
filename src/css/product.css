@@ -428,7 +428,10 @@
 
 		&-link {
 
-			display: block;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			&:hover::after {
 
@@ -463,6 +466,13 @@
 			position: relative;
 			margin-top: 10px;
 			padding: 0;
+
+		}
+
+		.swiper-slide {
+
+			height: auto;
+			display: flex;
 
 		}
 

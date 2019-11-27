@@ -28,7 +28,7 @@ SF.swiper = function(swiperContainer){
 					prevEl: swipePrev
 				},
 				autoplay: {
-					delay: 996000
+					delay: 6000
 				}
 			},
 			gallery = swipe.classList.contains('swiper-container--gallery'),
