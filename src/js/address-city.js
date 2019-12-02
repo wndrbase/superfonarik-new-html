@@ -23,30 +23,22 @@
 
 		});
 
-		// а вот так слушаем события:
-
-		PubSub.subscribe('addressCity', function(e,value){
-
-			console.log(value);
-
-		});
-
 	};
 
 })(document.querySelector('#address-city'));
 
 
-(function(shop){
+(function(shops){
 
-	if(shop) {
+	if(shops) {
 
-		shop.addEventListener('click', function (e) {
+		document.querySelector('.address').addEventListener('click', function (e) {
 
-			var btn = e.target.closest('[data-show-map]');
+			var btn = e.target.closest('[data-shop]');
 
 			if(btn) {
 
-				var placemark = btn.getAttribute('data-show-map'),
+				var placemark = btn.getAttribute('data-shop'),
 					scrollMap = document.querySelector('#address-city').getBoundingClientRect().top;
 
 				if(scrollMap < 0) {
@@ -63,12 +55,18 @@
 
 		// а вот так слушаем события:
 
-		PubSub.subscribe('addressShop', function(e,value){
+		PubSub.subscribe('addressCity', function(e,value){
 
 			console.log(value);
+
+			Array.prototype.forEach.call(shops, function(shop){
+
+				shop.classList.toggle('visuallyhidden', !shop.classList.contains('address-shop--' + value));
+
+			});
 
 		});
 
 	};
 
-})(document.querySelector('.address-shop'));
+})(document.querySelectorAll('.address-shop'));

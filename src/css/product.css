@@ -768,6 +768,12 @@
 
 				}
 
+				table:not(.product__param) {
+
+					display: none;
+
+				}
+
 			}
 
 		}
