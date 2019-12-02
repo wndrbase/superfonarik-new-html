@@ -369,6 +369,7 @@
 	&__lk {
 
 		width: 50%;
+		position: relative;
 
 		button {
 
@@ -386,6 +387,48 @@
 				background-color: var(--yellow);
 
 			}
+
+		}
+
+		&-mini-menu {
+
+			position: absolute;
+			top: 100%;
+			left: -2px;
+			right: -2px;
+			background-color: #fff;
+			z-index: 10;
+			border: 2px solid var(--yellow);
+			padding: 12px 20px;
+			font-size: 13px;
+			display: none;
+
+			li {
+
+				margin: 5px 0;
+
+			}
+
+			a {
+
+				color: var(--color);
+				text-decoration: underline;
+				text-decoration-color: var(--color);
+				transition: .3s;
+
+				&:hover {
+
+					text-decoration-color: color(var(--color) a(0%));
+
+				}
+
+			}
+
+		}
+
+		&:hover &-mini-menu {
+
+			display: block;
 
 		}
 
