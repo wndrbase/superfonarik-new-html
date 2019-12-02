@@ -35,6 +35,8 @@ SF.sliderRangeInit = function(elems){
 
 		var min = parseInt(el.getAttribute('data-min'), 10),
 			max = parseInt(el.getAttribute('data-max'), 10),
+			minInputHidden = el.querySelector('.slider-range__value-min'),
+			maxInputHidden = el.querySelector('.slider-range__value-max'),
 			start = el.getAttribute('data-start'),
 			input = el.querySelectorAll('.slider-range__input-control .input'),
 			inputMin = el.querySelector('.slider-range__input-min'),
@@ -57,8 +59,6 @@ SF.sliderRangeInit = function(elems){
 
 		}
 
-		console.log(start)
-
 		noUiSlider.create(track, {
 			start: start,
 			connect: true,
@@ -72,6 +72,13 @@ SF.sliderRangeInit = function(elems){
 
 			inputMin.value = SF.sepNumber(parseInt(values[0], 10));
 			inputMax.value = SF.sepNumber(parseInt(values[1], 10));
+
+		});
+
+		track.noUiSlider.on('update', function(values){
+
+			minInputHidden.value = parseInt(values[0], 10);
+			maxInputHidden.value = parseInt(values[1], 10);
 
 		});
 
