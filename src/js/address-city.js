@@ -30,7 +30,7 @@
 
 (function(shops){
 
-	if(shops.lenght) {
+	if(shops.length) {
 
 		document.querySelector('.address').addEventListener('click', function (e) {
 
