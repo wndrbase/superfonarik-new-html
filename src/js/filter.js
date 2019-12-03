@@ -75,10 +75,20 @@ SF.sliderRangeInit = function(elems){
 
 		});
 
+		// create and dispatch the event
+		var event = new CustomEvent("change", {
+			detail: {
+				hazcheeseburger: true
+			}
+		});
+
 		track.noUiSlider.on('update', function(values){
 
 			minInputHidden.value = parseInt(values[0], 10);
 			maxInputHidden.value = parseInt(values[1], 10);
+
+			minInputHidden.dispatchEvent(event);
+			maxInputHidden.dispatchEvent(event);
 
 		});
 
