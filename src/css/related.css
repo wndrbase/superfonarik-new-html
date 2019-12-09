@@ -2,12 +2,17 @@
 
 	.swiper-container-style {
 
+		padding-bottom: 88px;
+
 		.swiper-controls {
 
-			left: auto;
-			right: 0;
-			bottom: auto;
-			top: -24px;
+			left: -22px;
+
+			@media ($mdWidth) {
+
+				left: 0;
+
+			}
 
 			@media ($smWidth) {
 
@@ -17,12 +22,12 @@
 
 			}
 
-
 		}
 
-		.swiper-navigation::before {
+		.swiper-pagination {
 
-			display: none;
+			display: flex;
+			top: 0;
 
 		}
 

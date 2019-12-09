@@ -85,7 +85,6 @@ SF.swiper = function(swiperContainer){
 
 			param.loopFillGroupWithBlank = true;
 
-			swipeNav.classList.add('hide');
 			swipeNext.classList.add('hide');
 			swipePrev.classList.add('hide');
 
@@ -93,7 +92,6 @@ SF.swiper = function(swiperContainer){
 
 				resetSwipe();
 
-				swipeNav.classList.add('hide');
 				swipeNext.classList.add('hide');
 				swipePrev.classList.add('hide');
 
