@@ -164,3 +164,33 @@
 	}
 
 })(document.querySelector('.product__nav'));
+
+
+// js-img-modal
+(function(items){
+
+	if(items.length) {
+
+		Array.prototype.forEach.call(items, function(el){
+
+			el.addEventListener('click', function(e) {
+
+				e.preventDefault();
+
+				var img = document.createElement('img'),
+					photo = document.querySelector('#modal-photo');
+
+				img.src = el.getAttribute('href');
+
+				photo.innerHTML = '';
+				photo.appendChild(img);
+
+				SF.modalShow('photo');
+
+			});
+
+		});
+
+	}
+
+})(document.querySelectorAll('.js-img-modal'));

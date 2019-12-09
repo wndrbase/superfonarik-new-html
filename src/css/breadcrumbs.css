@@ -14,6 +14,7 @@
 
 		display: flex;
 		white-space: nowrap;
+		color: color(var(--color) a(81%));
 
 		&:last-child::after {
 
@@ -30,14 +31,14 @@
 
 		a {
 
-			color: var(--color);
+			color: color(var(--color) a(81%));
 			text-decoration: underline;
 			transition: .3s;
 			text-decoration-color: color(var(--color) a(0%));
 
 			&:hover {
 
-				text-decoration-color: var(--color);
+				text-decoration-color: color(var(--color) a(81%));
 
 			}
 

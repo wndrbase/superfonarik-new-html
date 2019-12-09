@@ -796,4 +796,12 @@
 
 	}
 
+	&__beamshot {
+
+		padding: 10px;
+		display: block;
+		width: 148px;
+
+	}
+
 }
