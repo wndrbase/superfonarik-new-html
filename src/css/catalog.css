@@ -98,6 +98,8 @@
 		@media ($mdWidth) {
 
 			margin-top: 10px;
+			display: flex;
+			flex-direction: column;
 
 		}
 
@@ -110,6 +112,15 @@
 	}
 
 	&__desc {
+
+		@media ($mdWidth) {
+
+			order: 5;
+			padding-bottom: 20px;
+			border-bottom: 1px solid var(--dark);
+			margin-bottom: 20px;
+
+		}
 
 		p {
 

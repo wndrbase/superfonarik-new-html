@@ -303,7 +303,20 @@
 
 					color: transparent;
 					display: block;
-					overflow: hidden;
+					font-size: 0;
+					position: relative;
+
+					&::after {
+
+						position: absolute;
+						top: -5px;
+						left: -5px;
+						right: -5px;
+						bottom: -5px;
+						content: '';
+						outline:1px solid red;
+
+					}
 
 				}
 
