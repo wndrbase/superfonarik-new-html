@@ -667,7 +667,7 @@
 
 			color: #5d5d5d;
 			display: block;
-			padding: 11px 24px 5px 64px;
+			padding: 11px 16px 5px 60px;
 			line-height: 24px;
 
 			&.is-active {
