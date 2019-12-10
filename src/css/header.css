@@ -264,9 +264,46 @@
 
 				&-cart {
 
-					width: 19px;
-					height: 18px;
+					width: 20px;
+					height: 20px;
+					background-position: center;
+					background-repeat: no-repeat;
 					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' viewBox='0 0 19 18'%3E%3Cg fill-rule='evenodd'%3E%3Cpath d='M17.984 3.502H6.68c-.368 0-.578.285-.469.636L8 9.376c.088.283.4.512.696.512h7.41a.772.772 0 00.696-.512l1.558-5.361c.089-.283-.08-.513-.376-.513z'/%3E%3Ccircle cx='8.703' cy='15.922' r='1.691'/%3E%3Ccircle cx='15.858' cy='15.943' r='1.691'/%3E%3Cpath d='M17.888 11.609h-9.89L4.04.218H.957a.957.957 0 100 1.914h1.721l3.959 11.392h11.25a.957.957 0 100-1.915z'/%3E%3C/g%3E%3C/svg%3E%0A");
+
+					&[data-count] {
+
+						&::before {
+
+							position: absolute;
+							top: -8px;
+							left: -8px;
+							right: -8px;
+							bottom: -8px;
+							border-radius: 50%;
+							content: '';
+							background-color: var(--yellow);
+							z-index: -1;
+
+						}
+
+						&::after {
+
+							position: absolute;
+							top: -16px;
+							left: 16px;
+							content: attr(data-count);
+							color: #fff;
+							font-size: 11px;
+							border-radius: 50%;
+							width: 16px;
+							height: 16px;
+							line-height: 16px;
+							text-align: center;
+							background-color: var(--color);
+
+						}
+
+					}
 
 				}
 
@@ -288,6 +325,7 @@
 
 				display: flex;
 				justify-content: flex-end;
+				align-items: center;
 
 				li {
 
@@ -298,8 +336,9 @@
 						position: absolute;
 						width: 3px;
 						height: 3px;
-						top: 6px;
+						top: 50%;
 						left: 10px;
+						margin-top: -1px;
 						content: '';
 						background-color: #f5e615;
 
