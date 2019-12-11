@@ -138,23 +138,41 @@
 
 	}
 
-	&__submit {
+	&__foot {
 
-		width: 234px;
+		display: flex;
 		margin: 24px auto 0;
+		justify-content: space-between;
+		padding-right: 5px;
+
+		.btn {
+
+			padding: 0 20px;
+
+		}
 
 	}
 
-	&__reset-btn {
+	@media ($mdWidth) {
 
-		position: absolute;
-		top: -34px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		padding: 0 20px;
-		height: 30px;
-		line-height: 30px;
+		&__submit {
+
+			width: 100%;
+
+		}
+
+		&__reset-btn {
+
+			position: absolute;
+			top: -34px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			padding: 0 20px;
+			height: 30px;
+			line-height: 30px;
+
+		}
 
 	}
 
