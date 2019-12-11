@@ -43,7 +43,7 @@
 
 	};
 
-	SF.modalShow = function (selector, text) {
+	SF.modalShow = function (selector, title, text) {
 
 	//	document.body.classList.toggle('menu-open', selector == 'menu');
 
@@ -59,6 +59,13 @@
 		}
 
 		SF.activeModal = modal.querySelector('.modal__item--' + selector);
+
+		if(selector == 'message') {
+
+			SF.activeModal.querySelector('.modal-form__title').innerHTML = title ? title : '';
+			SF.activeModal.querySelector('.modal-form__text').innerHTML = text ? text : '';
+
+		}
 
 		modal.classList.toggle('modal--wide', SF.activeModal.classList.contains('is-wide'));
 		modal.classList.toggle('modal--video', SF.activeModal.classList.contains('is-video'));

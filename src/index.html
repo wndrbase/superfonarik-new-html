@@ -52,4 +52,20 @@
 
 	<hr style="margin: 20px">
 
+	<div>
+
+		<button style="float: left; margin: 10px; width: 120px" type="button" onclick="SF.modalShow('message', 'Уведомить о поступлении', 'Мы оповестим вас как только товар появится в наличии.');">
+			Подписаться
+		</button>
+
+		<button style="float: left; margin: 10px; width: 120px" type="button" onclick="SF.modalShow('message', false, 'Вы отписались.');">
+			Отписаться
+		</button>
+
+		<button style="float: left; margin: 10px; width: 120px" type="button" onclick="SF.modalShow('message', false, '<b>Вы успешно авторизованы.</b>');">
+			Авторизация
+		</button>
+
+	</div>
+
 {% endblock %}
