@@ -59,10 +59,14 @@
 		color: #111;
 		background-color: var(--yellow);
 
-		&:hover {
+		@media ($desktop) {
 
-			color: #fff;
-			background-color: #4e4e4e;
+			&:hover {
+
+				color: #fff;
+				background-color: #4e4e4e;
+
+			}
 
 		}
 
@@ -82,20 +86,24 @@
 		padding: 0 20px 0 80px;
 		display: inline-block;
 
-		&:hover {
+		@media ($desktop) {
 
-			color: #fff;
-			background-color: #4e4e4e;
+			&:hover {
 
-			svg {
+				color: #fff;
+				background-color: #4e4e4e;
 
-				fill: var(--yellow);
+				svg {
 
-			}
+					fill: var(--yellow);
 
-			&::before {
+				}
 
-				background-color: #fff;
+				&::before {
+
+					background-color: #fff;
+
+				}
 
 			}
 
@@ -132,9 +140,13 @@
 
 		background-color: #eee;
 
-		&:hover {
+		@media ($desktop) {
 
-			background-color: #dadada;
+			&:hover {
+
+				background-color: #dadada;
+
+			}
 
 		}
 
@@ -154,10 +166,14 @@
 		background-color: #4e4e4e;
 		transition: background-color .3s, color .3s;
 
-		&:hover {
+		@media ($desktop) {
 
-			color: #111;
-			background-color: var(--yellow);
+			&:hover {
+
+				color: #111;
+				background-color: var(--yellow);
+
+			}
 
 		}
 
@@ -170,11 +186,25 @@
 
 			}
 
-			&:hover::before {
+			@media ($desktop) {
 
-				color: #111;
+				&:hover::before {
+
+					color: #111;
+
+				}
 
 			}
+
+		}
+
+	}
+
+	&--pre-order {
+
+		@media ($smWidth) {
+
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23FFF' d='M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm1-10V5H9v7h6v-2h-4z'/%3E%3C/svg%3E%0A") !important;
 
 		}
 
@@ -188,9 +218,13 @@
 		line-height: 18px;
 		border-bottom: 1px solid;
 
-		&:hover {
+		@media ($desktop) {
 
-			border-bottom-color: transparent;
+			&:hover {
+
+				border-bottom-color: transparent;
+
+			}
 
 		}
 
@@ -223,17 +257,21 @@
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			&::before {
+			&:hover {
 
-				background-color: #fff;
+				&::before {
 
-			}
+					background-color: #fff;
 
-			svg {
+				}
 
-				fill: var(--yellow);
+				svg {
+
+					fill: var(--yellow);
+
+				}
 
 			}
 
@@ -243,17 +281,21 @@
 
 	&--user&--gray {
 
-		&:hover {
+		@media ($desktop) {
 
-			&::before {
+			&:hover {
 
-				background-color: var(--color);
+				&::before {
 
-			}
+					background-color: var(--color);
 
-			svg {
+				}
 
-				fill: var(--color);
+				svg {
+
+					fill: var(--color);
+
+				}
 
 			}
 
@@ -267,10 +309,14 @@
 		color: #fff;
 		background-color: #4e4e4e;
 
-		&:hover {
+		@media ($desktop) {
 
-			color: var(--color);
-			background-color: var(--yellow);
+			&:hover {
+
+				color: var(--color);
+				background-color: var(--yellow);
+
+			}
 
 		}
 
@@ -334,13 +380,17 @@
 
 		}
 
-		&:hover {
+		@media ($desktop) {
 
-			border-bottom-color: transparent;
-
-			&::before {
+			&:hover {
 
 				border-bottom-color: transparent;
+
+				&::before {
+
+					border-bottom-color: transparent;
+
+				}
 
 			}
 
@@ -506,9 +556,13 @@
 		border-bottom: 1px dotted;
 		transition: border-color .3s;
 
-		&:hover {
+		@media ($desktop) {
 
-			border-bottom-color: transparent;
+			&:hover {
+
+				border-bottom-color: transparent;
+
+			}
 
 		}
 
@@ -522,9 +576,13 @@
 
 			}
 
-			&:hover::before {
+			@media ($desktop) {
 
-				border-bottom-color: transparent;
+				&:hover::before {
+
+					border-bottom-color: transparent;
+
+				}
 
 			}
 
@@ -539,27 +597,31 @@
 		border: 2px solid #4e4e4e;
 		line-height: 42px;
 
-		&:hover {
+		@media ($desktop) {
 
-			background-color: var(--yellow);
-			color: var(--dark);
-			border-color: var(--yellow);
-
-			&::after {
-
-				background-color: var(--dark);
-
-			}
-
-			&::before {
+			&:hover {
 
 				background-color: var(--yellow);
+				color: var(--dark);
+				border-color: var(--yellow);
 
-			}
+				&::after {
 
-			svg {
+					background-color: var(--dark);
 
-				fill: var(--dark);
+				}
+
+				&::before {
+
+					background-color: var(--yellow);
+
+				}
+
+				svg {
+
+					fill: var(--dark);
+
+				}
 
 			}
 
@@ -668,10 +730,14 @@
 		border: 2px solid var(--yellow);
 		background-color: #fff;
 
-		&:hover {
+		@media ($desktop) {
 
-			color: var(--dark);
-			background-color: var(--yellow);
+			&:hover {
+
+				color: var(--dark);
+				background-color: var(--yellow);
+
+			}
 
 		}
 
@@ -688,9 +754,13 @@
 
 			}
 
-			&:hover::before {
+			@media ($desktop) {
 
-				content: attr(data-delete);
+				&:hover::before {
+
+					content: attr(data-delete);
+
+				}
 
 			}
 
@@ -734,6 +804,12 @@
 
 		font-size: 13px;
 		padding: 0 24px;
+
+		@media ($smWidth) {
+
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='18' viewBox='0 0 16 18'%3E%3Cpath fill='%23FFF' d='M14.983 11.488V9c0-4.12-2.167-7.161-5.432-7.915A1.756 1.756 0 007.933 0c-.728 0-1.349.446-1.618 1.085C3.049 1.84.882 4.88.882 9v2.488l-.789 1.61a.915.915 0 00.039.875.878.878 0 00.75.427h14.119a.89.89 0 00.881-.9.905.905 0 00-.18-.546l-.719-1.466zM7.933 18c1.155 0 2.121-.75 2.483-1.8H5.45c.362 1.05 1.328 1.8 2.484 1.8z'/%3E%3C/svg%3E%0A") !important;
+
+		}
 
 	}
 
@@ -790,9 +866,13 @@
 
 	}
 
-	&:hover {
+	@media ($desktop) {
 
-		background-color: #dadada;
+		&:hover {
+
+			background-color: #dadada;
+
+		}
 
 	}
 
@@ -878,9 +958,13 @@
 
 	}
 
-	&:hover &__label::before {
+	@media ($desktop) {
 
-		border-color: var(--color);
+		&:hover &__label::before {
+
+			border-color: var(--color);
+
+		}
 
 	}
 

@@ -145,6 +145,19 @@
 
 	}
 
+	&__reset-btn {
+
+		position: absolute;
+		top: -34px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding: 0 20px;
+		height: 30px;
+		line-height: 30px;
+
+	}
+
 }
 
 @media ($mdWidth) {
