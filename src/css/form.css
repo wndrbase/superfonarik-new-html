@@ -177,6 +177,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			height: 50px;
+			font: 15px/50px Hermes;
+
+		}
+
 		&[data-open].is-open {
 
 			&::before {

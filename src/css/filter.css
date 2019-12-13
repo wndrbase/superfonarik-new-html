@@ -1,5 +1,13 @@
 .filter {
 
+	@media ($mdWidth) {
+
+		width: 500px;
+		max-width: 100%;
+		margin: 0 auto;
+
+	}
+
 	&__header {
 
 		margin-bottom: 20px;
@@ -7,29 +15,6 @@
 		&-item {
 
 			margin-bottom: 5px;
-
-		}
-
-	}
-
-	&__close-btn {
-
-		position: absolute;
-		width: 48px;
-		height: 48px;
-		top: -42px;
-		right: -10px;
-
-		svg {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			transition: .3s;
-			fill: var(--dark);
 
 		}
 
@@ -138,10 +123,10 @@
 
 	}
 
+	&__head,
 	&__foot {
 
 		display: flex;
-		margin: 24px auto 0;
 		justify-content: space-between;
 		padding-right: 5px;
 
@@ -153,24 +138,24 @@
 
 	}
 
+	&__foot {
+
+		margin: 24px auto 0;
+
+	}
+
 	@media ($mdWidth) {
 
 		&__submit {
 
-			width: 100%;
+			flex-grow: 1;
 
 		}
 
 		&__reset-btn {
 
-			position: absolute;
-			top: -34px;
-			left: 0;
-			right: 0;
-			margin: auto;
-			padding: 0 20px;
-			height: 30px;
-			line-height: 30px;
+			flex-shrink: 0;
+			margin-right: 15px;
 
 		}
 

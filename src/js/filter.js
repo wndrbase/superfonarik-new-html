@@ -143,13 +143,6 @@ SF.sliderRangeInit = function(elems){
 
 		});
 
-	// reset
-		PubSub.subscribe('filterFormReset', function(){
-
-			track.noUiSlider.reset();
-
-		});
-
 	});
 /*
 	PubSub.subscribe('windowWidthResize', function(){
@@ -189,19 +182,3 @@ SF.sliderRangeInit = function(elems){
 	}
 
 })(document.querySelector('.js-open-filter'));
-
-// reset
-
-(function (form) {
-
-	if(form) {
-
-		form.addEventListener('reset', function(){
-console.log('reset')
-			PubSub.publish('filterFormReset');
-
-		});
-
-	}
-
-})(document.querySelector('.filter__form'));
