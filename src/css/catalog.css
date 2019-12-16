@@ -50,6 +50,46 @@
 
 	}
 
+	&__search-menu {
+
+		width: 270px;
+		position: relative;
+		flex-shrink: 0;
+		margin-right: 58px;
+
+		a {
+
+			display: block;
+			padding: 10px 40px;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			color: var(--color);
+
+		}
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
+
+		li {
+
+			border: 1px solid #e8e8e8;
+			margin: 10px 0;
+
+		}
+
+		&-current {
+
+			border-color: var(--yellow) !important;
+			background-color: var(--yellow);
+
+		}
+
+	}
+
 	&__filter {
 
 		width: 270px;

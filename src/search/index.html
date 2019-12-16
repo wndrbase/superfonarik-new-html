@@ -1,0 +1,68 @@
+{% set title = "Поиск" %}
+
+{% set description = "Магазин SuperFonarik - лучшее место, чтобы купить Фонари по доступным ценам. У нас все Фонари высокого качества и с гарантией производителя. Есть доставка по всей России" %}
+
+{% set urlPage = "search" %}
+
+{% set article = "fonari" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Поиск",
+		link: "search"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="catalog-before">
+
+		Найдено 204 результата по запросу "fenix"
+
+	</div>
+
+	<div class="catalog">
+
+		<ul class="catalog__search-menu">
+			<li class="catalog__search-menu-current">
+				<a href="/search/?show=catalog&amp;q=fenix&amp;s=">
+					Товары (179)
+				</a>
+			</li>
+			<li>
+				<a href="/search/?show=news&amp;q=fenix&amp;s=">
+					Новости (3)
+				</a>
+			</li>
+			<li>
+				<a href="/search/?show=articles&amp;q=fenix&amp;s=">
+					Статьи (22)
+				</a>
+			</li>
+		</ul>
+
+		<div class="catalog__list">
+
+{% include "catalog/fonari/catalog-list.html" %}
+
+			<div class="catalog__more">
+
+				<button class="btn btn--more" type="button">
+					Показать ещё
+				</button>
+
+			</div>
+
+			<div class="catalog__pagination">
+
+{% include "template/pagination.html" %}
+
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}
