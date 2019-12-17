@@ -13,18 +13,6 @@
 
 		}
 
-		.swiper-slide {
-
-			padding-right: 20px;
-
-			&:not(.swiper-slide-active) {
-
-				opacity: .5;
-
-			}
-
-		}
-
 	}
 
 	@media ($xsWidth) {
@@ -39,14 +27,14 @@
 
 		@media ($smWidth) {
 
-			width: 280px;
-			overflow: visible;
 			margin: 0;
 			padding-bottom: 40px;
+			overflow: visible;
 
 			.swiper-slide {
 
-				width: 100% !important;
+				width: 280px !important;
+				padding-right: 20px;
 
 			}
 
@@ -54,35 +42,12 @@
 
 		@media ($xsWidth) {
 
-			width: auto;
 			margin: 0 -10px;
-
-			&::after,
-			&::before {
-
-				position: absolute;
-				width: 20px;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				content: '';
-				background-image: linear-gradient(to right, #fff, color(#fff a(0)));
-				z-index: 5;
-				pointer-events: none;
-
-			}
-
-			&::after {
-
-				left: auto;
-				right: 0;
-				background-image: linear-gradient(to left, #fff, color(#fff a(0)));
-
-			}
 
 			.swiper-slide {
 
 				padding: 0 10px;
+				width: 100% !important;
 
 			}
 

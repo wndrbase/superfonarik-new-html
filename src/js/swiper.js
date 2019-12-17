@@ -147,7 +147,7 @@ SF.swiper = function(swiperContainer){
 			param.loopAdditionalSlides = 1;
 			param.breakpoints = {
 				320: {
-					slidesPerView: 1,
+					slidesPerView: 'auto',
 					slidesPerGroup: 1,
 					spaceBetween: 0
 				},
