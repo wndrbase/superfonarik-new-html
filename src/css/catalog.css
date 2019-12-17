@@ -10,6 +10,12 @@
 
 	}
 
+	&-search-form {
+
+		margin-bottom: 20px;
+
+	}
+
 	&-head {
 
 		@media ($mdWidth) {
