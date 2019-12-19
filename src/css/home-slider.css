@@ -52,7 +52,7 @@
 		position: relative;
 		display: block;
 
-		@media ($smWidth) {
+		@media (max-width: 414px) {
 
 			height: 100vw;
 
@@ -91,7 +91,7 @@
 		align-items: center;
 		position: relative;
 
-		@media ($smWidth) {
+		@media (max-width: 414px) {
 
 			height: 100vw;
 
