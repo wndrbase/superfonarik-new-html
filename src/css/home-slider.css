@@ -47,22 +47,9 @@
 
 	&__item {
 
-		height: 396px;
 		overflow: hidden;
 		position: relative;
 		display: block;
-
-		@media ($smWidth) {
-
-			height: auto;
-
-		}
-
-		@media (max-width: 414px) {
-
-			height: 100vw;
-
-		}
 
 		img {
 
@@ -80,9 +67,15 @@
 
 			}
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				height: auto;
+
+			}
+
+			@media (max-width: 414px) {
+
+				height: 100vw;
 
 			}
 
