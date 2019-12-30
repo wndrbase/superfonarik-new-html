@@ -1,0 +1,110 @@
+	<div class="order__item">
+
+{% set head = "Оплата" %}
+{% include "personal/order/make/head.html" %}
+
+		<div class="order__body">
+
+			<div class="order__option-desc">
+
+				<div class="order__option-desc-select">
+
+					<div class="order__radio-img">
+
+						<label class="order__radio-img-item">
+
+							<input class="order__radio-img-input" type="radio" name="PAY_SYSTEM_ID" checked="checked">
+
+							<span class="order__radio-img-box">
+
+								<img src="https://superfonarik.ru/upload/sale/paysystem/logotip/44d/44d59b951fb7ba4167cdb0dd82d0cacc.png" alt="">
+
+							</span>
+
+							<span class="order__radio-img-text">
+								Оплата онлайн
+							</span>
+
+						</label>
+
+						<label class="order__radio-img-item">
+
+							<input class="order__radio-img-input" type="radio" name="PAY_SYSTEM_ID" checked="checked">
+
+							<span class="order__radio-img-box">
+
+								<img src="https://superfonarik.ru/upload/sale/paysystem/logotip/a91/a9113f74e9daa1d525328416a831b9bd.png" alt="">
+
+							</span>
+
+							<span class="order__radio-img-text">
+								Оплата в постамате Pick Point
+							</span>
+
+						</label>
+
+						<label class="order__radio-img-item">
+
+							<input class="order__radio-img-input" type="radio" name="PAY_SYSTEM_ID">
+
+							<span class="order__radio-img-box">
+
+								<img src="https://superfonarik.ru/upload/sale/paysystem/logotip/88b/88b834ef24c4b8d30048102c2bf83482.png" alt="">
+
+							</span>
+
+							<span class="order__radio-img-text">
+								Оплата по счету в банке
+							</span>
+
+						</label>
+
+						<label class="order__radio-img-item">
+
+							<input class="order__radio-img-input" type="radio" name="PAY_SYSTEM_ID">
+
+							<span class="order__radio-img-box">
+
+								<img src="https://superfonarik.ru/upload/sale/paysystem/logotip/ec9/ec9234fec140738c757cabe1df49331b.png" alt="">
+
+							</span>
+
+							<span class="order__radio-img-text">
+								Хочу оплатить по-другому
+							</span>
+
+						</label>
+
+					</div>
+
+				</div>
+
+				<div class="order__option-desc-current">
+
+					<p class="order__option-desc-title">
+						Курьеру наличными, при получении заказа
+					</p>
+
+					<img src="https://superfonarik.ru/upload/sale/paysystem/logotip/ec9/ec9234fec140738c757cabe1df49331b.png" alt="">
+
+					<p>
+						Курьер принимает только наличные.
+					</p>
+
+					<p>
+						Для экономии времени рекомендуем Вам подготовить сумму без сдачи.
+					</p>
+
+					<p>
+						Если Вам необходима сдача с крупных купюр, то просим проинформировать об этом заранее.
+					</p>
+
+				</div>
+
+			</div>
+
+{% include "personal/order/make/btns.html" %}
+
+		</div>
+
+	</div>

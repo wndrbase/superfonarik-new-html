@@ -13,9 +13,9 @@
 
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: 100%;
 			bottom: 0;
-			width: 100vw;
+			width: calc((100vw - var(--widthScrollBar) - var(--widthCenter)) / 2);
 			content: '';
 			background-color: #eee;
 			pointer-events: none;

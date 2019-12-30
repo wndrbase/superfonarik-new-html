@@ -1,0 +1,97 @@
+	<div class="order__item">
+
+{% set head = "Данные покупателя" %}
+{% set state = 'is-error' %}
+{% include "personal/order/make/head.html" %}
+
+		<div class="order__body">
+
+			<label class="input-label input-label--error">
+
+				<input class="input-label__input input input--border" required="required">
+
+				<span class="input-label__label">
+					ФИО
+				</span>
+
+				<span class="input-label__text input-label__text--error">
+					Поле "ФИО" обязательно для заполнения
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Дисконтная карта
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" required="required" type="email">
+
+				<span class="input-label__label">
+					E-mail
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" required="required" type="tel">
+
+				<span class="input-label__label">
+					Телефон
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<textarea class="input-label__input input input--border"></textarea>
+
+				<span class="input-label__label">
+					Адрес доставки
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<textarea class="input-label__input input input--border"></textarea>
+
+				<span class="input-label__label">
+					Комментарий к заказу
+				</span>
+
+			</label>
+
+{% include "personal/order/make/btns.html" %}
+
+		</div>
+
+	</div>
+
+	<div class="order__item">
+
+{% set state = 'is-check' %}
+{% include "personal/order/make/head.html" %}
+{% set state = false %}
+
+		<div class="order__body">
+
+			<p>
+				<b>ФИО:</b> Иванов Иван Иванович<br>
+				<b>Дисконтная карта:</b> не выбрано<br>
+				<b>E-mail:</b> design@de.ru<br>
+				<b>Телефон:</b> +7 977 340-50-68<br>
+				<b>Адрес доставки:</b> г. Москва, ул. Петровка, 12
+			</p>
+
+		</div>
+
+	</div>

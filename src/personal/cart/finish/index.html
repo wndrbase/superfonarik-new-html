@@ -1,0 +1,48 @@
+{% set title = "Заказ сформирован" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Корзина",
+		link: "personal/cart"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="cart">
+
+		<div class="cart__finish">
+
+			<h1 class="h1">
+				Заказ сформирован
+			</h1>
+
+			<p>
+				Ваш заказ <b>№50605_1</b> от 22.12.2019 21:46 успешно создан. Номер вашей оплаты: <b>№50605_1/1</b>
+			</p>
+
+			<p>
+				Оплата заказа: Курьеру наличными, при получении заказа
+			</p>
+
+			<div class="cart__finish-btns">
+
+				<a href="/" class="btn btn--dark">
+					На главную
+				</a>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

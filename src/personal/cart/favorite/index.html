@@ -1,0 +1,203 @@
+{% set title = "Корзина отложено" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Отложено",
+		link: "personal/cart/favorite"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+
+	<article class="cart">
+
+		<div class="cart__head">
+
+			<div class="cart__head-title">
+
+				<h1 class="h1">
+					Корзина
+				</h1>
+
+			</div>
+
+			<div class="cart__head-btn">
+
+				<button class="btn btn--yellow" type="button">
+					Готовы к заказу
+				</button>
+
+				<button class="btn btn--gray" type="button" disabled="disabled">
+					Отложено (1)
+				</button>
+
+			</div>
+
+		</div>
+
+		<div class="hidden-md">
+
+			<div class="cart-product-table">
+
+				<table>
+
+					<thead>
+						<tr>
+							<td colspan="2">
+								Товары
+							</td>
+							<td>
+								Скидка
+							</td>
+							<td>
+								Цена
+							</td>
+							<td>
+								Сумма
+							</td>
+							<td colspan="2">
+								Количество
+							</td>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>
+
+								<a class="cart-product__img" href="/product" target="_blank">
+
+									<picture>
+
+										<source srcset="/img/cart/item@1x.png 1x, /img/cart/item@2x.png 2x">
+
+										<img src="/img/cart/item@1x.png" alt="Комплект Охотник-5 (EagleTac T25L-R Kit, XHP35 HD) для гладкоствольного оружия">
+
+									</picture>
+
+								</a>
+
+							</td>
+							<td>
+
+								<a href="/product/" class="cart-product__link" target="_blank">
+									Комплект Охотник-5 (EagleTac T25L-R Kit, XHP35 HD) для гладкоствольного оружия
+								</a>
+
+							</td>
+							<td class="cart-product-table__number">
+								5%
+							</td>
+							<td class="cart-product-table__number">
+								7 690 <span class="rub">₽</span>
+							</td>
+							<td class="cart-product-table__number">
+								14 285 <span class="rub">₽</span>
+							</td>
+							<td class="cart-product-table__number">
+								2 шт
+							</td>
+							<td>
+
+								<div class="cart-product__btns">
+
+									<button class="btn btn--dotted" type="button">
+										Добавить к заказу
+									</button>
+
+									<button class="btn btn--dotted" type="button">
+										Удалить
+									</button>
+
+								</div>
+
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+			</div>
+
+		</div>
+
+		<div class="cart__list visible-md">
+
+			<div class="cart-product">
+
+				<a class="cart-product__img" href="/product" target="_blank">
+
+					<picture>
+
+						<source srcset="/img/cart/item@1x.png 1x, /img/cart/item@2x.png 2x">
+
+						<img src="/img/cart/item@1x.png" alt="Комплект Охотник-5 (EagleTac T25L-R Kit, XHP35 HD) для гладкоствольного оружия">
+
+					</picture>
+
+				</a>
+
+				<div class="cart-product__body">
+
+					<a href="/product/" class="cart-product__link" target="_blank">
+						Комплект Охотник-5 (EagleTac T25L-R Kit, XHP35 HD) для гладкоствольного оружия
+					</a>
+
+					<div class="cart-product__details">
+
+						<div class="table-property">
+
+							<div class="table-property__row">
+								<div class="table-property__key">Цена</div>
+								<div class="table-property__value">7 690 <span class="rub">₽</span></div>
+							</div>
+
+							<div class="table-property__row">
+								<div class="table-property__key">Скидка</div>
+								<div class="table-property__value">5%</div>
+							</div>
+
+							<div class="table-property__row">
+								<div class="table-property__key">Сумма</div>
+								<div class="table-property__value">14 285 <span class="rub">₽</span></div>
+							</div>
+
+							<div class="table-property__row">
+								<div class="table-property__key">Количество</div>
+								<div class="table-property__value">2 шт</div>
+							</div>
+
+						</div>
+
+						<div class="cart-product__btns">
+
+							<button class="btn btn--yellow" type="button">
+								Добавить к заказу
+							</button>
+
+							<button class="btn btn--yellow" type="button">
+								Удалить
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

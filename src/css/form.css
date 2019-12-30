@@ -426,6 +426,7 @@
 
 	}
 
+	&--order,
 	&--cart {
 
 		@media ($desktop) {
@@ -500,6 +501,21 @@
 			}
 
 		}
+
+	}
+
+	&--order {
+
+		@media ($mdWidth) {
+
+			color: #fff;
+			background-color: var(--dark);
+
+		}
+
+	}
+
+	&--cart {
 
 		@media ($mdWidth) {
 
@@ -914,6 +930,41 @@
 
 	}
 
+	&--border {
+
+		width: 100%;
+		background-color: #fff;
+		height: 50px;
+		line-height: 20px;
+		padding: 15px 18px;
+		border: 1px solid #bababa;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #fff;
+				border-color: var(--dark);
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			border: 1px solid #eee;
+
+		}
+
+		&:focus {
+
+			background-color: #fff;
+			border-color: var(--dark);
+
+		}
+
+	}
+
 }
 
 @keyframes autofill {
@@ -1015,6 +1066,38 @@
 
 	}
 
+	&--big &__label {
+
+		padding-left: 38px;
+		font-size: 12px;
+		line-height: 18px;
+
+		&::before {
+
+			width: 24px;
+			height: 24px;
+			top: 4px;
+			border: 1px solid var(--dark);
+
+		}
+
+		&::after {
+
+			display: none;
+
+		}
+
+	}
+
+	&--big &__input[type="checkbox"]:checked + &__label::before {
+
+		background-color: #fff;
+		border-color: #dedede;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' fill='none' viewBox='0 0 13 10'%3E%3Cpath stroke='%23272827' stroke-width='2' d='M1 4.7052L4.5205 8 12 1'/%3E%3C/svg%3E%0A");
+		background-position: center;
+		background-repeat: no-repeat;
+
+	}
 
 }
 
@@ -1022,24 +1105,17 @@
 
 	display: block;
 	position: relative;
-	padding-right: 30px;
 
 	option {
 
 		color: var(--color);
+		font-size: 16px;
 
 	}
 
 	&::-ms-expand {
 
 		display: none;
-
-	}
-
-	&:focus {
-
-		outline: none;
-		font-size: 16px;
 
 	}
 
@@ -1067,9 +1143,232 @@
 		color: var(--dark);
 		height: 34px;
 		line-height: 34px;
-		padding: 0;
+		padding: 0 30px 0 0;
 		display: block;
 		width: 100%;
+
+		&:focus {
+
+			outline: none;
+			font-size: 16px;
+
+		}
+
+	}
+
+	&--border {
+
+		background-color: #fff;
+		border: 1px solid #eee;
+
+		&::after {
+
+			width: 16px;
+			height: 11px;
+			top: 20px;
+			right: 18px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='11' viewBox='0 0 16 11'%3E%3Cpath stroke='%23272827' fill='none' stroke-width='3' d='M2 2l6 6 6-6'/%3E%3C/svg%3E%0A");
+
+		}
+
+		select {
+
+			height: 50px;
+			line-height: 50px;
+			padding: 0 48px 0 18px;
+
+		}
+
+	}
+
+}
+
+/* input-box */
+.input-box {
+
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&__label {
+
+		line-height: 21px;
+		margin-bottom: 10px;
+		display: block;
+
+		&--required::after {
+
+			content: '*';
+			color: var(--red);
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 12px;
+		display: block;
+		position: relative;
+		top: 5px;
+
+		&--error {
+
+			color: var(--error);
+			display: none;
+
+		}
+
+	}
+
+	&--error .input--border {
+
+		border-color: var(--error);
+
+	}
+
+	&--error &__text--error {
+
+		display: block;
+
+	}
+
+}
+
+/* input-label */
+.input-label {
+
+	display: block;
+	width: 100%;
+	position: relative;
+
+	&__label {
+
+		font-size: 14px;
+		line-height: 20px;
+		position: absolute;
+		top: 15px;
+		left: 19px;
+		pointer-events: none;
+
+	}
+
+	&__input[required] ~ &__label::after {
+
+		content: '*';
+		color: var(--red);
+
+	}
+
+	&__input:focus ~ &__label,
+	&--no-empty &__label {
+
+		top: 0;
+		font-size: 10px;
+		color: var(--dark);
+
+		&::after {
+
+			display: none;
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 12px;
+		display: block;
+		position: relative;
+		top: 5px;
+
+		&--error {
+
+			color: var(--error);
+			display: none;
+
+		}
+
+	}
+
+	&--error &__input {
+
+		border-color: var(--error);
+
+	}
+
+	&--error &__text--error {
+
+		display: block;
+
+	}
+
+}
+
+
+/* input-live-search */
+.input-live-search {
+
+	position: relative;
+
+	&__ico {
+
+		opacity: .15;
+		position: absolute;
+		top: 17px;
+		left: 18px;
+		fill: var(--dark);
+		z-index: 1;
+		pointer-events: none;
+
+	}
+
+	&__input {
+
+		padding-left: 48px;
+		padding-right: 48px;
+
+	}
+
+	&__reset {
+
+		position: absolute;
+		top: 19px;
+		right: 19px;
+		fill: var(--dark);
+
+	}
+
+	&__result {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		margin-top: 10px;
+		z-index: 5;
+		background-color: #fff;
+		border: 1px solid var(--dark);
+		padding: 8px 0;
+		max-height: 200px;
+		overflow-y: auto;
+
+		&-item {
+
+			cursor: pointer;
+			padding: 4px 14px;
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--dark);
+
+				}
+
+			}
+
+		}
 
 	}
 

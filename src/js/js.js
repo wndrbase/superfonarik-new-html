@@ -63,6 +63,45 @@ var SF = {};
 
 	});
 
+
+	PubSub.subscribe('windowWidthResize', function(){
+
+		setCustomProperty();
+
+	});
+
+	function setCustomProperty(){
+
+		// создадим элемент с прокруткой
+		var div = document.createElement('div');
+
+		div.style.overflowY = 'scroll';
+		div.style.width = '50px';
+		div.style.height = '50px';
+
+		// мы должны вставить элемент в документ, иначе размеры будут равны 0
+		document.body.appendChild(div);
+		var scrollWidth = div.offsetWidth - div.clientWidth;
+
+		document.body.removeChild(div);
+
+		// ищем первый видимый элемент
+		var i = 0,
+			el = document.querySelector('.main').children[i];
+
+		while (el.offsetParent === null) {
+
+			el = document.querySelector('.main').children[++i];
+
+		}
+
+		document.documentElement.style.setProperty("--widthCenter", el.clientWidth + 'px');
+		document.documentElement.style.setProperty("--widthScrollBar", scrollWidth + 'px');
+
+	}
+
+	setCustomProperty();
+
 	// обработчик анимаций
 	SF.cssAnimation = function(a){var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]}
 

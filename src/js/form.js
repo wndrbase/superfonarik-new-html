@@ -123,3 +123,51 @@
 	});
 
 })(document.querySelectorAll('.js-modal-pre-order'));
+
+
+// input-label
+(function(inputLabel){
+
+	if(!inputLabel.length) {
+
+		return;
+
+	}
+
+	function focusInputLabel(el,required){
+
+		el.parentNode.classList.toggle('input-label--no-empty', el.value);
+
+		if(required && el.getAttribute('required') !== null) {
+
+			el.parentNode.classList.toggle('input-label--error', !el.value);
+
+		}
+
+	}
+
+	Array.prototype.forEach.call(inputLabel, function(el){
+
+		el.addEventListener('focus', function() {
+
+			focusInputLabel(el);
+
+		});
+
+		el.addEventListener('keyup', function() {
+
+			focusInputLabel(el,true);
+
+		});
+
+		el.addEventListener('blur', function() {
+
+			focusInputLabel(el,true);
+
+		});
+
+		focusInputLabel(el);
+
+	});
+
+})(document.querySelectorAll('.input-label__input'));

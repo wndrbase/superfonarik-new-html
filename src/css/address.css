@@ -105,7 +105,7 @@
 		&::after {
 
 			position: absolute;
-			width: 100vw;
+			width: calc((100vw - var(--widthScrollBar) - var(--widthCenter)) / 2);
 			top: 0;
 			left: 100%;
 			bottom: 0;

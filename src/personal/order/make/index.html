@@ -1,0 +1,50 @@
+{% set title = "Оформление заказа" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Оформление заказа",
+		link: "personal/order/make"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<form class="order">
+
+		<h1 class="h1">
+			Оформление заказа
+		</h1>
+
+		<div class="order__box">
+
+			<div class="order__main">
+
+{% include "personal/order/make/geo.html" %}
+{% include "personal/order/make/ship.html" %}
+{% include "personal/order/make/pay.html" %}
+{% include "personal/order/make/user.html" %}
+{% include "personal/order/make/list.html" %}
+
+			</div>
+
+			<div class="order__bar">
+
+{% include "personal/order/make/bar.html" %}
+
+			</div>
+
+		</div>
+
+{% include "personal/order/make/foot.html" %}
+
+	</form>
+
+{% endblock %}

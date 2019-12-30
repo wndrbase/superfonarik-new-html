@@ -185,13 +185,19 @@
 			bottom: 0;
 			margin: auto;
 			transition: .3s;
-			fill: #ddd;
+			fill: var(--dark);
 
 		}
 
-		&:hover svg {
+		@media ($desktop) {
 
-			fill: var(--dark);
+			fill: #ddd;
+
+			&:hover svg {
+
+				fill: var(--dark);
+
+			}
 
 		}
 
@@ -298,6 +304,13 @@
 			}
 
 		}
+
+	}
+
+	&__submit {
+
+		margin: 24px 0 12px;
+		width: 100%;
 
 	}
 

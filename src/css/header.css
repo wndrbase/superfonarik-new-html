@@ -2,17 +2,24 @@
 
 	padding-top: 22px;
 	flex-shrink: 0;
-	background-color: #fff;
+
+	&::before {
+
+		position: absolute;
+		height: 2px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background-color: var(--yellow);
+
+	}
 
 	&--home {
 
-		.menu-catalog {
+		&::before {
 
-			&::after {
-
-				display: none;
-
-			}
+			display: none;
 
 		}
 
@@ -26,7 +33,6 @@
 
 			& ~ .main {
 
-				border-top: 0;
 				padding-top: 0;
 
 			}
@@ -616,8 +622,6 @@
 
 	.menu-show {
 
-		background-color: var(--bg);
-
 		.main,
 		.footer,
 		.home-slider,
@@ -628,15 +632,15 @@
 
 		}
 
-		.menu-mobile {
+		.header::before {
 
-			display: block;
+			display: none;
 
 		}
 
-		.wrapper {
+		.menu-mobile {
 
-			background-color: var(--bg);
+			display: block;
 
 		}
 
