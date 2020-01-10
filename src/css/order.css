@@ -55,6 +55,36 @@
 
 		}
 
+		&-list {
+
+			border: 1px solid var(--gray);
+			padding: 10px 14px;
+
+			dt {
+
+				padding: 0 5px;
+
+			}
+
+			dd {
+
+				color: var(--dark);
+				font-weight: 700;
+				font-size: 13px;
+				padding: 0 5px;
+
+				& ~ dt {
+
+					border-top: 1px solid var(--gray);
+					margin-top: 8px;
+					padding-top: 8px;
+
+				}
+
+			}
+
+		}
+
 	}
 
 	&__foot {

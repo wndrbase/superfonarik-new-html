@@ -9,7 +9,7 @@
 
 	}
 
-	&__btn {
+	&__nav &__btn {
 
 		padding: 2px 10px;
 		line-height: 18px;

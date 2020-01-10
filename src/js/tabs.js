@@ -8,7 +8,11 @@ SF.tabs = function(elems){
 
 		Array.prototype.forEach.call(btn, function(el,index){
 
-			nav.appendChild(el);
+			if(!tab.classList.contains('tabs--btn-no-move')) {
+
+				nav.appendChild(el);
+
+			}
 
 			el.addEventListener('click',function(){
 
@@ -33,9 +37,13 @@ SF.tabs = function(elems){
 
 		});
 
-		nav.classList.add('tabs__nav');
+		if(!tab.classList.contains('tabs--btn-no-move')) {
 
-		tab.insertBefore(nav, item[0]);
+			nav.classList.add('tabs__nav');
+
+			tab.insertBefore(nav, item[0]);
+
+		}
 
 	});
 
