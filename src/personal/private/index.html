@@ -1,0 +1,122 @@
+{% set title = "Профиль пользователя" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Персональные данные",
+		link: "personal/private"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<form action="/" class="lk lk-user">
+
+		<h1 class="lk__title h1">
+			Профиль пользователя
+		</h1>
+
+		<p>
+			Дата обновления: 27.03.2019 16:20:58 <br>Последняя авторизация: 04.01.2020 21:07:18
+		</p>
+
+		<div class="lk__fieldset">
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Название доставки
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Имя
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Фамилия
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Отчество
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" type="email">
+
+				<span class="input-label__label">
+					E-mail
+				</span>
+
+			</label>
+
+			<div class="lk__text-after-input">
+				Пароль должен быть не менее 6 символов длиной.
+			</div>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" type="password">
+
+				<span class="input-label__label">
+					Новый пароль
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" type="password">
+
+				<span class="input-label__label">
+					Подтверждение нового пароля
+				</span>
+
+			</label>
+
+		</div>
+
+		<div class="lk__btns">
+
+			<a href="/personal" class="btn btn--dark">
+				Отмена
+			</a>
+
+			<button class="btn btn--yellow">
+				Сохранить
+			</button>
+
+		</div>
+
+	</form>
+
+{% endblock %}

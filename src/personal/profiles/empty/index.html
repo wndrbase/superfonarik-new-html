@@ -1,0 +1,36 @@
+{% set title = "Адреса для доставки" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Адреса для доставки",
+		link: "personal/profiles"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="lk lk-user">
+
+		<h1 class="lk__title h1">
+			Адреса для доставки
+		</h1>
+
+		<p>
+			Нет добавленных адресов
+		</p>
+
+		<a href="/personal/profiles/edit/" class="btn btn--yellow lk__submit">
+			Добавить адрес
+		</a>
+
+	</article>
+
+{% endblock %}

@@ -1,0 +1,134 @@
+{% set title = "Адреса для доставки" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Список профилей пользователя",
+		link: "personal/profiles"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<form action="/" class="lk lk-user">
+
+		<h1 class="lk__title h1">
+			Адреса для доставки
+		</h1>
+
+		<div class="lk__fieldset">
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Название доставки
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					ФИО
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Дисконтная карта
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" type="email">
+
+				<span class="input-label__label">
+					E-mail
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" type="tel">
+
+				<span class="input-label__label">
+					Телефон
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Населенный пункт
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border" type="tel">
+
+				<span class="input-label__label">
+					Индекс
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Местоположение
+				</span>
+
+			</label>
+
+			<label class="input-label">
+
+				<textarea class="input-label__input input input--border"></textarea>
+
+				<span class="input-label__label">
+					Адрес
+				</span>
+
+			</label>
+
+		</div>
+
+		<div class="lk__btns">
+
+			<button type="button" onclick="history.back()" class="btn btn--dark">
+				Отмена
+			</button>
+
+			<button class="btn btn--yellow">
+				Сохранить
+			</button>
+
+		</div>
+
+	</form>
+
+{% endblock %}

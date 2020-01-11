@@ -1,0 +1,67 @@
+{% set title = "Адреса для доставки" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Адреса для доставки",
+		link: "personal/profiles"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="lk lk-user">
+
+		<h1 class="lk__title h1">
+			Адреса для доставки
+		</h1>
+
+		<ul class="lk-user__address-list">
+
+			<li class="lk-user__address-list-item">
+
+				<h3 class="lk-user__address-list-name">
+					Доставка домой
+				</h3>
+
+				<p class="lk-user__address-list-key-value">
+					Ф.И.О.:
+					<b>Артем Измайлов</b>
+				</p>
+
+				<p class="lk-user__address-list-key-value">
+					Адрес доставки
+					<b>г. Москва</b>
+				</p>
+
+				<p class="lk-user__address-list-key-value">
+					Телефон
+					<b>+7 (900) 120-15-70</b>
+				</p>
+
+				<div class="lk__btns">
+
+					<a href="/personal/profiles/edit/" class="btn btn--dark">
+						Изменить
+					</a>
+
+					<button type="button" class="btn btn--yellow" onclick="if(confirm('Вы уверены, что хотите удалить этот профиль?')) window.location='/personal/profiles/?del_id=31717&sessid=53096832ef1be458f77df2dca6bde9bc'">
+						Удалить
+					</button>
+
+				</div>
+
+			</li>
+
+		</ul>
+
+	</article>
+
+{% endblock %}
