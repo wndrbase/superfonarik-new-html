@@ -171,8 +171,9 @@
 
 		@media ($smWidth) {
 
-			top: 0;
-			right: 0;
+			top: 24px;
+			width: 36px;
+			height: 36px;
 
 		}
 
@@ -243,10 +244,17 @@
 
 .modal-form {
 
+	&__title {
+
+		text-transform: none;
+		margin: 6px 0 12px;
+
+	}
+
 	&__text {
 
-		color: #4e4e4e;
 		margin: 10px 0;
+		font-size: 13px;
 
 		&--big {
 
@@ -255,23 +263,31 @@
 
 		}
 
-		.is-error & {
+		&-bold {
 
-			color: color(var(--red) a(50%)) !important;
+			color: var(--dark);
+			font: 15px/18px Hermes;
 
 		}
 
 	}
 
-	&__input {
+	&__fieldset {
 
-		margin: 24px 0;
+		margin: 20px 0;
 
 	}
 
-	&__input &__text {
+	.input-label {
 
-		margin-top: 4px;
+		margin: 15px 0;
+
+	}
+
+	.input-label--error + &__text {
+
+		margin-top: -10px;
+		color: var(--error) !important;
 
 	}
 

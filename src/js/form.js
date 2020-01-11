@@ -168,6 +168,11 @@
 
 		focusInputLabel(el);
 
-	});
+		PubSub.subscribe('DOMContentLoaded', function(){
 
+			focusInputLabel(el);
+
+		});
+
+	});
 })(document.querySelectorAll('.input-label__input'));

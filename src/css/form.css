@@ -235,76 +235,11 @@
 
 		}
 
-	}
+		@media ($smWidth) {
 
-	&--user {
-
-		padding-right: 70px;
-
-		&::before {
-
-			position: absolute;
-			width: 2px;
-			top: 14px;
-			right: 50px;
-			bottom: 12px;
-			background-color: var(--color);
-			transition: .3s;
-			content: '';
-
-		}
-
-		svg {
-
-			position: absolute;
-			top: 14px;
-			right: 15px;
-			fill: var(--dark);
-			transition: .3s;
-
-		}
-
-		@media ($desktop) {
-
-			&:hover {
-
-				&::before {
-
-					background-color: #fff;
-
-				}
-
-				svg {
-
-					fill: var(--yellow);
-
-				}
-
-			}
-
-		}
-
-	}
-
-	&--user&--gray {
-
-		@media ($desktop) {
-
-			&:hover {
-
-				&::before {
-
-					background-color: var(--color);
-
-				}
-
-				svg {
-
-					fill: var(--color);
-
-				}
-
-			}
+			height: 18px;
+			font: 15px/18px Hermes;
+			color: var(--dark);
 
 		}
 
@@ -920,7 +855,7 @@
 
 	&--error {
 
-		background-color: color(var(--error) a(25%)) !important;
+		background-color: color(#a94442 a(25%)) !important;
 
 	}
 
