@@ -1,0 +1,58 @@
+{% set title = "Мои заказы" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Мои заказы",
+		link: "personal/orders"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<form action="/" class="lk lk--short">
+
+		<h1 class="lk__title h1">
+			Отмена заказа №48297_1
+		</h1>
+
+		<div class="lk__text">
+
+			<p>
+				Вы уверены, что хотите отменить	заказ #48297_1? <b>Отмена заказа необратима.</b>
+			</p>
+
+			<p>
+				Укажите, пожалуйста, причину отмены заказа:
+			</p>
+
+		</div>
+
+		<div class="lk__fieldset">
+
+			<label class="input-label">
+
+				<input class="input-label__input input input--border">
+
+				<span class="input-label__label">
+					Причина отказа
+				</span>
+
+			</label>
+
+		</div>
+
+		<button class="btn btn--dark lk__submit">
+			Отменить заказ
+		</button>
+
+	</form>
+
+{% endblock %}

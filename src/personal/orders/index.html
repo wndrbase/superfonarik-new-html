@@ -1,0 +1,184 @@
+{% set title = "Мои заказы" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Мой кабинет",
+		link: "personal"
+	},
+	{
+		name : "Мои заказы",
+		link: "personal/orders"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="lk">
+
+		<h1 class="lk__title h1">
+			Текущие заказы
+		</h1>
+
+		<ul class="lk__cards">
+
+			<li class="lk__card">
+
+				<h3 class="lk__card-head">
+					Заказ №48297_2 от 23.10.2019
+				</h3>
+
+				<p class="lk__head">
+					Информация о заказе
+				</p>
+
+				<dl class="lk__dl">
+
+					<dt>
+						Статус
+					</dt>
+					<dd>
+						Ждёт оплаты
+					</dd>
+
+					<dt>
+						Доставка
+					</dt>
+					<dd>
+						Доставка курьером за МКАД (зона 4) для заказов от 8000 р.
+					</dd>
+
+					<dt>
+						Оплата
+					</dt>
+					<dd>
+						Курьеру наличными, при получении заказа
+					</dd>
+
+					<dt>
+						Сумма
+					</dt>
+					<dd>
+						12 340 ₽
+					</dd>
+
+				</dl>
+
+				<ul class="lk__label">
+
+					<li class="lk__label-red">
+						Не оплачено
+					</li>
+
+				</ul>
+
+				<div class="lk__btn-center">
+
+					<a href="/personal/orders/item/" class="btn btn--link">
+						Подробнее о заказе
+					</a>
+
+				</div>
+
+				<hr>
+
+				<a href="/personal/orders/cancel" class="btn btn--yellow lk__submit">
+					Оплатить
+				</a>
+
+				<div class="lk__btns">
+
+					<a href="/" class="btn btn--dark">
+						Повторить
+					</a>
+
+					<a href="/personal/orders/cancel" class="btn btn--dark">
+						Отменить
+					</a>
+
+				</div>
+
+			</li>
+
+			<li class="lk__card">
+
+				<h3 class="lk__card-head">
+					Заказ №48297_2 от 23.10.2019
+				</h3>
+
+				<p class="lk__head">
+					Информация о заказе
+				</p>
+
+				<dl class="lk__dl">
+
+					<dt>
+						Статус
+					</dt>
+					<dd>
+						Ждёт оплаты
+					</dd>
+
+					<dt>
+						Доставка
+					</dt>
+					<dd>
+						Доставка курьером за МКАД (зона 4) для заказов от 8000 р.
+					</dd>
+
+					<dt>
+						Оплата
+					</dt>
+					<dd>
+						Курьеру наличными, при получении заказа
+					</dd>
+
+					<dt>
+						Сумма
+					</dt>
+					<dd>
+						12 340 ₽
+					</dd>
+
+				</dl>
+
+				<div class="lk__btn-center">
+
+					<a href="/personal/orders/item/" class="btn btn--link">
+						Подробнее о заказе
+					</a>
+
+				</div>
+
+				<hr>
+
+				<button class="btn btn--green lk__submit" disabled="disabled">
+					Оплачен
+				</button>
+
+				<div class="lk__btns">
+
+					<a href="/" class="btn btn--dark">
+						Повторить
+					</a>
+
+					<a href="/personal/orders/cancel" class="btn btn--dark">
+						Отменить
+					</a>
+
+				</div>
+
+			</li>
+
+		</ul>
+
+		<h2 class="lk__title h3">
+			Архив заказов
+		</h2>
+
+	</article>
+
+{% endblock %}

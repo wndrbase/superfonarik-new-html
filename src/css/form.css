@@ -80,6 +80,31 @@
 
 	}
 
+	&--green {
+
+		color: #fff;
+		background-color: var(--green);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--green);
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			height: 50px;
+			font: 15px/50px Hermes;
+
+		}
+
+	}
+
 	&--download {
 
 		background-color: var(--yellow);

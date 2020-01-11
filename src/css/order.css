@@ -168,17 +168,15 @@
 
 	}
 
-	&__item.is-open &__body {
-
-		display: block;
-
-	}
-
 	&__body {
 
-		border-top: 1px solid #e0e0e0;
-		padding: 14px 0 16px;
-		/* display: none; */
+		&-inner {
+
+			border-top: 1px solid #e0e0e0;
+			padding: 14px 0 16px;
+			display: none;
+
+		}
 
 		p {
 
@@ -194,12 +192,24 @@
 
 	}
 
-	&__error {
+	&__item.is-open &__body-inner {
+
+		display: block;
+
+	}
+
+	&__item.is-open &__error-head {
+
+		margin-bottom: 18px;
+
+	}
+
+	&__error-head {
 
 		color: var(--error);
 		background-color: rgba(169, 68, 66, 0.15);
 		padding: 10px 15px;
-		margin: 5px 0;
+		margin-bottom: 11px;
 
 	}
 

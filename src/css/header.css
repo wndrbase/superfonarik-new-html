@@ -500,7 +500,7 @@
 
 				&:hover {
 
-					text-decoration-color: color(var(--color) a(0%));
+					text-decoration-color: transparent;
 
 				}
 
