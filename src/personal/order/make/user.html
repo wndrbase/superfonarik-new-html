@@ -6,71 +6,75 @@
 
 		<div class="order__body">
 
-			<label class="input-label input-label--error">
+			<div class="order__body-inner">
 
-				<input class="input-label__input input input--border" required="required">
+				<label class="input-label input-label--error">
 
-				<span class="input-label__label">
-					ФИО
-				</span>
+					<input class="input-label__input input input--border" required="required">
 
-				<span class="input-label__text input-label__text--error">
-					Поле "ФИО" обязательно для заполнения
-				</span>
+					<span class="input-label__label">
+						ФИО
+					</span>
 
-			</label>
+					<span class="input-label__text input-label__text--error">
+						Поле "ФИО" обязательно для заполнения
+					</span>
 
-			<label class="input-label">
+				</label>
 
-				<input class="input-label__input input input--border">
+				<label class="input-label">
 
-				<span class="input-label__label">
-					Дисконтная карта
-				</span>
+					<input class="input-label__input input input--border">
 
-			</label>
+					<span class="input-label__label">
+						Дисконтная карта
+					</span>
 
-			<label class="input-label">
+				</label>
 
-				<input class="input-label__input input input--border" required="required" type="email">
+				<label class="input-label">
 
-				<span class="input-label__label">
-					E-mail
-				</span>
+					<input class="input-label__input input input--border" required="required" type="email">
 
-			</label>
+					<span class="input-label__label">
+						E-mail
+					</span>
 
-			<label class="input-label">
+				</label>
 
-				<input class="input-label__input input input--border" required="required" type="tel">
+				<label class="input-label">
 
-				<span class="input-label__label">
-					Телефон
-				</span>
+					<input class="input-label__input input input--border" required="required" type="tel">
 
-			</label>
+					<span class="input-label__label">
+						Телефон
+					</span>
 
-			<label class="input-label">
+				</label>
 
-				<textarea class="input-label__input input input--border"></textarea>
+				<label class="input-label">
 
-				<span class="input-label__label">
-					Адрес доставки
-				</span>
+					<textarea class="input-label__input input input--border"></textarea>
 
-			</label>
+					<span class="input-label__label">
+						Адрес доставки
+					</span>
 
-			<label class="input-label">
+				</label>
 
-				<textarea class="input-label__input input input--border"></textarea>
+				<label class="input-label">
 
-				<span class="input-label__label">
-					Комментарий к заказу
-				</span>
+					<textarea class="input-label__input input input--border"></textarea>
 
-			</label>
+					<span class="input-label__label">
+						Комментарий к заказу
+					</span>
+
+				</label>
 
 {% include "personal/order/make/btns.html" %}
+
+			</div>
 
 		</div>
 
@@ -84,13 +88,17 @@
 
 		<div class="order__body">
 
-			<p>
-				<b>ФИО:</b> Иванов Иван Иванович<br>
-				<b>Дисконтная карта:</b> не выбрано<br>
-				<b>E-mail:</b> design@de.ru<br>
-				<b>Телефон:</b> +7 977 340-50-68<br>
-				<b>Адрес доставки:</b> г. Москва, ул. Петровка, 12
-			</p>
+			<div class="order__body-inner">
+
+				<p>
+					<b>ФИО:</b> Иванов Иван Иванович<br>
+					<b>Дисконтная карта:</b> не выбрано<br>
+					<b>E-mail:</b> design@de.ru<br>
+					<b>Телефон:</b> +7 977 340-50-68<br>
+					<b>Адрес доставки:</b> г. Москва, ул. Петровка, 12
+				</p>
+
+			</div>
 
 		</div>
 
