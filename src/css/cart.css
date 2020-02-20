@@ -118,20 +118,90 @@
 
 		}
 
-		.input {
+		&-form {
 
-			padding-right: 115px;
+			.input {
+
+				padding-right: 115px;
+
+			}
+
+			.btn {
+
+				position: absolute;
+				top: 7px;
+				right: 7px;
+				padding: 0 14px;
+				height: 36px;
+				line-height: 36px;
+
+			}
 
 		}
 
-		.btn {
+		&-item {
 
-			position: absolute;
-			top: 7px;
-			right: 7px;
-			padding: 0 14px;
-			height: 36px;
-			line-height: 36px;
+			margin: 10px 0;
+			display: flex;
+			align-items: center;
+			color: var(--green);
+			white-space: nowrap;
+
+			&--error {
+
+				color: var(--error);
+
+			}
+
+			&--error &-text {
+
+				border-color: #E2B5BA;
+				background-color: #FBE6E8;
+
+			}
+
+			&-text {
+
+				font-size: 12px;
+				display: flex;
+				align-items: center;
+				padding: 0 30px;
+				background-color: #D5EBD9;
+				border: 1px solid #97CCA0;
+				border-radius: 3px;
+				line-height: 24px;
+				position: relative;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%23272827' d='M6.4166 12.25a.875.875 0 10-1.75 0H1.75a.5834.5834 0 01-.5834-.5833V2.3333A.5833.5833 0 011.75 1.75h2.9166a.875.875 0 101.75 0H12.25a.5832.5832 0 01.5833.5833v3.2084a1.4583 1.4583 0 100 2.9166v3.2084a.5832.5832 0 01-.5833.5833H6.4166zm-.875-6.125a.875.875 0 100-1.75.875.875 0 000 1.75zm0 3.5a.875.875 0 100-1.75.875.875 0 000 1.75z'/%3E%3C/svg%3E%0A");
+				background-position: 8px center;
+				background-repeat: no-repeat;
+
+			}
+
+			&-value {
+
+				display: block;
+				color: var(--dark);
+				font-weight: 700;
+
+			}
+
+			&-status {
+
+				display: block;
+				margin-left: 10px;
+
+			}
+
+			&-btn {
+
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				top: 4px;
+				right: 6px;
+				padding: 2px;
+
+			}
 
 		}
 
@@ -145,7 +215,8 @@
 			align-items: center;
 			font-size: 25px;
 			font-weight: 700;
-			line-height: 32px;
+			line-height: 30px;
+			margin: 10px 0;
 
 		}
 
@@ -188,6 +259,7 @@
 
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 
 		@media ($smWidth) {
 
