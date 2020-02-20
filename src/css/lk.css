@@ -238,7 +238,8 @@
 		margin: -4px -4px 16px;
 
 		&-red,
-		&-gray {
+		&-gray,
+		&-green {
 
 			background-color: #F3F4F5;
 			border: 1px solid #DCDEE0;
@@ -258,6 +259,14 @@
 			color: #BF2828;
 			background-color: #FBE6E8;
 			border: 1px solid #E2B5BA;
+
+		}
+
+		&-green {
+
+			color: var(--green);
+			background-color: #d5ebd9;
+			border: 1px solid #97cca0;
 
 		}
 
@@ -370,11 +379,41 @@
 
 		&-btn-print {
 
-			width: 30px;
-			height: 30px;
+			width: 27px;
+			height: 27px;
 			position: absolute;
 			top: 15px;
 			right: 15px;
+			padding: 0;
+			background-color: var(--yellow);
+
+			@media ($desktop) {
+
+				&:hover {
+
+					background-color: #4e4e4e;
+
+					svg {
+
+						fill: #fff;
+
+					}
+
+				}
+
+			}
+
+			svg {
+
+				fill: var(--dark);
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+
+			}
 
 		}
 
