@@ -38,6 +38,10 @@ SF.sliderRangeInit = function(elems){
 			minInputHidden = el.querySelector('.slider-range__value-min'),
 			maxInputHidden = el.querySelector('.slider-range__value-max'),
 			start = el.getAttribute('data-start'),
+			range = {
+				'min': min,
+				'max': max
+			},
 			input = el.querySelectorAll('.slider-range__input-control .input'),
 			inputMin = el.querySelector('.slider-range__input-min'),
 			inputMax = el.querySelector('.slider-range__input-max'),
@@ -59,13 +63,16 @@ SF.sliderRangeInit = function(elems){
 
 		}
 
+		if(track.classList.contains('slider-range__track--nonlinear-price')) {
+
+			range = sliderNonlinearPrice;
+
+		}
+
 		noUiSlider.create(track, {
 			start: start,
 			connect: true,
-			range: {
-				'min': min,
-				'max': max
-			}
+			range: range
 		});
 
 		track.noUiSlider.on('slide', function(values){
