@@ -144,7 +144,6 @@ SF.swiper = function(swiperContainer){
 			param.slidesPerGroup = 3;
 			param.spaceBetween = 59;
 			param.loopFillGroupWithBlank = true;
-			param.loopAdditionalSlides = 1;
 			param.breakpoints = {
 				320: {
 					slidesPerView: 'auto',
