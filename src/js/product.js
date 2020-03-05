@@ -5,41 +5,63 @@
 		var gallery = document.querySelector('#modal-gallery');
 
 		function galleryInit(big){
+console.log('galleryInit',big,window.Swiper)
+			if(document.querySelector('#gallery-product')) {
 
-			var view = {
-					"img": []
-				},
-				template = document.querySelector('#gallery-template').innerHTML,
-				items = document.querySelectorAll('#gallery-product .swiper-slide'),
-				index = big.closest('.swiper-slide').getAttribute('data-swiper-slide-index');
+				// если несколько изображений
 
-			if(gallery.querySelector('.swiper-container--gallery')){
+				var view = {
+						"img": []
+					},
+					template = document.querySelector('#gallery-template').innerHTML,
+					items = document.querySelectorAll('#gallery-product .swiper-slide'),
+					index = big.closest('.swiper-slide').getAttribute('data-swiper-slide-index');
 
-				galleryOpen(index);
+				if(gallery.querySelector('.swiper-container--gallery')){
 
-				return;
+					galleryOpen(index);
+
+					return;
+
+				}
+
+				items.forEach(function(item){
+
+					var i = parseInt(item.getAttribute('data-swiper-slide-index')),
+						link = item.querySelector('.product__img-link');
+
+					view.img[i] = {
+						"img1x" : link.getAttribute('data-img1x'),
+						"img2x" : link.getAttribute('data-img2x'),
+						"webp1x" : link.getAttribute('data-webp1x'),
+						"webp2x" : link.getAttribute('data-webp2x')
+					};
+
+				});
+
+				gallery.innerHTML = Mustache.render(template, view);
+
+				gallery.querySelector('.swiper-container--gallery').setAttribute('data-start-slide', index);
+
+				SF.swiper(gallery.querySelectorAll('.swiper-container--gallery'));
 
 			}
+			else {
 
-			items.forEach(function(item){
+				// только одно изображение
 
-				var i = parseInt(item.getAttribute('data-swiper-slide-index')),
-					link = item.querySelector('.product__img-link');
+				var template = document.querySelector('#gallery-template').innerHTML;
 
-				view.img[i] = {
-					"img1x" : link.getAttribute('data-img1x'),
-					"img2x" : link.getAttribute('data-img2x'),
-					"webp1x" : link.getAttribute('data-webp1x'),
-					"webp2x" : link.getAttribute('data-webp2x')
+				var view = {
+					"img1x" : big.getAttribute('data-img1x'),
+					"img2x" : big.getAttribute('data-img2x'),
+					"webp1x" : big.getAttribute('data-webp1x'),
+					"webp2x" : big.getAttribute('data-webp2x')
 				};
+console.log(template, view)
+				gallery.innerHTML = Mustache.render(template, view);
 
-			});
-
-			gallery.innerHTML = Mustache.render(template, view);
-
-			gallery.querySelector('.swiper-container--gallery').setAttribute('data-start-slide', index);
-
-			SF.swiper(gallery.querySelectorAll('.swiper-container--gallery'));
+			}
 
 		}
 
@@ -86,7 +108,7 @@
 
 			var preview = e.target.closest('[data-preview]');
 
-			if(preview) {
+			if(preview && document.querySelector('.swiper-container--product').swiper) {
 
 				document.querySelector('.swiper-container--product').swiper.slideToLoop(parseInt(preview.getAttribute('data-preview')));
 
