@@ -5,7 +5,7 @@
 		var gallery = document.querySelector('#modal-gallery');
 
 		function galleryInit(big){
-console.log('galleryInit',big,window.Swiper)
+
 			if(document.querySelector('#gallery-product')) {
 
 				// если несколько изображений
@@ -58,7 +58,7 @@ console.log('galleryInit',big,window.Swiper)
 					"webp1x" : big.getAttribute('data-webp1x'),
 					"webp2x" : big.getAttribute('data-webp2x')
 				};
-console.log(template, view)
+
 				gallery.innerHTML = Mustache.render(template, view);
 
 			}

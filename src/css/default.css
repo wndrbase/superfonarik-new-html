@@ -141,9 +141,8 @@ table {
 .h1 {
 
 	font-family: 'Hermes', 'Impact';
-	font-size: 36px;
+	font-size: 34px;
 	font-weight: 400;
-	text-transform: uppercase;
 
 	@media ($mdWidth) {
 
