@@ -1,0 +1,31 @@
+.infomess {
+
+	padding: 14px 10px;
+	background-color: var(--yellow);
+	text-align: center;
+	color: #333;
+	font-weight: bold;
+	transition: 1s;
+
+	&__close  {
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+	}
+
+	a {
+
+		text-decoration: underline;
+		color: inherit;
+
+		&:hover {
+
+			text-decoration: none;
+
+		}
+
+	}
+
+}
