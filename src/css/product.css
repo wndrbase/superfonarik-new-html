@@ -554,6 +554,7 @@
 		align-items: flex-end;
 		padding: 10px;
 		white-space: nowrap;
+		z-index: 1;
 
 		@media ($mdWidth) {
 

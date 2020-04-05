@@ -2,6 +2,7 @@
 
 	padding-top: 22px;
 	flex-shrink: 0;
+	z-index: 9;
 
 	&::before {
 
