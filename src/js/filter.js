@@ -89,13 +89,19 @@ SF.sliderRangeInit = function(elems){
 			}
 		});
 
-		track.noUiSlider.on('update', function(values){
+		function setInputHidden(min,max){
 
-			minInputHidden.value = parseInt(values[0], 10);
-			maxInputHidden.value = parseInt(values[1], 10);
+			minInputHidden.value = parseInt(min, 10);
+			maxInputHidden.value = parseInt(max, 10);
 
 			minInputHidden.dispatchEvent(event);
 			maxInputHidden.dispatchEvent(event);
+
+		}
+
+		track.noUiSlider.on('change', function(values){
+
+			setInputHidden(values[0],values[1]);
 
 		});
 
@@ -114,10 +120,7 @@ SF.sliderRangeInit = function(elems){
 
 			});
 
-			el.addEventListener('input', function(e) {
-
-				var _min = parseInt(inputMin.value, 10),
-					_max = parseInt(inputMax.value, 10);
+			el.addEventListener('keyup', function(e) {
 
 				if (e.keyCode == 13) {
 
@@ -125,6 +128,13 @@ SF.sliderRangeInit = function(elems){
 					e.preventDefault();
 
 				}
+
+			});
+
+			el.addEventListener('blur', function() {
+
+				var _min = parseInt(SF.strToNumber(inputMin.value), 10),
+					_max = parseInt(SF.strToNumber(inputMax.value), 10);
 
 				if (_min < min) {
 
@@ -143,6 +153,7 @@ SF.sliderRangeInit = function(elems){
 				if(_min < _max) {
 
 					track.noUiSlider.set([_min, _max]);
+					setInputHidden(_min,_max);
 
 				}
 
@@ -158,12 +169,6 @@ SF.sliderRangeInit = function(elems){
 		});
 
 	});
-/*
-	PubSub.subscribe('windowWidthResize', function(){
-
-
-
-	});*/
 
 };
 
