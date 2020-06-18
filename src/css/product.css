@@ -709,8 +709,8 @@
 
 		@media ($mdWidth) {
 
-			margin: 0 -20px;
-			padding: 20px;
+			margin: 0 -15px;
+			padding: 15px;
 			background-color: var(--bg);
 
 			&:nth-child(2n+1) {
@@ -718,6 +718,13 @@
 				background-color: #fff;
 
 			}
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0 -20px;
+			padding: 20px;
 
 		}
 

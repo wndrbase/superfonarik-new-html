@@ -272,7 +272,7 @@
 
 		@media ($mdWidth) {
 
-			height: auto;
+			height: auto !important;
 
 		}
 
@@ -400,6 +400,41 @@
 	&:hover &__img::before {
 
 		opacity: 1;
+
+	}
+
+}
+
+
+@media ($mdWidth) {
+
+	.table-scroll {
+
+		margin: 24px 0;
+		overflow: auto;
+		padding-bottom: 16px;
+
+		&::-webkit-scrollbar {
+
+			height: 6px;
+			border-radius: 3px;
+			background-color: #f5f6f8;
+
+		}
+
+		&::-webkit-scrollbar-thumb {
+
+			border-radius: 3px;
+			background-color: #d1d3d8;
+
+		}
+
+		table {
+
+			margin: 0 !important;
+			display: table !important;
+
+		}
 
 	}
 
