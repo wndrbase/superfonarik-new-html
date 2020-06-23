@@ -41,6 +41,7 @@
 
 	&__box {
 
+		overflow: hidden;
 		position: relative;
 
 		& + & {
