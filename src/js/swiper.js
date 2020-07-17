@@ -83,6 +83,8 @@ SF.swiper = function(swiperContainer){
 
 		if (related) {
 
+			swipe.parentNode.parentNode.appendChild(swipeControls);
+
 			param.loopFillGroupWithBlank = true;
 
 			swipeNext.classList.add('hide');
@@ -95,11 +97,11 @@ SF.swiper = function(swiperContainer){
 				swipeNext.classList.add('hide');
 				swipePrev.classList.add('hide');
 
-				swipe.parentNode.classList.remove('swiper-container-style');
+				swipe.parentNode.parentNode.classList.remove('swiper-container-style');
 
 				if (count > 4 && window.innerWidth >= 1200) {
 
-					swipe.parentNode.classList.add('swiper-container-style');
+					swipe.parentNode.parentNode.classList.add('swiper-container-style');
 					swipeNext.classList.remove('hide');
 					swipePrev.classList.remove('hide');
 
@@ -111,7 +113,7 @@ SF.swiper = function(swiperContainer){
 				}
 				else if (count > 3 && window.innerWidth < 1200 &&  window.innerWidth >= 768) {
 
-					swipe.parentNode.classList.add('swiper-container-style');
+					swipe.parentNode.parentNode.classList.add('swiper-container-style');
 					swipeNext.classList.remove('hide');
 					swipePrev.classList.remove('hide');
 
@@ -123,7 +125,7 @@ SF.swiper = function(swiperContainer){
 				}
 				else if (count > 2 && window.innerWidth < 768) {
 
-					swipe.parentNode.classList.add('swiper-container-style');
+					swipe.parentNode.parentNode.classList.add('swiper-container-style');
 					swipeNav.classList.remove('hide');
 
 					param.slidesPerView = 2;
