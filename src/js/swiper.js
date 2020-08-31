@@ -53,6 +53,13 @@ SF.swiper = function(swiperContainer){
 		swipeControls.appendChild(swipeNav);
 		swipe.parentNode.appendChild(swipeControls);
 
+		// eager
+		Array.prototype.forEach.call(swipe.querySelectorAll('[loading="lazy"]'), function(img){
+
+			img.setAttribute('loading','eager');
+
+		});
+
 		resetSwipe = function(){
 
 			if(mySwipe) {
