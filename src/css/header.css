@@ -339,6 +339,15 @@
 
 				}
 
+
+				&-telegram {
+
+					width: 20px;
+					height: 20px;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10'/%3E%3Cpath d='M4.58 9.78l9.64-3.72c.45-.16.84.11.69.79l-1.64 7.73c-.12.55-.45.68-.9.42l-2.5-1.84-1.21 1.17a.63.63 0 01-.5.25L8.33 12 13 7.84c.2-.18 0-.28-.31-.1l-5.76 3.61-2.47-.77c-.54-.17-.55-.54.11-.79z' fill='%23fff'/%3E%3C/svg%3E");
+
+				}
+
 			}
 
 		}
@@ -517,22 +526,29 @@
 
 	}
 
-	&__whatsapp {
+	&__messenger {
 
-		margin-bottom: 5px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 10px;
 
 		a {
 
-			display: flex;
 			color: var(--color);
-			align-items: baseline;
+			padding-left: 24px;
+			line-height: 20px;
+			position: relative;
+			margin: 5px 0;
 
 		}
 
 		svg {
 
-			margin-right: 3px;
 			flex-shrink: 0;
+			position: absolute;
+			top: 2px;
+			left: 0;
 			fill: var(--color);
 
 		}
@@ -540,7 +556,6 @@
 		span {
 
 			text-decoration: underline;
-			margin-right: 10px;
 
 		}
 
