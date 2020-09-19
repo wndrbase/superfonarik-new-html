@@ -533,6 +533,18 @@
 		align-items: flex-start;
 		margin-bottom: 10px;
 
+		@media ($mdWidth) {
+
+			flex-direction: row;
+
+			a + a {
+
+				margin-left: 28px;
+
+			}
+
+		}
+
 		a {
 
 			color: var(--color);
@@ -555,7 +567,7 @@
 
 		span {
 
-			text-decoration: underline;
+			text-decoration: none;
 
 		}
 
