@@ -403,6 +403,12 @@
 			align-items: center;
 			justify-content: center;
 
+			@media ($mdWidth) {
+
+				height: 50px;
+
+			}
+
 		}
 
 		&-link:hover &-count {
@@ -453,6 +459,13 @@
 			&:hover {
 
 				background-color: var(--yellow);
+
+			}
+
+			@media ($mdWidth) {
+
+				height: 50px;
+				line-height: 50px;
 
 			}
 
@@ -509,6 +522,18 @@
 		align-items: flex-start;
 		margin-bottom: 10px;
 
+		@media ($mdWidth) {
+
+			flex-direction: row;
+
+			a + a {
+
+				margin-left: 28px;
+
+			}
+
+		}
+
 		a {
 
 			color: var(--color);
@@ -531,7 +556,7 @@
 
 		span {
 
-			text-decoration: underline;
+			text-decoration: none;
 
 		}
 

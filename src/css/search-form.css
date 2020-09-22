@@ -22,6 +22,20 @@
 
 		}
 
+		@media ($mdWidth) {
+
+			padding: 0;
+			border: 2px solid var(--dark);
+			margin-top: -2px;
+
+			&::before {
+
+				display: none;
+
+			}
+
+		}
+
 	}
 
 	&__input {
