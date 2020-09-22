@@ -231,18 +231,7 @@
 
 		@media ($xsWidth) {
 
-			width: 62px;
-			height: 40px;
-			flex-grow: 0;
-			flex-shrink: 0;
-			top: -5px;
-
-			img {
-
-				width: 62px;
-				height: 40px;
-
-			}
+			display: none;
 
 		}
 
@@ -362,20 +351,7 @@
 
 				li {
 
-					padding-left: 25px;
-
-					& + li::before {
-
-						position: absolute;
-						width: 3px;
-						height: 3px;
-						top: 50%;
-						left: 10px;
-						margin-top: -1px;
-						content: '';
-						background-color: #f5e615;
-
-					}
+					margin-left: 20px;
 
 				}
 
