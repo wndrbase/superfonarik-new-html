@@ -231,7 +231,18 @@
 
 		@media ($xsWidth) {
 
-			display: none;
+			width: 62px;
+			height: 40px;
+			flex-grow: 0;
+			flex-shrink: 0;
+			top: -5px;
+
+			img {
+
+				width: 62px;
+				height: 40px;
+
+			}
 
 		}
 
