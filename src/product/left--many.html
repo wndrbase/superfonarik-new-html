@@ -1,0 +1,57 @@
+	<div class="product__left">
+
+		<div class="product__img swiper-container-style">
+
+			<div class="swiper-container swiper-container--product">
+
+				<ul class="swiper-wrapper" id="gallery-product">
+
+{% set list = [
+	"a50dcffbca8b3de81268af6fd6a5fa9e",
+	"97c3656f20c975def6e8a8b9c464d1b7",
+	"4d54913d20c005a465269f491eb1a891",
+	"82998c610c35c15baf1395b26ed44d4f",
+	"9f8077d6ca470264d112ae953331e8e7",
+	"4ba12402410a2a1ad8676960c9687a89",
+	"a50dcffbca8b3de81268af6fd6a5fa9e",
+	"97c3656f20c975def6e8a8b9c464d1b7",
+	"4d54913d20c005a465269f491eb1a891",
+	"82998c610c35c15baf1395b26ed44d4f",
+	"9f8077d6ca470264d112ae953331e8e7",
+	"4ba12402410a2a1ad8676960c9687a89",
+	"69eda5f2af0940773ad095b63fd99fb0"
+] %}
+
+{% for item in list %}
+
+{% include "product/slide.html" %}
+
+{% endfor %}
+
+				</ul>
+
+			</div>
+
+			<ul class="product__preview">
+
+{% for item in list %}
+
+{% if loop.index === 10 and list.length > 10 %}
+
+				<li class="product__preview-many">
+					всего {{ list.length }}
+				</li>
+
+{% endif %}
+
+{% include "product/preview.html" %}
+
+{% endfor %}
+
+			</ul>
+
+		</div>
+
+{% include "product/gallery-template.html" %}
+
+	</div>

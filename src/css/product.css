@@ -413,6 +413,21 @@
 
 		}
 
+		&-many {
+
+			background-color: var(--bg);
+			text-align: center;
+			font-size: 12px;
+			line-height: 14px;
+
+			& ~ li {
+
+				display: none;
+
+			}
+
+		}
+
 	}
 
 	&__img {

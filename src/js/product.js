@@ -114,6 +114,14 @@
 
 			}
 
+			var many = e.target.closest('.product__preview-many');
+
+			if(many) {
+
+				many.remove();
+
+			}
+
 		});
 
 	}
