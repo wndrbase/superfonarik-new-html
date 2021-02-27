@@ -1,31 +1,34 @@
 
-(function(form){
+(function(bar){
 
-	if(form) {
+	if(bar) {
 
-		var input = form.querySelectorAll('[name="address-city"]');
+		var maps = document.querySelectorAll('.address__map'),
+			links = bar.querySelectorAll('.btn');
 
-		Array.prototype.forEach.call(input, function(elem){
+		PubSub.subscribe('windowScroll', function(){
 
-			elem.addEventListener('change', function () {
+			for (var i = 0; i < maps.length; i++) {
 
-				Array.prototype.forEach.call(input, function(el){
+				if(maps[i].getBoundingClientRect().top > 0){
 
-					el.closest('.btn').classList.toggle('is-active', el === elem);
+					Array.prototype.forEach.call(links, function(el,index){
 
-				});
+						el.closest('.btn').classList.toggle('is-active', index === i);
 
-				var city = form.querySelector('[name="address-city"]:checked').value;
+					});
 
-				PubSub.publish('addressCity', city);
+					break;
 
-			});
+				}
+
+			}
 
 		});
 
 	};
 
-})(document.querySelector('#address-city'));
+})(document.querySelector('.address__city'));
 
 
 (function(shops){
@@ -38,32 +41,11 @@
 
 			if(btn) {
 
-				var placemark = btn.getAttribute('data-shop'),
-					scrollMap = document.querySelector('#address-city').getBoundingClientRect().top;
-
-				if(scrollMap < 0) {
-
-					window.scrollTo(0, scrollMap + window.pageYOffset);
-
-				}
+				var placemark = btn.getAttribute('data-shop');
 
 				PubSub.publish('addressShop', placemark);
 
 			}
-
-		});
-
-		// а вот так слушаем события:
-
-		PubSub.subscribe('addressCity', function(e,value){
-
-			console.log(value);
-
-			Array.prototype.forEach.call(shops, function(shop){
-
-				shop.classList.toggle('visuallyhidden', !shop.classList.contains('address-shop--' + value));
-
-			});
 
 		});
 

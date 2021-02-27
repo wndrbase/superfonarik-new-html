@@ -17,6 +17,7 @@
 		display: flex;
 		align-items: flex-start;
 		margin: 20px 0;
+		position: relative;
 
 		@media ($mdWidth) {
 
@@ -37,6 +38,7 @@
 		flex-grow: 1;
 		position: relative;
 		padding-right: 14px;
+		width: calc(100% - 272px);
 
 		@media ($mdWidth) {
 
@@ -58,15 +60,22 @@
 
 		@media ($mdWidth) {
 
-			width: auto;
+			width: 100%;
 			margin-bottom: 20px;
+
+			&::after {
+
+				display: none;
+
+			}
 
 		}
 
 		@media ($smWidth) {
 
-			margin: 0 -20px;
+			margin: 0 -20px 10px;
 			padding: 30px 20px;
+			width: auto;
 
 			h2 {
 
@@ -85,7 +94,7 @@
 
 		@media ($xsWidth) {
 
-			margin: 0 -10px;
+			margin: 0 -10px 10px;
 			padding: 20px 10px;
 
 		}
@@ -121,6 +130,10 @@
 		display: flex;
 		margin: -5px;
 		flex-wrap: wrap;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		background-color: #fff;
 
 		.btn {
 
@@ -128,7 +141,7 @@
 
 			@media ($smWidth) {
 
-				margin: 5px 0;
+				margin: 0;
 
 			}
 
@@ -136,13 +149,13 @@
 
 		@media ($smWidth) {
 
-			margin: -5px -15px 5px;
+			margin: 0 -20px;
 
 		}
 
 		@media ($xsWidth) {
 
-			margin: -5px -10px 5px;
+			margin: 0 -10px;
 
 		}
 
@@ -154,6 +167,14 @@
 		height: 430px;
 		position: relative;
 		margin: 10px 0;
+		scroll-snap-margin-top: 36px;
+		scroll-margin-top: 36px;
+
+		& > ymaps {
+
+			max-width: 100%;
+
+		}
 
 		@media ($smWidth) {
 
@@ -162,6 +183,8 @@
 			border: 0;
 			height: 100vw;
 			background-color: #f7f7f7;
+			scroll-snap-margin-top: 76px;
+			scroll-margin-top: 76px;
 
 		}
 
@@ -178,15 +201,24 @@
 
 		display: flex;
 		margin: 20px -10px;
+		width: calc(100% + 272px + 20px);
 		counter-reset: headings 0;
+
+		@media ($mdWidth) {
+
+			width: auto;
+			display: block;
+			margin: 0 -15px;
+			padding: 15px;
+			border: 0;
+			background-color: #f7f7f7;
+
+		}
 
 		@media ($smWidth) {
 
-			display: block;
 			margin: 0 -20px;
-			padding: 15px 20px 30px;
-			border: 0;
-			background-color: #f7f7f7;
+			padding: 20px;
 
 		}
 
@@ -213,7 +245,7 @@
 
 			}
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				margin: 0;
 
@@ -246,7 +278,7 @@
 			margin-bottom: 16px;
 			position: relative;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				font: 15px/18px Hermes;
 				color: var(--dark);
