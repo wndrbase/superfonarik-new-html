@@ -147,9 +147,17 @@
 
 		}
 
+		@media ($mdWidth) {
+
+			margin: 0 -15px;
+			padding: 0 10px;
+
+		}
+
 		@media ($smWidth) {
 
 			margin: 0 -20px;
+			padding: 0;
 
 		}
 
@@ -161,14 +169,26 @@
 
 	}
 
+	&__item {
+
+		margin: 10px 0;
+		scroll-snap-margin-top: 36px;
+		scroll-margin-top: 36px;
+
+		@media ($smWidth) {
+
+			scroll-snap-margin-top: 76px;
+			scroll-margin-top: 76px;
+
+		}
+
+	}
+
 	&__map {
 
 		border: 2px solid var(--yellow);
 		height: 430px;
 		position: relative;
-		margin: 10px 0;
-		scroll-snap-margin-top: 36px;
-		scroll-margin-top: 36px;
 
 		& > ymaps {
 
@@ -183,8 +203,6 @@
 			border: 0;
 			height: 100vw;
 			background-color: #f7f7f7;
-			scroll-snap-margin-top: 76px;
-			scroll-margin-top: 76px;
 
 		}
 
