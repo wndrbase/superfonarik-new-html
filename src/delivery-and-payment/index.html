@@ -86,42 +86,47 @@
 
 		</div>
 
-		<div class="tabs-hash">
+		<div class="tabs-top">
 
-<!--
-в зависимости от hash адресной строки расставлять tabs-hash__btn--active и visuallyhidden
-по умолчанию (если отсуствйет hash) - текущее состояние,
-оно аналогично состоянию /delivery-and-payment/#tabs-1
--->
-			<article class="tabs-hash__item">
+			<div class="tabs-top__nav">
 
-				<div class="hash-detect" id="tabs-1"></div>
-
-				<h2 class="tabs-hash__btn tabs-hash__btn--active h4">
+				<a href="#moskau" class="tabs-top__btn h4 is-active">
 					<span class="hidden-sm">Доставка</span> по Москве
+				</a>
+
+				<a href="#country" class="tabs-top__btn h4">
+					<span class="hidden-sm">Доставка</span> по России и в страны ТС
+				</a>
+
+				<a href="#payment" class="tabs-top__btn h4">
+					Оплата
+				</a>
+
+			</div>
+
+			<article class="tabs-top__item" id="moskau">
+
+				<h2 class="tabs-top__head h3">
+					Доставка по Москве
 				</h2>
 
 {% include "delivery-and-payment/tabs-1.html" %}
 
 			</article>
 
-			<article class="tabs-hash__item visuallyhidden">
+			<article class="tabs-top__item" id="country">
 
-				<div class="hash-detect" id="tabs-2"></div>
-
-				<h2 class="tabs-hash__btn h4">
-					<span class="hidden-sm">Доставка</span> по России и в страны ТС
+				<h2 class="tabs-top__head h3">
+					Доставка по России и в страны ТС
 				</h2>
 
 {% include "delivery-and-payment/tabs-2.html" %}
 
 			</article>
 
-			<article class="tabs-hash__item visuallyhidden">
+			<article class="tabs-top__item" id="payment">
 
-				<div class="hash-detect" id="tabs-3"></div>
-
-				<h2 class="tabs-hash__btn h4">
+				<h2 class="tabs-top__head h3">
 					Оплата
 				</h2>
 

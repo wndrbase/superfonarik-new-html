@@ -3,18 +3,18 @@
 
 	if(bar) {
 
-		var maps = document.querySelectorAll('.address__map'),
+		var items = document.querySelectorAll('.address__item'),
 			links = bar.querySelectorAll('.btn');
 
 		PubSub.subscribe('windowScroll', function(){
 
-			for (var i = 0; i < maps.length; i++) {
+			for (var i = 0; i < items.length; i++) {
 
-				if(maps[i].getBoundingClientRect().top > 0){
+				if(items[i].getBoundingClientRect().bottom > bar.clientHeight){
 
 					Array.prototype.forEach.call(links, function(el,index){
 
-						el.closest('.btn').classList.toggle('is-active', index === i);
+						el.classList.toggle('is-active', index === i);
 
 					});
 
