@@ -451,7 +451,7 @@
 
 			}
 
-			img {
+			img:not(.no-style) {
 
 				border: 2px solid #c3cace;
 				border-radius: 2px;
